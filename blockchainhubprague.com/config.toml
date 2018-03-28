@@ -1,5 +1,5 @@
 # Main config
-baseURL = "http://blockchainhubprague.com/"
+baseURL = "http://tender-knuth-067bd4.netlify.com/"
 languageCode = "en-us"
 title = "Blockchain Hub Prague"
 theme = "hugo-icon"
