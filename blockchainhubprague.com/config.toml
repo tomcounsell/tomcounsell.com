@@ -1,5 +1,5 @@
 # Main config
-baseURL = "http://tender-knuth-067bd4.netlify.com/"
+baseURL = "//www.blockchainhubprague.com/"
 languageCode = "en-us"
 title = "Blockchain Hub Prague"
 theme = "hugo-icon"
@@ -10,9 +10,10 @@ theme = "hugo-icon"
   author = "Blockchain Hub Prague"
   description = "startup incubator for blockchain projects and international businesses based in Prague, Czech Republic"
 
-# Hero section (from here on is for icon theme)
+# Hero section
 [params.hero]
   img = "images/hero_bg.jpg"
+  logo = "/images/BH-icon.png"
   title = "Blockchain Hub Prague"
   description = "For blockchain projects  to synergize and succeed. <br> Karlin, Prague, Czech Republic"
 
@@ -22,8 +23,7 @@ theme = "hugo-icon"
   services = "Services"
   team = "The Team"
   contact = "Get In Touch"
-  # Include logo instead if HOME:
-  # logo = "path/to/logo"
+  logo = "/images/BH-icon.png"
 
 ## Mission section
 [params.mission]
