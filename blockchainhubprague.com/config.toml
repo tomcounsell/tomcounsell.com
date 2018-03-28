@@ -1,5 +1,5 @@
 # Main config
-baseURL = "//www.blockchainhubprague.com/"
+baseURL = "http://www.blockchainhubprague.com/"
 languageCode = "en-us"
 title = "Blockchain Hub Prague"
 theme = "hugo-icon"
