@@ -21,8 +21,8 @@ theme = "hugo-icon"
 [params.nav]
   # mission = "Our Mission"
   services = "Services"
-  team = "The Team"
-  contact = "Get In Touch"
+  team = "Startups"
+  contact = "Apply Now"
   logo = "/images/BH-icon.png"
 
 ## Mission section
@@ -148,7 +148,7 @@ theme = "hugo-icon"
 # Team section
 [params.team]
   enable = true
-  title = "Incubated Projects"
+  title = "Member Startups"
   description = ""
 
   [[params.team.item]]
@@ -173,12 +173,12 @@ theme = "hugo-icon"
     linkedin = "https://www.linkedin.com/company/13400684/"
 
   [[params.team.item]]
-    name = "Aztrana"
-    position = "VC Seed Funded"
-    description = "Web 3.0, privacy-first environment and social interaction platform."
-    img = "images/AZ-icon.png"
-    linkedin = "https://www.linkedin.com/company/4859381/"
-    github = "https://github.com/Aztrana/"
+    name = "New Life"
+    position = "Privately-Funded"
+    description = "Futurist community for art, fashion, and new economy, built on Web3 tech."
+    img = "images/NL-icon.png"
+    facebook = "https://www.facebook.com/newlifeai/"
+
 
   # [[params.team.item]]
   #   name = "Jason Doe"
@@ -194,17 +194,17 @@ theme = "hugo-icon"
 # Contact section
 [params.contact]
   enable = true
-  title = "Get In Touch"
-  message = "ICO developement and launch services starting from $80k."
+  title = "Apply Now"
+  message = "Services for ICO developement and launch: starting at $80k.\nApplications for startup incubation and private investment: FREE."
 
 # Footer section
 # Note here that the copyright and attribution statement must remain as part of the license agreement. If you wish to remove this, please contact freehtml5 and pay for a professional license.
 [params.footer]
   enable = true
-  note = "<p></p>"
+  note = "Blockchain Technology Hub s.r.o.<br>Křižíkova 213/ 44, Karlín<br>18600 Praha 8<br>Czech Republic<br><br>IČ: 06069231<br>0035681002/5500</p>"
   # github = "#"
   # twitter = "#"
-  # facebook = "#"
+  facebook = "https://www.facebook.com/blockchainhubprague/"
   # vine = "#"
   linkedin = "https://www.linkedin.com/company/13649363/"
   # instagram = "#"
