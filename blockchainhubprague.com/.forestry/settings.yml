@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
-auto_deploy: false
-admin_path: 
+auto_deploy: true
+admin_path: ''
 webhook_url: 
 sections:
 - type: directory
@@ -12,12 +12,9 @@ sections:
 - type: document
   path: about/_index.md
   label: About
-  match: "**/*"
 - type: document
   path: contact/_index.md
   label: Contact
-  match: "**/*"
-  read_only: false
 upload_dir: blockchainhubprague.com/static/uploads
 public_path: "/uploads"
 front_matter_path: ''
