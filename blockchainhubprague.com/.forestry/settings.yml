@@ -5,15 +5,19 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: blockchainhubprague.com/content
-  label: Pages
-  create: all
-  match: "*"
-- type: directory
-  path: blockchainhubprague.com/content/posts
-  label: Posts
+  path: blog
+  label: Blog
   create: all
   match: "**/*"
+- type: document
+  path: about/_index.md
+  label: About
+  match: "**/*"
+- type: document
+  path: contact/_index.md
+  label: Contact
+  match: "**/*"
+  read_only: false
 upload_dir: blockchainhubprague.com/static/uploads
 public_path: "/uploads"
 front_matter_path: ''
