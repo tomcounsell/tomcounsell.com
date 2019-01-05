@@ -8,7 +8,6 @@ case_summary = ""
 case_title = ""
 date = ""
 description = "some info"
-draft = true
 methods = []
 nav_heading = ""
 roles = []
@@ -23,3 +22,5 @@ weight = 1
 
 +++
 some things
+
+some edit
