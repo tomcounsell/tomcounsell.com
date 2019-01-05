@@ -119,3 +119,5 @@ fields:
   type: datetime
   hidden: false
   default: ''
+pages:
+- content/about-tom-counsell.md
