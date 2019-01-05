@@ -17,5 +17,7 @@ file_template: ":filename:"
 build:
   preview_command: hugo -D
   publish_command: hugo -b tomcounsell.com
+  publish_env:
+  - do_it=now
   output_directory: public
 version: '0.53'
