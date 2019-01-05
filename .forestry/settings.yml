@@ -16,7 +16,7 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_command: hugo -D
-  publish_command: hugo -b tomcounsell.com
+  publish_command: hugo -b
   publish_env:
   - do_it=now
   output_directory: public
