@@ -1,4 +1,4 @@
-baseURL = "localhost:1313"
+baseURL = "tomcounsell.com"
 languageCode = "en-us"
 title = "Tom Counsell"
 theme = "hugo-lodi-theme"
