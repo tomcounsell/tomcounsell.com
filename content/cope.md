@@ -1,36 +1,55 @@
 ---
 weight: 1
-title: "Cope | Alexis Collado"
-description: "I set a direction for the branding and identity of the product and crafted a functioning prototype ready for usability testing and development."
-nav_heading: "Cope Case Study"
-thumbnail: "cope.jpg"
-case_short_title: "Cope iOS App"
-case_title: "Cope iOS App"
-case_subtitle: "Mobile App Design"
-case_description: "Cope is a mobile app that allows mental health help seekers track their symptoms and medication. I helped them create a minimum viable product for testing."
-case_feature_img: "featured-cope.jpg"
-case_summary: "Cope is an application that helps users track their mental health. Progress is measured through the use of a check-in system, calendar, medicine tracker and a summary dashboard. I created a minimum viable product for this application."
-team: ["Alexis Collado", "Carlos Arcenas", "Kat Uytiepo", "John Palomo"]
-roles: ["Branding and Identity", "User Interface Design", "Prototyping", "User Research"]
-methods: ["Sketching", "Mockups", "Guerilla Testing"]
+title: 'Case Study #1 | Tom Counsell'
+description: I set a direction for the branding and identity of the product and crafted
+  a functioning prototype ready for usability testing and development.
+nav_heading: Cope Case Study
+thumbnail: cope.jpg
+case_short_title: Cope iOS App
+case_title: Cope iOS App
+case_subtitle: Mobile App Design
+case_description: Cope is a mobile app that allows mental health help seekers track
+  their symptoms and medication. I helped them create a minimum viable product for
+  testing.
+case_feature_img: featured-cope.jpg
+case_summary: Cope is an application that helps users track their mental health. Progress
+  is measured through the use of a check-in system, calendar, medicine tracker and
+  a summary dashboard. I created a minimum viable product for this application.
+team:
+- Alexis Collado
+- Carlos Arcenas
+- Kat Uytiepo
+- John Palomo
+roles:
+- Branding and Identity
+- User Interface Design
+- Prototyping
+- User Research
+methods:
+- Sketching
+- Mockups
+- Guerilla Testing
 button_links:
-    - link: "https://marvelapp.com/g4b64e/screen/14364499"
-      img: "eyeball.svg"
-      text: "View Prototype"
-    - link: "http://copenow.co/"
-      img: "eyeball.svg"
-      text: "View Landing Page"
-    - link: "cope.pdf"
-      img: "download.svg"
-      text: "Download Feature Sets"
-testimonial: "Alexis designed everything for Cope from the ground up. What I really like about him is his true understanding and grasp of what makes a great UI great. He knows that the user experience needs a lot of refining from customers and he isn't shy to take feedback even if it's critical. Alexis is one of those rare people who just gets it."
-testimonial_photo: "john.jpg"
-testimonial_author: "John Robert Palomo"
-testimonial_subtitle: "Co-founder, Cope"
-date: 2017-10-15T03:29:08-07:00
-draft: false
----
+- link: https://marvelapp.com/g4b64e/screen/14364499
+  img: eyeball.svg
+  text: View Prototype
+- link: http://copenow.co/
+  img: eyeball.svg
+  text: View Landing Page
+- link: cope.pdf
+  img: download.svg
+  text: Download Feature Sets
+testimonial: Alexis designed everything for Cope from the ground up. What I really
+  like about him is his true understanding and grasp of what makes a great UI great.
+  He knows that the user experience needs a lot of refining from customers and he
+  isn't shy to take feedback even if it's critical. Alexis is one of those rare people
+  who just gets it.
+testimonial_photo: john.jpg
+testimonial_author: John Robert Palomo
+testimonial_subtitle: Co-founder, Cope
+date: 2017-10-15 10:29:08 +0000
 
+---
 # The Challenge
 
 ![](//localhost:1313/cope/img/persona.png)
