@@ -1,0 +1,58 @@
+baseURL = "localhost:1313"
+languageCode = "en-us"
+title = "Tom Counsell"
+theme = "hugo-lodi-theme"
+googleAnalytics = "UA-XXXXXXXX-Y"
+
+[params]
+    theme_color = "#004976"
+    description = "Entreprenuer, Futurist, and Software Engineer"
+    description_photo = "portfolio.jpg"
+    favicon = "favicon.ico"
+    logo = "logo.png"
+    # email = ""
+    # facebook = ""
+    twitter = "tomcounsell"
+    # dribbble = ""
+    linkedin = "https://www.linkedin.com/in/tomcounsell"
+    # medium = "tomcounsell"
+    github = "tomcounsell"
+
+[params.nav]
+    enable = false
+
+[params.hero]
+    enable = true
+    avatar = "profile.jpg"
+    title = "Tom Counsell"
+    subtitle = "Entreprenuer, Futurist, and Software Engineer"
+    hero_right = [
+      "## My aim is to learn and experience all the great things that life offers: love, pain, family, leadership, spirituality, culture, and beauty.",
+      "## My joy comes from solving problems and making forward progress on any of the above.",
+      "## Through my work, I hope to empower others to live rich and meaningful lives.",
+      "____",
+      "### Tom's Rules:",
+      "- Challenge the status quo and initiate new experiments",
+      "- Quietly lead by example",
+      "- Promote an environment of open curiosity and fun",
+      "- Be first to admit being wrong or making a mistake",
+      "- Never back down from a challenge",
+      "- Take responsibility and make difficult decisions when others don't want to",
+      "- Ask for help all the time",
+      "- Give help to everyone who asks",
+      "- Nothing is more valuable than integrity",
+    ]
+    # resume = "ResumeCollado.pdf"
+
+[params.process]
+    enable = false
+    title = "My Process"
+    subtitle = "Full Process Design"
+
+[params.case_studies]
+    enable = false
+    title = "Case Studies"
+    subtitle = "Selected Works"
+
+[params.footer]
+    enable = false
