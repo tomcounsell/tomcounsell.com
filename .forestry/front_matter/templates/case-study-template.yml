@@ -1,0 +1,121 @@
+---
+label: Case Study Template
+hide_body: 
+is_partial: 
+fields:
+- name: weight
+  label: Weight
+  type: text
+  hidden: false
+  default: ''
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+- name: nav_heading
+  label: Nav heading
+  type: text
+  hidden: false
+  default: ''
+- name: thumbnail
+  label: Thumbnail
+  type: file
+  hidden: false
+  default: ''
+- name: case_short_title
+  label: Case short title
+  type: text
+  hidden: false
+  default: ''
+- name: case_title
+  label: Case title
+  type: text
+  hidden: false
+  default: ''
+- name: case_subtitle
+  label: Case subtitle
+  type: text
+  hidden: false
+  default: ''
+- name: case_description
+  label: Case description
+  type: textarea
+  hidden: false
+  default: ''
+- name: case_feature_img
+  label: Case feature img
+  type: file
+  hidden: false
+  default: ''
+- name: case_summary
+  label: Case summary
+  type: textarea
+  hidden: false
+  default: ''
+- name: team
+  label: Team
+  type: list
+  hidden: false
+  default: ''
+- name: roles
+  label: Roles
+  type: list
+  hidden: false
+  default: ''
+- name: methods
+  label: Methods
+  type: list
+  hidden: false
+  default: ''
+- name: button_links
+  label: Button links
+  type: field_group_list
+  fields:
+  - name: link
+    label: Link
+    type: text
+    hidden: false
+    default: ''
+  - name: img
+    label: Img
+    type: text
+    hidden: false
+    default: ''
+  - name: text
+    label: Text
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: testimonial
+  label: Testimonial
+  type: textarea
+  hidden: false
+  default: ''
+- name: testimonial_photo
+  label: Testimonial photo
+  type: file
+  hidden: false
+  default: ''
+- name: testimonial_author
+  label: Testimonial author
+  type: text
+  hidden: false
+  default: ''
+- name: testimonial_subtitle
+  label: Testimonial subtitle
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
