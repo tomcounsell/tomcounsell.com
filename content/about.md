@@ -1,10 +1,9 @@
 ---
 weight: 3
-title: 'Case Study #2 | Tom Counsell'
-description: I strategized, designed, and developed a simple landing page for TEDxADMU
-  to set their application conversions to 66.8%.
-nav_heading: TEDxADMU Case Study
-thumbnail: tedx.jpg
+title: About | Tom Counsell
+description: Some things
+nav_heading: About
+thumbnail: ''
 case_short_title: TEDxADMU Website
 case_title: TEDxADMU Website
 case_subtitle: Web Design
