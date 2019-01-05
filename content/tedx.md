@@ -1,31 +1,49 @@
 ---
 weight: 3
-title: "TEDxADMU | Alexis Collado"
-description: "I strategized, designed, and developed a simple landing page for TEDxADMU to set their application conversions to 66.8%."
-nav_heading: "TEDxADMU Case Study"
-thumbnail: "tedx.jpg"
-case_short_title: "TEDxADMU Website"
-case_title: "TEDxADMU Website"
-case_subtitle: "Web Design"
-case_description: "The TEDxADMU website was a project for the Ateneo Junior Marketing Association. It's a project where I helped them reach a 66.8% conversion rate from scratch."
-case_feature_img: "featured-tedx.jpg"
-case_summary: "TEDxADMU is an independently organized community event that aims to spread ideas that inform and transform society. My role in the project was to design their website and make the application process as easy and seamless as possible."
-team: ["Alexis Collado", "Royce Chan"]
-roles: ["Project Manager", "User Interface Design", "Front-end Development"]
-methods: ["Contextual Inquiry", "Google Analytics", "Web Development", "User Interface Design"]
+title: 'Case Study #2 | Tom Counsell'
+description: I strategized, designed, and developed a simple landing page for TEDxADMU
+  to set their application conversions to 66.8%.
+nav_heading: TEDxADMU Case Study
+thumbnail: tedx.jpg
+case_short_title: TEDxADMU Website
+case_title: TEDxADMU Website
+case_subtitle: Web Design
+case_description: The TEDxADMU website was a project for the Ateneo Junior Marketing
+  Association. It's a project where I helped them reach a 66.8% conversion rate from
+  scratch.
+case_feature_img: featured-tedx.jpg
+case_summary: TEDxADMU is an independently organized community event that aims to
+  spread ideas that inform and transform society. My role in the project was to design
+  their website and make the application process as easy and seamless as possible.
+team:
+- Alexis Collado
+- Royce Chan
+roles:
+- Project Manager
+- User Interface Design
+- Front-end Development
+methods:
+- Contextual Inquiry
+- Google Analytics
+- Web Development
+- User Interface Design
 button_links:
-    - link: "http://tedxadmu.ph"
-      img: "eyeball.svg"
-      text: "View Website"
-      text: "Download Feature Sets"
-testimonial: "The partnership with UX Society was nothing short of amazing. Throughout the entire ideation and execution process, they have meticulously attended to our needs. The website that was created for us allowed more for applicants to apply. We’ve seen a boost in the amount of applicants that have accessed the website and applied after visiting. We’re really happy to have worked with Alexis’ team and even until now, they still continue to maintain and attend to our needs."
-testimonial_photo: "nate.jpg"
-testimonial_author: "Nathaniel Benedicto"
-testimonial_subtitle: "Associate Vice President for Events, Ateneo Junior Marketing Association"
-date: 2017-10-15T03:29:08-07:00
-draft: false
----
+- link: http://tedxadmu.ph
+  img: eyeball.svg
+  text: Download Feature Sets
+testimonial: The partnership with UX Society was nothing short of amazing. Throughout
+  the entire ideation and execution process, they have meticulously attended to our
+  needs. The website that was created for us allowed more for applicants to apply.
+  We’ve seen a boost in the amount of applicants that have accessed the website and
+  applied after visiting. We’re really happy to have worked with Alexis’ team and
+  even until now, they still continue to maintain and attend to our needs.
+testimonial_photo: nate.jpg
+testimonial_author: Nathaniel Benedicto
+testimonial_subtitle: Associate Vice President for Events, Ateneo Junior Marketing
+  Association
+date: 2017-10-15 10:29:08 +0000
 
+---
 # Context
 
 ![](//localhost:1313/tedx/img/projecti7.jpg)
