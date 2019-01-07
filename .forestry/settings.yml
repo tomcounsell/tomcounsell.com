@@ -7,7 +7,6 @@ sections:
 - type: document
   path: content/about-tom-counsell.md
   label: About
-  match: "**/*"
 upload_dir: static/img
 public_path: "/img"
 front_matter_path: ''
