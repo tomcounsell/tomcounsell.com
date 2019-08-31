@@ -12,19 +12,10 @@ public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
-instant_preview: 
 build:
-  preview_env:
-  - HUGO_ENV=staging
-  - HUGO_VERSION=0.53
-  preview_output_directory: public
-  preview_docker_image: forestryio/hugo:latest
-  mount_path: "/srv"
-  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
-    -d public
+  preview_command: hugo -D
   publish_command: hugo
   publish_env:
   - do_it=now
   output_directory: public
-  preview_command: hugo -D
 version: '0.53'

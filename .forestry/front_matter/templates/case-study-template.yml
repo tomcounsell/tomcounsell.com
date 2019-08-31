@@ -1,6 +1,7 @@
 ---
 label: Case Study Template
-hide_body: false
+hide_body: 
+is_partial: 
 fields:
 - name: weight
   label: Weight
