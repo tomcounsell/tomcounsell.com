@@ -18,6 +18,13 @@
     h1, h2, h3 {
         font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     }
+    .jumbotron{
+      background-color: #F7F7F6;
+    }
+    .card{
+      border-width: 2.5px;
+      border-color: #F7F7F6;
+    }
   </style>
 
 </head>
@@ -70,7 +77,7 @@
               <i class="fab fa-github"></i>
             </a>
           </li>
-          
+
           <li class="list-inline-item">
             <a href="https://stackoverflow.com/users/2102461/tomcounsell" target="_blank" title="StackOverflow"
                class="btn btn-default btn-circle">
@@ -149,21 +156,21 @@
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-primary">Founder</strong>
               <h3 class="mb-0">
-                <ul class="list-inline m-1">
+                <ul class="list-inline m-0">
                   <li class="list-inline-item">
-                    <img src="static/img/yudame.png" title="Yudame Logo" width="42px">
+                    <img src="static/img/yudame.png" title="Yudame Logo" height="42px">
                   </li>
                   <li class="list-inline-item">
                     <a class="text-dark" href="https://yuda.me" target="_blank">Yudame</a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/company/yudame/" title="LinkedIn"
+                    <a href="https://www.linkedin.com/company/yudame/" target="_blank" title="LinkedIn"
                        class="btn btn-default btn-circle">
                       <i class="fab fa-linkedin"></i>
                     </a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://github.com/Yudame" title="GitHub"
+                    <a href="https://github.com/Yudame" target="_blank" title="GitHub"
                        class="btn btn-default btn-circle">
                       <i class="fab fa-github"></i>
                     </a>
@@ -177,13 +184,51 @@
                 </ul>
               </h3>
 
-              <div class="mb-1 text-muted">2019-present</div>
+              <div class="my-1 text-muted">2019-present</div>
 
               <p class="card-text mb-auto">
                 Building web and mobile apps to solve a variety of needs.
-                <br><a href="https://bemmerse.com" target="_blank">Bemmerse</a>: helping people get better sleep
-                <br>Pop Menu: helping restaurants serve customers via mobile chat
-                <br>Prakti: helping students meet and study together
+                <br>
+                <a href="https://bemmerse.com" target="_blank">Bemmerse</a>
+                is helping people get better sleep
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Advisor</strong>
+              <h3 class="mb-0">
+                <ul class="list-inline m-0">
+                  <li class="list-inline-item">
+                    <img src="static/img/chainstarters.jpg" title="Chainstarters Logo" height="42px">
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="text-dark" href="https://www.chainstarters.com/" target="_blank">Chainstarters</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/company/chainstarters/" target="_blank" title="LinkedIn"
+                       class="btn btn-default btn-circle">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://github.com/chainstarters" target="_blank" title="GitHub"
+                       class="btn btn-default btn-circle">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </li>
+                </ul>
+              </h3>
+
+              <div class="my-1 text-muted">2018-present</div>
+
+              <p class="card-text mb-auto">
+                A cloud platform for deploying modern applications.
+                <br>
+                Chainstarters bridges the gap between web2 and web3.
               </p>
             </div>
           </div>
@@ -194,7 +239,7 @@
             <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-primary">CTO</strong>
               <h3 class="mb-0">
-                <ul class="list-inline">
+                <ul class="list-inline m-0">
                   <li class="list-inline-item">
                     <img src="static/img/ITF.png" title="ITF Logo" height="42px">
                   </li>
@@ -202,13 +247,13 @@
                     <a class="text-dark" href="https://intelligenttrading.org/about" target="_blank">Intelligent Trading</a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/company/intelligenttrading/" title="LinkedIn"
+                    <a href="https://www.linkedin.com/company/intelligenttrading/" target="_blank" title="LinkedIn"
                        class="btn btn-default btn-circle">
                       <i class="fab fa-linkedin"></i>
                     </a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://github.com/IntelligentTrading" title="GitHub"
+                    <a href="https://github.com/IntelligentTrading" target="_blank" title="GitHub"
                        class="btn btn-default btn-circle">
                       <i class="fab fa-github"></i>
                     </a>
@@ -216,13 +261,12 @@
                 </ul>
               </h3>
 
-              <div class="mb-1 text-muted">2017-2020</div>
+              <div class="my-1 text-muted">2017-2020</div>
 
               <p class="card-text mb-auto">
-                We track digital assets and predict price action using machine learning.
-                Tom lead a team of 6 engineers including frontend JS, backend Python, and 2 PhD AI researchers
+                Tracking digital assets and predicting price action using machine learning.
                 <br>
-                view
+                See open source
                 <a href="https://github.com/IntelligentTrading/core/graphs/contributors" target="_blank">
                   contributions on GitHub
                 </a>
@@ -234,40 +278,9 @@
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">CTO</strong>
-              <h3 class="mb-0">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <img src="static/img/aztrana.png" title="Aztrana Logo" height="42px">
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="text-dark" href="https://www.aztrana.ch/" target="_blank">Aztrana</a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/company/aztrana/" title="LinkedIn"
-                       class="btn btn-default btn-circle">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </h3>
-
-              <div class="mb-1 text-muted">2016-2018</div>
-
-              <p class="card-text mb-auto">
-                A social media platform focused on security, free speech, and free market economy.
-                <br>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card flex-md-row mb-4 box-shadow h-md-250">
-            <div class="card-body d-flex flex-column align-items-start">
               <strong class="d-inline-block mb-2 text-primary">Cofounder, Technical Director</strong>
               <h3 class="mb-0">
-                <ul class="list-inline">
+                <ul class="list-inline m-0">
                   <li class="list-inline-item">
                     <img src="static/img/anou.png" title="Anou Logo" height="42px">
                   </li>
@@ -275,13 +288,13 @@
                     <a class="text-dark" href="https://theanou.com" target="_blank">Anou</a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/company/anou/" title="LinkedIn"
+                    <a href="https://www.linkedin.com/company/anou/" target="_blank" title="LinkedIn"
                        class="btn btn-default btn-circle">
                       <i class="fab fa-linkedin"></i>
                     </a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://github.com/NobleSF/Cobra" title="GitHub"
+                    <a href="https://github.com/NobleSF/Cobra" target="_blank" title="GitHub"
                        class="btn btn-default btn-circle">
                       <i class="fab fa-github"></i>
                     </a>
@@ -289,7 +302,7 @@
                 </ul>
               </h3>
 
-              <div class="mb-1 text-muted">2013-2015</div>
+              <div class="my-1 text-muted">2013-2015</div>
 
               <p class="card-text mb-auto">
                 An ecommerce marketplace designed for illiterate business owners.
@@ -349,11 +362,10 @@
   </main>
 
   <footer class="footer pt-3 mt-5 border-top">
-    <div class="row flex-nowrap justify-content-around align-items-center">
+    <div class="row justify-content-around align-items-center">
       <div class="col-auto">
         <p>
-          made by Tom Counsell<br>
-          view source at
+          view source:
           <a href="https://github.com/tomcounsell/tomcounsell.com" target="_blank">
             github.com/tomcounsell/tomcounsell.com
           </a>
