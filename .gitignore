@@ -1,8 +1,6 @@
 
-*.DS_Store
 .git/
 .github/
-
 exampleSite/
 public/
 public/360pro/img/chappy.jpg
