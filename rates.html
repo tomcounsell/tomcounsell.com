@@ -45,19 +45,44 @@
 <body class="" style="touch-action: manipulation;">
 
   <header class="py-3">
+
+
     <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-2 pt-1">
+      <div class="col-3">
 
       </div>
-      <div class="col-8 text-center">
+      <div class="col-6 text-center">
         <h1 class="display-4">
           <a class="text-dark" href="/">Tom Counsell</a>
         </h1>
       </div>
-      <div class="col-2 d-flex justify-content-end align-items-center">
 
+      <div class="col-3 d-flex flex-row justify-content-start align-items-start">
+        <a class="btn btn-default mx-2" href="index.html" style="position: float; background-color: #F7F7F6; border: thin solid lightgrey;">
+          About
+        </a>
+        <button class="btn btn-default" id="shareButton" style="position: float; background-color: #F7F7F6; border: thin solid lightgrey;">
+          Share
+        </button>
+        <div id="shareMessage" style="display: none; position: fixed; top: 50px; right: 10%; background-color: #F7F7F6; border: thin solid lightgrey; padding: 10px;">
+          Copied: <span id="copiedURL"></span>
+        </div>
+        <script>
+          document.getElementById('shareButton').addEventListener('click', function() {
+            var url = window.location.href;
+            navigator.clipboard.writeText(url);
+            var shareMessage = document.getElementById('shareMessage');
+            document.getElementById('copiedURL').textContent = url;
+            shareMessage.style.display = 'block';
+            setTimeout(function() {
+              shareMessage.style.display = 'none';
+            }, 2000);
+          });
+        </script>
       </div>
+
     </div>
+
 
     <div class="row d-flex justify-content-center">
       <div class="col-auto">
@@ -129,7 +154,7 @@
     <div class="jumbotron p-3 p-md-5 rounded">
 
       <div class="row d-flex justify-content-center mt-3">
-        <div class="col-auto">
+        <div class="col-auto mb-3 pr-4">
           <img class="rounded-circle z-depth-2" alt="100x100" src="static/img/profile.jpg" width="150px"
             data-holder-rendered="true">
         </div>
@@ -140,49 +165,58 @@
             <h3>Millions Served</h3>
           </ul>
         </div>
-
-        <div class="col-auto">
-          <p class="pt-3">
-
-          <div class="blockquote">
-            <blockquote class="mb-2">
-              "Tom cares. He's a force multiplier that makes everyone around him better... I highly recommend Tom as a
-              leader."
-            </blockquote>
-            <footer class="blockquote-footer">Anthony S. Cannella, B Hub Prague</footer>
-          </div>
-          <br>
-
-          <div class="blockquote">
-            <blockquote class="mb-2">
-              "Tom is not only a very talented developer, but a keen business leader... He instituted ‘hack days’ and
-              design sprints that really encouraged innovation."
-            </blockquote>
-            <footer class="blockquote-footer">Ben Lakoff, CFA</footer>
-          </div>
-          <br>
-
-          <div class="blockquote">
-            <blockquote class="mb-2">
-              "Tom has incredible personal, leadership and technical skills... the best aspect of working with Tom is
-              the quality and ease of management."
-            </blockquote>
-            <footer class="blockquote-footer">Francesco De Lisi, Intelligent Trading</footer>
-          </div>
-          <br>
-
-          <div class="blockquote">
-            <blockquote class="mb-2">
-              "Tom shows great passion and creativity... The products he built were instant hits... he has natural
-              leadership qualities."
-            </blockquote>
-            <footer class="blockquote-footer">Rupert Lane, Agoda</footer>
-          </div>
-          <br>
-          </p>
-        </div>
-
       </div>
+
+      <div class="mt-3">
+        
+        <div class="blockquote mx-4 my-5">
+          <blockquote class="mb-2" style="line-height: 1.6;">
+            <i class="fas fa-quote-left"></i>
+            an indispensable asset to our team.. 
+            the best engineer I've had the privilege of working with.. 
+            Tom fostered a positive and collaborative work environment, serving as a natural leader who inspired the entire team to strive for excellence.
+            I wholeheartedly recommend Tom for any leadership role in engineering, confident that his dedication, expertise, and leadership qualities will greatly contribute to the success of any organization.
+          </blockquote>
+          <footer class="blockquote-footer">Zac Stern, Bumble Inc</footer>
+        </div>
+        
+        <div class="blockquote mx-4 my-5">
+          <blockquote class="mb-2" style="line-height: 1.6;">
+            <i class="fas fa-quote-left"></i>
+            Tom cares. He's a force multiplier that makes everyone around him better... I highly recommend Tom as a
+            leader.
+          </blockquote>
+          <footer class="blockquote-footer">Anthony S. Cannella, Blockchain Hub</footer>
+        </div>
+        
+        <div class="blockquote mx-4 my-5">
+          <blockquote class="mb-2" style="line-height: 1.6;">
+            <i class="fas fa-quote-left"></i>
+            Tom is not only a very talented developer, but a keen business leader... He instituted ‘hack days’ and
+            design sprints that really encouraged innovation.
+          </blockquote>
+          <footer class="blockquote-footer">Ben Lakoff, Bankless Ventures</footer>
+        </div>
+        
+        <div class="blockquote mx-4 my-5">
+          <blockquote class="mb-2" style="line-height: 1.6;">
+            <i class="fas fa-quote-left"></i>
+            Tom has incredible personal, leadership, and technical skills... the best aspect of working with Tom is
+            the quality and ease of management.
+          </blockquote>
+          <footer class="blockquote-footer">Francesco De Lisi, Intelligent Trading</footer>
+        </div>
+        
+        <div class="blockquote mx-4 my-5">
+          <blockquote class="mb-2" style="line-height: 1.6;">
+            <i class="fas fa-quote-left"></i>
+            Tom shows great passion and creativity... The products he built were instant hits... he has natural
+            leadership qualities.
+          </blockquote>
+          <footer class="blockquote-footer">Rupert Lane, Agoda, Booking Inc.</footer>
+        </div>
+      </div>
+
     </div>
 
     <div class="row justify-content-center mb-2">

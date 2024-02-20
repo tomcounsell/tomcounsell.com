@@ -35,17 +35,39 @@
 
   <header class="py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-2 pt-1">
+      <div class="col-3">
 
       </div>
-      <div class="col-8 text-center">
+      <div class="col-6 text-center">
         <h1 class="display-4">
           <a class="text-dark" href="/">Tom Counsell</a>
         </h1>
       </div>
-      <div class="col-2 d-flex justify-content-end align-items-center">
 
+      <div class="col-3 d-flex flex-row justify-content-start align-items-start">
+        <a class="btn btn-default mx-2" href="rates.html" style="position: float; background-color: #F7F7F6; border: thin solid lightgrey;">
+          Rates
+        </a>
+        <button class="btn btn-default" id="shareButton" style="position: float; background-color: #F7F7F6; border: thin solid lightgrey;">
+          Share
+        </button>
+        <div id="shareMessage" style="display: none; position: fixed; top: 50px; right: 10%; background-color: #F7F7F6; border: thin solid lightgrey; padding: 10px;">
+          Copied: <span id="copiedURL"></span>
+        </div>
+        <script>
+          document.getElementById('shareButton').addEventListener('click', function() {
+            var url = window.location.href;
+            navigator.clipboard.writeText(url);
+            var shareMessage = document.getElementById('shareMessage');
+            document.getElementById('copiedURL').textContent = url;
+            shareMessage.style.display = 'block';
+            setTimeout(function() {
+              shareMessage.style.display = 'none';
+            }, 2000);
+          });
+        </script>
       </div>
+
     </div>
 
     <div class="row d-flex justify-content-center">
@@ -131,20 +153,13 @@
         </div>
 
         <div class="col-auto">
-          <div class="bg-white px-3 my-3 rounded d-none d-lg-block" style="min-width: 750px; max-width: 750px;">
+          <div class="bg-white px-3 my-4 rounded d-none d-lg-block" style="min-width: 750px; max-width: 750px;">
             <img src="https://ghchart.rshah.org/tomcounsell" alt="tomcounsell's Github chart" />
             <br>
-            <small>
-              <a href="https://github.com/tomcounsell" target="_blank">
-                view contributions on GitHub
-              </a>
-            </small>
+            <a class="text-muted" href="https://github.com/tomcounsell" target="_blank">
+              <small><small>GitHub contributions</small></small>
+            </a>
           </div>
-          <p class="font-italic pt-3">
-            solving problems and building web services, cloud infrastructure,<br>
-            artificial intelligence, chat bots, and blockchain<br>
-            since 2009<br>
-          </p>
         </div>
       </div>
     </div>
