@@ -1,8 +1,8 @@
-# TODO: Portfolio Site Rebuild (Minimalist Single-Page)
+# TODO: Portfolio Site Rebuild (Modern Professional)
 
 **Branch:** `rebuild-tailwind-v4`
-**Status:** Ready to rebuild from scratch following updated minimalist design brief
-**Design Version:** 2.0 - Light, clean, single-page portfolio
+**Status:** Ready to rebuild from scratch following updated design brief
+**Design Version:** 2.1 - Modern professional portfolio with substantive content
 
 ---
 
@@ -11,53 +11,72 @@
 ### Phase 1: Setup & Foundation
 - [ ] Create HTML boilerplate for index.html
   - [ ] Add Tailwind CSS Browser v4 CDN script
-  - [ ] Define @theme colors (off-white background, dark text, single accent color)
+  - [ ] Add Display Serif Google Font (choose one: Playfair Display, Libre Baskerville, or Lora)
+  - [ ] Define @theme colors (off-white bg, secondary bg, text colors, accent, accent-light)
   - [ ] Include Font Awesome CDN for icons
-  - [ ] System sans-serif font stack (NO Playfair Display)
+  - [ ] Set up CSS for serif headings/name and sans-serif body
+  - [ ] Apply serif font to "Tom Counsell" name wherever it appears (H1, nav, footer)
   - [ ] Set up semantic HTML structure (header, main with sections, footer)
 
 ### Phase 2: Header Navigation
-- [ ] Build simple header/nav bar
-  - [ ] Site name/logo: "Tom Counsell" (left side, simple text)
-  - [ ] Navigation links (right side): About, Achievements, Contact (anchor links)
+- [ ] Build sticky header/nav bar
+  - [ ] Site name/logo: "Tom Counsell" (left side, serif font)
+  - [ ] Navigation links (right side): About, Experience, Contact (anchor links)
   - [ ] Share button with clipboard functionality
-  - [ ] Mobile: Consider hamburger menu if needed
-  - [ ] Minimal styling, light background
+  - [ ] Sticky positioning with light background and subtle border
+  - [ ] Mobile: Responsive layout (consider stacking if needed)
 
 ### Phase 3: Hero Section
-- [ ] Build hero section (first screenful)
-  - [ ] Circular portrait image (100px mobile, 120px desktop)
-  - [ ] Center-aligned above name
-  - [ ] H1: "Tom Counsell" (large, bold, 3rem desktop)
-  - [ ] Subtitle: "CTO & Technical Leader" (smaller, gray)
-  - [ ] Social media icon row (5 icons, ~24px each)
+- [ ] Build hero section (make a strong first impression)
+  - [ ] **Large circular portrait image (160px mobile, 240px tablet, 320px+ desktop)**
+  - [ ] Portrait is primary visual anchor - as big as layout allows
+  - [ ] Subtle shadow on portrait for polish
+  - [ ] Center-aligned above name with generous breathing room
+  - [ ] H1: "Tom Counsell" (large, bold, serif, 3rem+ desktop)
+  - [ ] Subtitle: "CTO & Technical Leader" (serif, gray)
+  - [ ] Social media icon row (5 icons with generous sizing)
     - [ ] LinkedIn, AngelList, GitHub, Stack Overflow, Telegram
-    - [ ] Simple icons in gray/accent color with hover state
-  - [ ] Generous padding, clean and airy
+    - [ ] Icons in accent color with hover states
+  - [ ] Extra vertical padding to let portrait breathe
 
 ### Phase 4: About Section
 - [ ] Build about section
-  - [ ] Section heading H2: "About"
-  - [ ] Single paragraph biography (4-5 sentences from CONTENT.md)
-  - [ ] Max width 600-800px, left-aligned text
+  - [ ] Section heading H2: "About" (serif, large)
+  - [ ] Three-paragraph biography from CONTENT.md lines 216-220
+  - [ ] Max width 800px, left-aligned text
   - [ ] Centered container
-  - [ ] Ample vertical padding
+  - [ ] Alternating background color for visual interest
 
-### Phase 5: Key Achievements Section
-- [ ] Build achievements section
-  - [ ] Section heading H2: "Key Achievements"
-  - [ ] 3 achievement items:
-    - [ ] "Leading Dev Teams" with icon
-    - [ ] "Building Software" with icon
-    - [ ] "Millions Served" with icon
-  - [ ] Responsive grid: 1 column mobile, 3 columns desktop
-  - [ ] Each item: icon (32px) + short text label
-  - [ ] Center-aligned within grid cells
-  - [ ] Simple outline icons, consistent style
+### Phase 5: Professional Experience Section
+- [ ] Build experience section with cards
+  - [ ] Section heading H2: "Professional Experience" (serif, large)
+  - [ ] Create experience cards for all roles from CONTENT.md:
+    - [ ] Fuse (DeckFusion) - CTO (Jun 2024-present)
+    - [ ] Bumble/Official - Head of Engineering (Oct 2022-Dec 2023)
+    - [ ] Chainstarters - Strategic Advisor (May 2018-present)
+    - [ ] Yudame - Owner (Mar 2019-present)
+    - [ ] SIMPLENIGHT - Cache Architect (2021-2024)
+    - [ ] Blockchain Hub Prague - Executive Director (Sep 2017-Oct 2019)
+    - [ ] Intelligent Trading Foundation - CTO (Jan 2017-Aug 2020)
+    - [ ] Agoda (Booking Group) - Senior Team Lead (Jan 2016-Sep 2016)
+    - [ ] Anou - Cofounder, Technical Director (Dec 2012-Jul 2015)
+  - [ ] Each card includes:
+    - [ ] Company logo (42px height, from static/img/)
+    - [ ] Role title (H3, serif, prominent)
+    - [ ] Company name (H4, accent color, linked)
+    - [ ] Date range (small text, gray)
+    - [ ] 3-5 bullet points from CONTENT.md
+    - [ ] Technology tags (rounded badges, colored backgrounds)
+  - [ ] Card styling:
+    - [ ] Light border or subtle shadow
+    - [ ] Padding: 1.5-2rem
+    - [ ] Single-column stacked layout
+    - [ ] Alternating backgrounds or consistent white cards
+    - [ ] Generous spacing between cards
 
 ### Phase 6: Contact Section
 - [ ] Build contact section (CTA)
-  - [ ] Section heading H2: "Get in Touch"
+  - [ ] Section heading H2: "Get in Touch" (serif)
   - [ ] Intro text: "Interested in working with Tom? Let's get in touch."
   - [ ] Large CTA button linking to rates.html
   - [ ] Button text: "View Rates & Contact"
@@ -66,133 +85,147 @@
   - [ ] Extra bottom padding
 
 ### Phase 7: Footer
-- [ ] Build minimal footer
+- [ ] Build footer
   - [ ] Copyright: "© 2025 Tom Counsell"
-  - [ ] Optional: GitHub source link
-  - [ ] Optional: "Back to top" link
+  - [ ] GitHub source link
+  - [ ] "Back to top" link
   - [ ] Small text, centered
+  - [ ] Light border on top
 
 ### Phase 8: Rates.html (Secondary Page)
-- [ ] Rebuild rates.html to match minimalist aesthetic
-  - [ ] Reuse header/nav from index.html
-  - [ ] Hero section (portrait, tagline, social links for consistency)
+- [ ] Build rates.html with consistent styling
+  - [ ] Reuse header/nav from index.html (update links to point to index.html#sections)
+  - [ ] Hero section (large portrait, name, tagline, social links - unified with index.html)
   - [ ] Testimonials section
+    - [ ] Section heading H2: "What People Say"
     - [ ] 5 quotes with attribution from CONTENT.md
-    - [ ] Clean blockquote styling, generous spacing
-  - [ ] Pricing table
-    - [ ] Base Rate: $324/hr
-    - [ ] FinTech: $486/hr
-    - [ ] Consultancy: $648/hr
-    - [ ] Simple table or card layout
-  - [ ] Services sections
-    - [ ] Core Services (4 items)
+    - [ ] Clean blockquote styling with accent left border
+    - [ ] Generous spacing
+  - [ ] Pricing section
+    - [ ] Section heading H2: "2024 Rates"
+    - [ ] Table with 3 rates:
+      - [ ] Base Rate: $324/hr
+      - [ ] FinTech: $486/hr
+      - [ ] Consultancy: $648/hr
+  - [ ] Services sections (grid layouts)
+    - [ ] Core Services (4 items in 2-column grid)
     - [ ] Data & Analytics (2 items)
-    - [ ] Specialized Technologies (3 items)
-    - [ ] Integrations & Content (3 items)
-    - [ ] Clean list or card format
-  - [ ] Payment Terms, Discounts, Additional Assurances
+    - [ ] Specialized Technologies (3 items in 3-column grid)
+    - [ ] Integrations & Content (3 items in 3-column grid)
+    - [ ] Each with icon, title, description
+  - [ ] Payment Terms section
+  - [ ] Discounts section
+  - [ ] Additional Assurances section
+  - [ ] CTA section with email contact button
   - [ ] Reuse footer from index.html
 
 ### Phase 9: Polish & Testing
 - [ ] Test anchor navigation on index.html
 - [ ] Test share button clipboard functionality
-- [ ] Verify all external links work (social, rates page)
+- [ ] Verify all external links work (social, company links, rates page)
 - [ ] Test mobile responsiveness at all breakpoints
-  - [ ] < 640px (mobile)
+  - [ ] < 640px (mobile - single column)
   - [ ] 640-768px (tablet)
-  - [ ] 1024px+ (desktop)
+  - [ ] 1024px+ (desktop - larger portrait, optimal spacing)
 - [ ] Check accessibility
-  - [ ] Semantic HTML (proper heading hierarchy)
-  - [ ] Alt text on portrait image
+  - [ ] Semantic HTML (proper heading hierarchy H1→H2→H3→H4)
+  - [ ] Alt text on all images (portrait, company logos)
   - [ ] Color contrast (WCAG AA)
   - [ ] Keyboard navigation
 - [ ] Test on different browsers (Chrome, Safari, Firefox)
 - [ ] Verify smooth scrolling behavior
 - [ ] Check all spacing/padding is consistent
-- [ ] Ensure single-column layout on mobile
+- [ ] Verify typography hierarchy (serif headings, sans-serif body)
+- [ ] Check that colors are used throughout (not just black/white)
 
 ---
 
-## Design System Reference (v2.0)
+## Design System Reference (v2.1)
 
 ### Colors (Tailwind @theme)
 ```
 --color-bg-primary: #FAFAFA       (Off-white background)
+--color-bg-secondary: #F0F5F4     (Light teal for alternating sections)
 --color-text-primary: #111111     (Dark charcoal text)
---color-text-secondary: #555555   (Gray for subtitles)
---color-accent: #52796F           (Muted teal for CTAs)
+--color-text-secondary: #555555   (Gray for subtitles, dates)
+--color-accent: #52796F           (Muted teal for CTAs, links, company names)
+--color-accent-light: #6B9B8F     (Lighter teal for hover states)
 ```
 
 ### Typography
-- **All text:** System sans-serif stack (NOT Playfair Display)
-- **H1 (Name):** 3rem (48px), bold/extra-bold
-- **H2 (Sections):** 1.5-2rem (24-32px), semibold
-- **H3 (Sub-points):** 1.125rem (18px), medium
-- **Body:** 1rem (16px), line-height 1.6
-- **NO monospace tech tags** (not applicable in minimalist design)
+- **"Tom Counsell" Name:** Display serif (Playfair Display, Libre Baskerville, or Lora)
+  - Balanced, readable, authoritative
+  - Used in H1, navigation, footer - wherever the name appears
+- **Headings (H2-H4):** Same display serif font
+  - H1 (Name): 3rem (48px), bold, serif
+  - H2 (Sections): 1.75-2.25rem (28-36px), semibold, serif
+  - H3 (Roles): 1.25rem (20px), medium, serif
+  - H4 (Companies): 1rem (16px), semibold, accent color
+- **Body text:** System sans-serif stack
+  - Body: 1rem (16px), line-height 1.6
+  - Small (dates, tags): 0.875rem (14px)
+- **Technology tags:** Sans-serif, small, rounded badges with colored backgrounds
 
 ### Layout Principles
-- **Single-column layout** throughout
-- **Max content width:** 600-800px for text
+- **Single-column layout** for experience cards
+- **Max content width:** 800-1000px for readability
 - **Centered containers** with generous margins
-- **No cards, no gradients, no textures**
-- **Flat design:** No shadows, no borders (except very subtle if needed)
+- **Card-based design:** Subtle borders, shadows, or alternating backgrounds
+- **Visual hierarchy:** Large portrait → Name → Experience cards with logos
 - **Whitespace:** Generous (4rem desktop, 2rem mobile between sections)
+- **Color throughout:** Not just black/white - use accent colors meaningfully
 
-### Responsive Breakpoints
-- Mobile: `< 640px` (single column, stacked)
-- Tablet: `sm: 640px`, `md: 768px` (still mostly single column)
-- Desktop: `lg: 1024px`, `xl: 1280px` (optimized spacing)
-- Wide: `2xl: 1536px` (max content width)
-
-### Key Differences from Previous Build
-- ❌ NO dark navy backgrounds
-- ❌ NO heavy card-based layouts with 10 experience cards
-- ❌ NO Playfair Display serif font
-- ❌ NO color progression gradients
-- ❌ NO texture overlays
-- ❌ NO 12 Rules for Business grid
-- ✅ Light, airy off-white background
-- ✅ Simple single-page scroll
-- ✅ 3 achievement highlights (not detailed experience cards)
-- ✅ Sans-serif throughout
-- ✅ One accent color only
-- ✅ Minimal, clean, focused on content
+### Key Features (v2.1)
+- ✅ Display serif font for "Tom Counsell" name and headings (Playfair Display, Libre Baskerville, or Lora)
+- ✅ Professional experience cards with company logos
+- ✅ Technology tags with colored backgrounds
+- ✅ Accent colors used throughout (teal: #52796F)
+- ✅ Alternating section backgrounds for visual interest
+- ✅ Large portrait photo (160px-320px+) as hero element
+- ✅ Subtle shadows and borders for depth
+- ✅ Information-rich content (8-10 experience cards)
+- ✅ Clean, modern, professional - not sterile or corporate
 
 ---
 
 ## Files to Reference
-- **DESIGN_BRIEF.md v2.0** - Complete minimalist design specifications
-- **CONTENT.md** - All copy/content for the site
+- **DESIGN_BRIEF.md v2.1** - Complete modern professional design specifications
+- **CONTENT.md** - All copy/content for the site (experience details, testimonials, services)
 - **CLAUDE.md** - Project documentation
 
 ## Notes
 - This is a static site with no backend
-- Single-page scrolling design with anchor navigation
+- Long-scrolling portfolio with anchor navigation
 - Secondary rates.html page for detailed info
 - Use Tailwind utility classes throughout
 - Keep JavaScript minimal (share button only)
 - Git commits should NOT include co-author information
-- Focus: Light, clean, minimalist aesthetic
-- Emphasis: Content over decoration, readability, whitespace
+- Focus: Modern, professional, content-rich
+- Emphasis: Substantive content with elegant design
 
 ---
 
 ## Content Mapping
 
 ### Hero Section
-- Portrait: `static/img/profile.jpg`
+- Portrait: `static/img/profile.jpg` (LARGE - 320px+ desktop)
 - Name: "Tom Counsell"
 - Title: "CTO & Technical Leader"
 - Social links from CONTENT.md lines 25-29
 
 ### About Section
-- Biography: CONTENT.md lines 216-220 (condensed to 4-5 sentences)
+- Biography: CONTENT.md lines 216-220 (three paragraphs)
 
-### Key Achievements Section
-- Achievement 1: "Leading Dev Teams" (from CONTENT.md header tagline)
-- Achievement 2: "Building Software" (from CONTENT.md header tagline)
-- Achievement 3: "Millions Served" (from CONTENT.md header tagline)
+### Professional Experience Section
+- Fuse: CONTENT.md lines 40-52
+- Bumble/Official: CONTENT.md lines 56-72
+- Chainstarters: CONTENT.md lines 76-90
+- Yudame: CONTENT.md lines 94-103
+- SIMPLENIGHT: CONTENT.md lines 107-118
+- Blockchain Hub: CONTENT.md lines 121-142
+- ITF: CONTENT.md lines 145-163
+- Agoda: CONTENT.md lines 166-184
+- Anou: CONTENT.md lines 187-209
 
 ### Contact Section
 - CTA: Links to rates.html
@@ -202,3 +235,15 @@
 - Pricing: CONTENT.md lines 265-268
 - Services: CONTENT.md lines 277-310
 - Terms: CONTENT.md lines 315-334
+
+### Company Logos (42px height)
+All located in `static/img/`:
+- deckfusion.jpeg (Fuse)
+- bumble.png, official.jpg (Bumble/Official)
+- chainstarters.jpg
+- yudame.png
+- simplenight.jpg
+- bhub.png (Blockchain Hub)
+- ITF.png
+- agoda.png, booking.png (Agoda/Booking)
+- anou.png

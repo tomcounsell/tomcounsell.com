@@ -2,8 +2,8 @@
 ## tomcounsell.com
 
 **Date:** October 30, 2025
-**Version:** 2.0
-**Project Type:** Minimalist Personal Website
+**Version:** 2.1
+**Project Type:** Modern Professional Portfolio
 
 ---
 
@@ -20,14 +20,14 @@ Tom Counsell is a strategic technology leader who combines:
 
 ## Site Structure
 
-### Single-Page Layout
-The site consists of one long-scrolling page with anchor-linked sections: Hero, About, Key Achievements, and Contact. The top navigation menu uses these anchors to smoothly scroll to each section.
+### Long-Scrolling Portfolio Layout
+The site consists of one long-scrolling page with anchor-linked sections: Hero, About, Professional Experience, and Contact. The top navigation menu uses these anchors to smoothly scroll to each section.
 
 **Pages:**
-- `index.html` - Main single-page portfolio with all sections
+- `index.html` - Main portfolio with professional experience cards
 - `rates.html` - Secondary page for detailed rates, testimonials, and contact information
 
-**Anchor Navigation:** A simple header nav bar at the top of the page contains Tom's name or logo (linked to the top/hero) and short text links to "About", "Achievements", and "Contact." This allows quick jumps to each section.
+**Anchor Navigation:** A simple header nav bar at the top of the page contains Tom's name or logo (linked to the top/hero) and short text links to "About", "Experience", and "Contact." This allows quick jumps to each section.
 
 **Mobile-First Approach:** The structure is planned mobile-first, meaning on small screens the content stacks vertically in one column (no side-by-side elements), and on larger screens it simply expands or centers within the available space.
 
@@ -56,12 +56,12 @@ The site uses a light, airy color scheme:
 - Plenty of whitespace, no clutter
 - Easy to scan – main points visible in seconds
 
-### Simplicity in Layout
-- Straightforward vertical stack of content blocks
-- No multiple columns or complex grids
-- Visual elements (images, icons) used sparingly
-- Consistent structure across sections (heading, then text or icons)
-- Fast load times, clean look
+### Balance in Layout
+- Vertical stack of content blocks with visual interest
+- Single-column for experience cards, grid layouts for other sections where appropriate
+- Visual elements (company logos, icons) used to enhance credibility and scannability
+- Consistent structure across sections with variation to maintain interest
+- Fast load times, professional appearance
 
 ### Responsive & Mobile-Friendly
 - All elements sized and positioned with small screens in mind
@@ -82,37 +82,56 @@ Text Secondary:   #555555  (Medium gray for subtitles)
 ```
 
 ### Accent Color
-Choose ONE muted accent color for highlights and interactive elements:
-- Options: Soft teal (#52796F), dusty blue, or similar muted professional tone
-- Low saturation to fit subdued aesthetic
+Soft teal (#52796F) as the primary accent color for highlights and interactive elements:
 - Used for:
-  - Contact Me button background
+  - Contact/CTA button backgrounds
   - Social media icon highlights
   - Hover states for links
-  - Achievement icons (optional)
-- Applied sparingly to draw attention where needed
+  - Company name/role headers in experience cards
+  - Section dividers or decorative elements
+  - Tag/label backgrounds for technologies
+- Applied consistently throughout to create cohesion
+
+### Secondary Colors
+Additional subtle colors for visual interest:
+- Light teal background for alternating sections (#F0F5F4)
+- Soft borders and dividers using gray tones
+- Technology tags can use muted color variations
 
 ### Usage Notes
-- Monochromatic + accent scheme keeps design minimalist and cohesive
+- Primary accent + subtle secondary colors create visual interest without overwhelming
 - All colors meet WCAG AA contrast standards
-- No additional colors beyond grayscale and the single accent
+- Color used meaningfully, not just decoration
 
 ---
 
 ## Typography
 
 ### Font System
-**Primary Font:** Modern sans-serif throughout for clean, professional appearance
+**"Tom Counsell" Name Display:** Display serif - balanced, readable, authoritative
+```css
+font-family: "Playfair Display", "Libre Baskerville", "Lora", Georgia, serif;
+```
+Use one of: Playfair Display, Libre Baskerville, or Lora for the name "Tom Counsell" wherever it appears (H1, navigation, footer, etc.)
+
+**Headings (H2-H4):** Serif font for elegance and distinction
+```css
+font-family: "Playfair Display", "Libre Baskerville", "Lora", Georgia, serif;
+```
+
+**Body & UI:** Modern sans-serif for readability
 ```css
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
              Roboto, "Helvetica Neue", Arial, sans-serif;
 ```
 
 ### Heading Hierarchy
-- **H1 (Hero name):** 3rem (48px) on desktop, smaller on mobile, bold/extra-bold weight
-- **H2 (Section titles):** 1.5rem to 2rem (24px-32px), medium/semi-bold weight
-- **H3 (Sub-points):** 1.125rem (18px), medium weight
-- **Body text:** 1rem (16px), line-height 1.6 for readability
+- **H1 (Hero name):** 3rem (48px) on desktop, serif, bold/extra-bold weight
+- **H2 (Section titles):** 1.75rem to 2.25rem (28px-36px), serif, semibold
+- **H3 (Experience roles, sub-sections):** 1.25rem (20px), serif, medium weight
+- **H4 (Company names):** 1rem (16px), serif or sans-serif, semibold, accent color
+- **Body text:** 1rem (16px), sans-serif, line-height 1.6 for readability
+- **Small text (dates, tags):** 0.875rem (14px), sans-serif
 
 ### Font Weights & Styles
 - Heavy weight for name
@@ -131,24 +150,27 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
 ## Core Sections
 
 ### 1. Hero Section
-The first screenful of content, communicating who Tom is.
+The first screenful of content, communicating who Tom is. **This section should make a strong first impression.**
 
 **Elements:**
-- **Portrait Image:** Tom's profile photo as a circle (~100px diameter mobile, larger on desktop)
+- **Portrait Image:** Tom's professional photo as a large circle
+  - **Primary visual anchor of the page** - make it prominent
   - Centered above name on all screen sizes
-  - Friendly, modern look
+  - As large as the design allows while maintaining balance (160px+ mobile, 320px+ desktop)
+  - Tom's professional appearance (handsome, well-dressed) conveys trust and leadership
+  - High-quality image with subtle shadow for polish
 - **Name and Title:**
-  - "Tom Counsell" in large, bold font
-  - Subtitle: "CTO & Technical Leader" (or similar) beneath in smaller text
+  - "Tom Counsell" in large, bold serif font (Playfair Display)
+  - Subtitle: "CTO & Technical Leader" beneath in smaller text
 - **Social Links:** Icons linking to professional profiles
-  - LinkedIn, AngelList, GitHub, Stack Overflow, Telegram
-  - Simple glyphs (~24px) in accent color or gray
+  - LinkedIn, AngelList, GitHub, Stack Overflow, Telegram (all 5)
+  - Simple glyphs in accent color or gray
   - Horizontal row with hover states
-  - Limit to 3-4 most important networks
+  - Generous sizing and spacing
 
-**Layout:** Central alignment, generous padding above and below
+**Layout:** Central alignment, generous padding above and below, extra vertical space to let the portrait breathe
 
-**Visual Hierarchy:** Photo → Name (largest text) → Title → Social icons
+**Visual Hierarchy:** Large Photo (hero element) → Name (largest text) → Title → Social icons
 
 ### 2. About Section
 Concise introduction providing context about Tom's background and values.
@@ -167,24 +189,32 @@ Concise introduction providing context about Tom's background and values.
 
 **Visuals:** Minimal – no additional images (portrait already in Hero), possibly small decorative horizontal line
 
-### 3. Key Achievements Section
-Showcase Tom's notable accomplishments in visually engaging, quick-to-read format.
+### 3. Professional Experience Section
+Showcase Tom's career history with detailed experience cards for each role.
 
 **Elements:**
-- **Section Heading:** "Key Achievements" or "What I've Done"
-- **Achievement Items:** 3-4 key points, each with icon and brief text
-  - Example points: "Leading Dev Teams", "Building Software", "Millions Served"
-  - Simple line icons or duotone icons in consistent style
-  - Icons in accent color or gray (~32px)
-  - Text: 1 line each, slightly larger or bold
+- **Section Heading:** "Professional Experience" or "Experience"
+- **Experience Cards:** One card per role/company (8-10 cards from CONTENT.md)
+  - Company logos (42px height, maintaining aspect ratio)
+  - Role title (H3, serif, prominent)
+  - Company name (H4, accent color, linked)
+  - Date range (small text, gray)
+  - 3-5 bullet points describing responsibilities and impact
+  - Technology tags (small rounded badges with light backgrounds)
+  - Cards can use subtle borders, light shadows, or alternating background colors
 
 **Layout:**
-- Mobile: Stack vertically (one per line)
-- Desktop: Horizontal row or grid (3 items in row, or 2x2 for 4 items)
-- Centered within grid cells, consistent spacing between items
-- Plenty of padding separating from sections above/below
+- Single-column layout for readability
+- Each card has generous padding (1.5-2rem)
+- Consistent spacing between cards
+- Mobile: Full width stacked
+- Desktop: Centered with max-width for readability
 
-**Visual Style:** Light, minimal, possibly uniform icon background shapes (circles)
+**Visual Style:**
+- Clean card-based design with subtle depth
+- Logos add visual interest and credibility
+- Technology tags provide scannable information
+- Professional but not corporate
 
 ### 4. Contact Section
 Final section acting as call-to-action for getting in touch.
@@ -236,21 +266,31 @@ Final section acting as call-to-action for getting in touch.
 - Consistent spacing scale (multiples of 4 or 8px)
 - Tailwind spacing utilities: 4, 8, 16, 24, 32px
 
-### No Borders or Shadows
-- Separation via spacing rather than lines
-- Very light 1px divider only if absolutely needed
-- Flat design, no card-like shadows
+### Subtle Depth & Separation
+- Light borders (1px, subtle gray) for card definition
+- Gentle shadows (shadow-sm, shadow-md) for depth and hierarchy
+- Alternating background colors for section variation
+- Not flat, but not heavy - balanced approach
 
 ---
 
 ## Imagery & Iconography
 
-### Photography
-- Only photograph: Tom's portrait in Hero
-- Good-quality, friendly photo
-- Cropped as circle (border-radius: 50%)
-- Responsive size: ~8rem mobile, ~10rem desktop
-- No background images or illustrations
+### Photography & Logos
+- **Portrait:** Tom's professional photo in Hero section
+  - High-quality photo showcasing Tom's professional presence
+  - Tom is handsome and well-dressed, evoking trust and strength
+  - **Make the image as large as possible while keeping the design clean**
+  - Cropped as circle (border-radius: 50%)
+  - Suggested sizes: 160px mobile, 240px tablet, 320px desktop (or larger if layout permits)
+  - Prominent placement - this image builds immediate credibility
+  - Subtle shadow for depth and polish
+  - The portrait should be a hero element, not an afterthought
+- **Company Logos:** In experience cards
+  - 42px height, maintaining aspect ratio
+  - Positioned near company name/role
+  - Adds credibility and visual interest
+- No decorative background images or illustrations
 
 ### Icons
 - Social links: Standard brand icons
@@ -282,11 +322,41 @@ Final section acting as call-to-action for getting in touch.
 <style type="text/tailwindcss">
   @theme {
     --color-bg-primary: #FAFAFA;
+    --color-bg-secondary: #F0F5F4;
     --color-text-primary: #111111;
     --color-text-secondary: #555555;
-    --color-accent: #52796F;  /* Muted teal - adjust as needed */
+    --color-accent: #52796F;
+    --color-accent-light: #6B9B8F;
   }
 </style>
+```
+
+### Display Serif Font (Choose One)
+**Option 1: Playfair Display** (elegant, classic)
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+```
+
+**Option 2: Libre Baskerville** (traditional, readable)
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+```
+
+**Option 3: Lora** (modern, balanced)
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+```
+
+**Font Stack:** Use one primary font with fallbacks
+```css
+/* Apply to "Tom Counsell" name and all headings */
+font-family: "Playfair Display", "Libre Baskerville", "Lora", Georgia, serif;
 ```
 
 ### Implementation Notes
@@ -324,10 +394,10 @@ Final section acting as call-to-action for getting in touch.
       <p><!-- Biography --></p>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" role="region">
-      <h2>Key Achievements</h2>
-      <ul><!-- Achievement items as list --></ul>
+    <!-- Professional Experience Section -->
+    <section id="experience" role="region">
+      <h2>Professional Experience</h2>
+      <div><!-- Experience cards from CONTENT.md --></div>
     </section>
 
     <!-- Contact Section -->
@@ -436,11 +506,12 @@ The rates page provides detailed information and maintains consistent styling wi
 - Single column, left-aligned text
 - Max width constraint for readability
 
-**4. Build Key Achievements Section**
+**4. Build Professional Experience Section**
 - Section heading
-- 3 achievement items with icons and short text
-- Responsive grid (1 column mobile, 3 columns desktop)
-- Center-aligned content
+- Experience cards for each role (8-10 from CONTENT.md)
+- Include: company logo, role, dates, description bullets, technology tags
+- Single-column stacked layout
+- Subtle borders/shadows for card definition
 
 **5. Build Contact Section**
 - Section heading and intro text
@@ -469,7 +540,7 @@ The rates page provides detailed information and maintains consistent styling wi
 
 ## Brand Essence
 
-"Clean, strategic, minimalist personal website for a stoic CTO" - Light, airy, focused on content over decoration, emphasizing Tom's leadership and technical excellence through simplicity and clarity.
+"Modern, professional portfolio for a strategic CTO" - Clean and well-designed with substantive content. Balances visual appeal with information density. Showcases Tom's impressive career trajectory with elegance and credibility. Professional without being corporate, modern without being trendy.
 
 ---
 
