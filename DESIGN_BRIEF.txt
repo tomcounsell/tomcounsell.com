@@ -1,0 +1,314 @@
+Design Brief: Minimalist Personal Website for Tom Counsell
+
+Site Structure
+	•	Single-Page Layout: The site will consist of one long-scrolling page with anchor-linked sections: Hero, About, Key Achievements, and Contact. The top navigation menu will use these anchors to smoothly scroll to each section.
+	•	Anchor Navigation: A simple header nav bar at the top of the page will contain Tom’s name or logo (linked to the top/hero) and short text links to “About”, “Achievements”, and “Contact.” This allows quick jumps to each section.
+	•	Secondary Contact Page: In addition to the main page, there will be a lightweight secondary page (e.g. /contact or /rates) accessible via the Contact section’s call-to-action. This page is for detailed contact information or a contact form. It keeps the main page minimal while still providing a way for visitors to reach out or view Tom’s consulting rates.
+	•	Mobile-First Approach: The structure is planned mobile-first, meaning on small screens the content stacks vertically in one column (no side-by-side elements), and on larger screens it simply expands or centers within the available space. This ensures the site looks and works great on smartphones by default, then scales up for tablets and desktops.
+
+Design Constraints
+	•	Light Theme Only: The site uses a light, airy color scheme. The background will be an off-white (approximately #FAFAFA) to avoid the starkness of pure white and give a modern, soft feel ￼. All text will appear in a dark charcoal or near-black color to maximize readability against the light background. This high contrast (dark text on light background) is critical for legibility ￼. The off-white background provides a subtle, contemporary finish and avoids the eye strain that pure white can cause by being too bright ￼.
+	•	No Animation or Gimmicks: The design will be static and calm – no parallax, sliders, or animated effects. Sections will appear as the user scrolls, but there won’t be any motion-based transitions or hovering elements that distract. This aligns with a minimalist philosophy, keeping focus on content. Any interactivity (like the navigation or button hovers) will be kept simple (e.g., a slight color change on hover) rather than using elaborate animations.
+	•	Visual Hierarchy & Clarity: A strong visual hierarchy will guide the user’s eyes through the page in order of importance. This is achieved through typography (larger/bolder text for key info) and spacing. For example, Tom’s name in the Hero should be the largest text, immediately grabbing attention, while section headings (About, Achievements) are smaller, and body text is modest. Users tend to scan pages by looking at the biggest, boldest elements first ￼, so the design will leverage that: the hero section will be very prominent, section headings clearly distinguishable, and content grouped with sufficient spacing. Every section will have a clear heading and concise content so that a quick scroll gives the reader an immediate sense of Tom’s profile. The layout will be easy to scan, meaning someone can glean the main points (who Tom is, what he’s accomplished, how to contact him) in seconds. We will use plenty of whitespace and avoid clutter, as recommended for single-page designs ￼.
+	•	Simplicity in Layout: The overall layout is straightforward – essentially a vertical stack of content blocks. We will not introduce multiple columns or complex grids that could complicate the responsiveness. Visual elements like images or icons will be used sparingly, only when they reinforce the content (for instance, a small icon next to each achievement). This restraint ensures fast load times and a clean look. Each section will have a consistent structure (e.g., a heading, then text or icons), so users intuitively know how to find information.
+	•	Responsive & Mobile-Friendly: Designing mobile-first means all elements are sized and positioned with small screens in mind. Buttons will be large enough to tap with a finger, text will be legible on a phone (no tiny font sizes), and images will scale to the width of the screen. On larger screens (desktop), we won’t simply stretch everything; instead we might introduce sensible max-widths for text lines and use the extra space as padding/margin. The result is a site that feels tailored to any device – on a phone it might feel like a well-spaced app screen, and on desktop it feels like a focused, centered one-pager. This approach is crucial in today’s mobile-first world to ensure a smooth experience across devices ￼.
+
+Core Requirements
+
+Hero Section: This is the first screenful of content and should immediately communicate who Tom is and provide a personable touch.
+	•	Portrait Image: Use Tom’s existing profile photo (from tomcounsell.com) in a prominent way. The image will be displayed as a circle (for a friendly, modern look) at the top of the page. On desktop, this portrait could be placed to one side (left of the text), but on mobile it will be centered above the name. The size should be large enough to be easily recognizable – roughly 100px in diameter on mobile, and slightly larger on desktop.
+	•	Name and Title: Tom’s name should be instantly visible – we’ll use a large font size, bold weight, and dark color for “Tom Counsell”. Directly beneath, include a brief title or tagline like “CTO & Technical Leader” (or a similar role description). This subtitle should be smaller than the name but still noticeable. Together, the name and title give a one-second overview of Tom’s professional identity.
+	•	Social Links: Prominently display icons linking to Tom’s professional social profiles (for example, LinkedIn, AngelList, GitHub, Stack Overflow). These can be placed in a row under the name/title. Each icon will be a simple glyph (the logo of the platform) in a consistent style. They should be fairly small (maybe ~24px) and use the accent color or simple gray, with a hover state to indicate interactivity. This allows visitors to quickly find more about Tom or connect with him on those platforms ￼. On mobile, these icons might wrap to two lines if needed or scroll horizontally if many – but we should limit to the most important 3-4 networks to keep it clean.
+	•	Layout and Alignment: The Hero content (image, name, title, icons) will be centrally aligned (especially on mobile and likely on desktop as well, unless the portrait floats to the side on larger screens). There should be generous padding above and below the Hero content so it’s distinctly the “first section.” The visual hierarchy here is: Photo draws the eye first (human element), then name (largest text), then title, then the social icons. This section essentially functions as a quick summary of “who is this person?”
+
+About Section: A concise introduction that provides context about Tom’s background and values.
+	•	Section Heading: It can simply be “About” or “About Tom”. This heading will be smaller than the hero text, but still clear (e.g., ~2rem size, bold). We might stylize it slightly (for example, a subtle underline or an accent color dot) to give a visual cue, but it will generally follow the site’s simple style.
+	•	Paragraph Content: A short paragraph (approximately 4-5 sentences, ~60-80 words) describing Tom’s professional biography and personal qualities. This text should highlight Tom’s leadership, vision, and technical authority in an approachable tone. For instance, it could mention that “Tom bootstrapped his first successful startup, growing it to a multi-million-dollar enterprise, and has led engineering teams at both startups and large companies”, and perhaps note something about his philosophy (like how he balances innovation with mentorship – drawn from hints in his profile) ￼. We should avoid long-winded history; instead focus on the high-impact points that establish credibility (years of experience, companies or industries, major achievements like raising funds or exiting companies, etc.).
+	•	Tone & Style: The about text should come across as confident but humble. In design terms, we’ll format it as a normal paragraph in a readable font size (around 16px). We will ensure there’s enough contrast and line-height for easy reading on screen. Given the single-column layout, the text will likely be centered within that column (with left alignment of the paragraph text itself for readability). We might use italic or a slight accent color for any particularly important keyword or quote, but sparingly.
+	•	Visuals: Likely no additional images here (Tom’s portrait is already in the Hero). Possibly a small decorative icon or horizontal line could separate this section, but since we want to avoid clutter, we may rely just on whitespace. If Tom has a signature or a personal logo, we could very subtly incorporate it as a watermark or beside his name, but only if it’s very minimalist.
+
+Key Achievements Section: A section to showcase Tom’s notable accomplishments or skills in a visually engaging, quick-to-read format.
+	•	Section Heading: Title this section something like “Key Achievements” or “What I’ve Done”. This prepares the user for a list of highlights. The style of this heading will match the About heading (for consistency) – likely the same font size and color, maybe centered.
+	•	Achievements Content: Rather than long text, we will use a grid of brief points, each paired with an icon or simple graphic:
+	•	We’ll include 3 (or possibly 4) key points. From Tom’s profile, for example, one could be “Leading Dev Teams”, another “Building Software”, and another “Millions Served”, since these phrases appear to be important in his current site ￼. These encapsulate impact (teams led, products built, users reached).
+	•	Each point will have a minimal icon: e.g., a small team icon (silhouettes of people) next to “Leading Dev Teams”, a code or tool icon next to “Building Software”, and a globe/user icon for “Millions Served”. The icons should be simple line icons or duotone icons that match in style, likely in the single accent color or a gray (to maintain the monochromatic vibe).
+	•	The text for each achievement will be short (1 line each, a few words as above). We’ll use a slightly larger text size or bold weight for these labels to make them stand out as key points. They should be digestible at a glance.
+	•	Layout: On mobile, these achievement items will stack vertically (one per line or perhaps two per line if icons are small, but likely one per line for clarity). On desktop, we can arrange them in a horizontal row or a grid:
+	•	If three items, one row of three columns works well. If four items, a 2x2 grid could be used.
+	•	Each item will be centered within its grid cell. There will be consistent spacing between them (using CSS grid or flex with space-around). The design will ensure balance – for example, three items evenly spaced across the screen with icons and text centered looks clean and symmetric.
+	•	Plenty of padding inside this section will separate it from the About above and Contact below.
+	•	Visual Style: We will keep this section light. Perhaps a very light subtle background tint (like a slightly different off-white or a thin divider line) could be used to distinguish it, but it’s not required. The focus will be on the icons and the few words of text. We might give the icons a uniform background shape (like all in circles) to add a design element, but using too many colors or graphics would violate the simplicity goal. So likely, icons will be simple and use the accent or a neutral tone, and the text will be charcoal like the rest of the site. The consistent style of each achievement item will make a nice responsive grid that is easy to scan.
+
+Contact Section: The final section on the main page, acting as a call-to-action for getting in touch with Tom.
+	•	Intro Text: A short prompt or encouragement to contact Tom. For example, “Interested in working with Tom? Let’s get in touch.” This should be a one-liner or at most two short lines. It sets a friendly, open tone inviting communication. We’ll style this as a normal paragraph or slightly highlighted text, possibly slightly larger than the body text to make it stand out as an important final message.
+	•	Contact Button (CTA): The centerpiece of this section will be a prominent button that says something like “Contact Me” or “Schedule a Consultation”. This button should use the site’s one accent color to differentiate it from the rest of the mostly neutral content – it needs to catch the eye as the next step. For example, if the accent color is a muted teal or blue, the button will be that color with white text on it.
+	•	The button will be styled for a modern look (likely a flat design, with maybe a slight hover effect like a darker shade or underline). It should be fairly large (to satisfy mobile tap size and also to visually signify importance – padding of around 0.75rem to 1rem vertically and maybe 2rem horizontally).
+	•	On click, this button will lead to the separate /contact (or /rates) page. We might use wording like “Contact Me” for general inquiries, or “View Rates & Contact” if we want to hint that his consulting rates are on that page (since the current site’s rates page combines both info and a contact route).
+	•	Additional Info: If Tom prefers, we could also list an email address or a Telegram/LinkedIn link here for direct contact (in addition to or instead of a form on the next page). For instance, an email icon with “tom@counsell.com” could be shown, but since we have a dedicated contact page, it might be cleaner to just use the button to funnel users there. The contact page itself could contain a form (Name, Email, Message fields) or just a simple text like “Email me at ___ or message me on LinkedIn” depending on how Tom wants to handle inquiries.
+	•	Layout & Design: The Contact section will be centered and padded, similar to other sections. Typically, the call-to-action text is centered above the button. We’ll ensure there is enough space so that this section stands out as the conclusion of the page (for example, extra bottom padding to signify “end of page”). We might also include a very minimal footer right below this section – something like a copyright notice – in small text, to formally close the page, though it’s optional.
+	•	No Animation here either: The contact button won’t have any fancy animations (maybe just a simple hover color change). Keeping it static aligns with the no-gimmick rule and ensures it loads quickly. It will, however, be visually prominent due to size and color.
+
+Design System
+
+Typography:
+	•	We’ll use a modern sans-serif font throughout the site for a clean, professional appearance. This could be a web-safe font stack (like Tailwind’s default UI sans-serif which might include ui-sans-serif, system-ui, -apple-system, Segoe UI, etc.) or a specific font like Inter or Helvetica Neue if we want a slightly unique touch. The key is that it’s sans-serif (for that minimalist tech feel) and legible at various sizes.
+	•	Heading Hierarchy:
+	•	The main hero name (Tom Counsell) should be set as an <h1> and styled extremely prominently (e.g., 3rem on desktop, slightly smaller on mobile). It will likely be in a bold or extra-bold weight to dominate the visual hierarchy.
+	•	Section titles (About, Key Achievements, Contact) will be <h2> elements. These might be around 1.5rem to 2rem in size (24px – 32px range) and perhaps a medium or semi-bold weight. They act as clear separators for each section.
+	•	If needed, sub-points (like each achievement item’s label) could be <h3> or simply styled paragraphs, but we will make them stand out with font weight (maybe medium) and size (~1.125rem or 18px) to ensure they don’t get lost in the body text.
+	•	Body text (the About paragraph, any descriptive text) will be around 16px (1rem) which is standard for readability on web. We’ll use a line-height of about 1.6 (Tailwind’s leading-relaxed or similar) to ensure the text isn’t cramped.
+	•	Font Weights & Styles: We will use font weight to create contrast. For example, using a heavy weight for the name, semibold for headings, and regular for paragraphs. This contrast in weight, along with size differences, establishes hierarchy without needing different fonts. We will avoid using italic or decorative styles heavily (maybe only sparingly for quotes or to emphasize a word or two) to keep the clean look.
+	•	Text Alignment: Mostly left-aligned or center-aligned depending on context:
+	•	Hero section text will be center-aligned (since it’s a welcome/introduction).
+	•	About text will be left-aligned (easier to read in paragraph form).
+	•	Achievements could be center-aligned under each icon (since each item is a short phrase).
+	•	Contact text and button will be center-aligned (as a final CTA).
+	•	Consistency: All sections will use the same font family to maintain unity. By restricting to one font (with its different weights for variety), we uphold the minimalist aesthetic and avoid loading multiple font files, which also improves performance.
+
+Color Palette:
+	•	Background: The primary background color is an off-white #FAFAFA (a very light gray with a warm tone). This color provides a gentle contrast with pure white elements, giving a polished look. It’s widely used in minimalist designs for its calming effect and ability to make content feel open ￼. We will use this as the page background for all sections to create a continuous, light canvas.
+	•	Text Color: Nearly all text will be a dark charcoal color, essentially black at first glance. For example, #111111 or Tailwind’s text-gray-900 (which is a very dark gray). This ensures maximum legibility on the light background. Using dark text on a light background is a fundamental for readability on screens ￼. We may use a slightly lighter dark gray (like #555 or text-gray-700) for less important text or subtitles to create a subtle hierarchy (for instance, the subtitle under Tom’s name might be a touch lighter than the name itself, to let the name stand out more).
+	•	Accent Color: We will choose one muted accent color to use for highlights and interactive elements. This could be a soft teal, blue, or green – something professional yet not overly bright. The key is it should be a muted tone (low saturation) to fit the subdued aesthetic. For example, a muted teal like #52796F or a dusty blue could work nicely. This accent will be applied to:
+	•	The Contact Me button background (to make it pop).
+	•	Possibly the social media icons (or they might remain in gray, depending on desired subtlety).
+	•	Hover states for links or any small emphasis elements (like maybe a line under the section headings or the color of the achievement icons).
+It will not be overused; having a single accent color used sparingly will draw attention where needed (calls-to-action, links) without upsetting the overall calmness. Using one accent color consistently is recommended for good visual hierarchy ￼. Everything else remains neutral (grays, off-white, black).
+	•	States and Contrast: All colors chosen will consider contrast standards. For example, the accent color on a button with white text must have sufficient contrast (we’ll pick a medium-dark tone of the accent for buttons to ensure white text is readable, or use dark text on a lighter accent if needed). Links or interactive text in the accent color will be used against the off-white or white background, so that should be fine as long as the accent isn’t too light. We will ensure the accent color we pick has a contrast ratio meeting at least AA standards for the size it’s used (e.g., the button text).
+	•	Additional Colors: The palette will be intentionally limited. Aside from grayscale and the one accent, we should not need any other colors. This monochromatic + accent scheme keeps the design minimalist and cohesive. For example, if we use teal as accent, we might stick to black/gray, white/off-white, and teal – no additional random colors.
+
+Spacing & Layout Principles:
+	•	Vertical Rhythm: Each section will have ample padding on top and bottom (e.g., 4rem top and bottom on desktop, maybe 2rem on mobile) to clearly separate it from the next. This generous whitespace prevents the content from feeling cramped and enhances the scanning experience (each section is like its own “breathing space”).
+	•	Content Width: We will use a single-column layout, but on large screens, it’s wise not to let lines of text get too long. So we’ll likely wrap the content in a container that maxes out at perhaps 600-800px width for paragraphs. The Hero section might be an exception if the image and text are side by side (in which case combined they might occupy more width), but even then, each sub-element (text block) wouldn’t exceed ~600px wide for easy reading. Centering this container in the viewport will result in generous left/right margins on desktop, which again adds to the clean look.
+	•	Grid System: While the overall layout is one column, we do make use of simple grids inside sections for alignment:
+	•	The nav links in the header can be thought of as a small horizontal grid or flex layout.
+	•	The Achievements section uses a grid (1x3 on desktop, 1x? on mobile) to align icons and text.
+	•	We will rely on CSS grid or flexbox utilities (like Tailwind’s grid-cols- and flex) to easily create these layouts without introducing a lot of custom CSS.
+	•	Mobile Adaptation: Because we start mobile-first, all elements naturally stack vertically with full width. For example, on mobile:
+	•	The nav might collapse to a menu (hamburger icon) to avoid a long horizontal list.
+	•	The hero image is centered and takes full width up to a certain size.
+	•	The achievements grid becomes one item per row (ensuring each item has breathing room).
+	•	Padding on mobile might be slightly reduced (perhaps 2rem instead of 4rem) to use screen space efficiently, but we won’t skimp so much that it feels crowded – whitespace is still our friend on mobile.
+	•	Whitespace: One of the most important “design elements” here is whitespace. We will err on the side of more spacing rather than less. It’s better for a minimalist site to have a bit too much space than too little. As a rule of thumb, we’ll maintain a consistent spacing scale (for instance, using multiples of 4 or 8 pixels). All margins and paddings will likely come from a predefined set (like Tailwind’s spacing scale: 4, 8, 16, 24, 32px etc.) to maintain visual harmony.
+	•	No Borders or Shadows: To keep the design clean, we will avoid heavy use of borders or drop-shadows. Separation between sections is achieved via spacing rather than lines. If we need a divider, it might be a very light 1px line in a neutral color, but we might not need any if spacing is sufficient. Similarly, we won’t use card-like shadows; everything will sit flat on the light background for a modern flat design approach.
+
+Imagery & Iconography:
+	•	Photography: The only photograph on the site will be Tom’s portrait in the Hero. This image should be a good-quality, friendly photo. We will likely crop it as a circle which often is done by making it a perfect square with border-radius: 50% (Tailwind can apply rounded-full). The size should be responsive (maybe ~8rem x 8rem on mobile, up to 10rem on desktop). No additional photos (like background images or illustrations) are planned, keeping in line with a minimalist personal site.
+	•	Icons: As mentioned, small icons will appear for social links (standard brand icons) and for the achievements. The style of icons should be consistent:
+	•	We could use an outline style icon set (material design outlined icons, Font Awesome line icons, etc.) so they are simple and unobtrusive.
+	•	All icons will be rendered in either the accent color or a dark gray. For instance, achievement icons could be in a muted gray so they complement the text, or in the accent color to add a subtle touch of color in that section.
+	•	Icons will be sized appropriately (social icons ~24px, achievement icons maybe ~32px) and have alt text (for accessibility, the SVGs should have role=“img” with a descriptive title or have aria-hidden if purely decorative).
+	•	Logo/Branding: If Tom has a personal logo or monogram, we might place it in the header instead of just text for his name. However, given the minimalist brief, plain text for the name might actually be preferred (with a strong font, the name itself is the “logo”). If a logo is used, it should be simple and likely monochrome.
+	•	Favicon: Not exactly a design layout issue, but we should consider a simple favicon (maybe just a “T” or “TC” in the accent color or white on accent background) for the site to maintain a polished feel.
+
+Accessibility & UX Considerations:
+	•	The design choices (high contrast, large text for important info, clear navigation) inherently help with accessibility. We will ensure the site meets basic accessibility: proper heading structure (H1, H2s in order), alt text on images (the portrait should have alt like “Tom Counsell Portrait” or just “Tom Counsell” since it’s a personal site image), and sufficient color contrast as noted.
+	•	The mobile-first, no-animation approach is also good for performance and for users who may prefer reduced motion or have slower devices.
+	•	We’ll test the anchor navigation such that it’s obvious which section is active (maybe highlight the nav link on scroll or at least have the nav bar fixed to top so it’s always accessible on a long scroll).
+	•	No content will rely on color alone to convey meaning (icons will have labels, etc., which is also good for color-blind users).
+	•	The contact form (if included) will be straightforward and labeled clearly.
+
+In summary, the design system revolves around simplicity, consistency, and clarity – from the color choices (neutral + one accent) to the typography (one font family, varied sizes/weights) to the spacing (ample and even). This will ensure the website feels cohesive and professional, reinforcing Tom Counsell’s image as a thoughtful and authoritative tech leader.
+
+Wireframe Layout Overview
+
+Below are wireframe-style visual hierarchy diagrams for the desktop and mobile versions of the site. These illustrate the basic layout, spacing, and relative sizing of elements in each section:
+
+Wireframe diagram of the proposed desktop layout. The single-page site is shown as a vertical sequence of sections (Hero, About, Achievements, Contact) laid out in one column. On desktop, content is centered within a constrained width for readability. The Hero section at the top contains a large circular portrait (left) with Tom’s name and title prominently to the right. (In an alternative layout, the portrait could be centered above the text on desktop as well, to maintain the one-column flow.) The navigation bar is a simple horizontal strip at the very top, with Tom’s name/logo on the left and anchor links on the right. The About section is a text block – it has a heading and a short paragraph describing Tom – taking up one column. The Achievements section displays three items in a row, each item represented by an icon (circle with an X as a placeholder) and a short label underneath (e.g., “Leading Dev Teams”, “Building Software”, “Millions Served”). Finally, the Contact section at the bottom has a call-to-action text and a centered button (represented by a rectangle) inviting the user to contact Tom. Notice the generous whitespace between sections and the overall lack of clutter – this wireframe shows a clean, easy-to-scan layout where each section’s content is distinctly separated.
+
+Wireframe diagram of the mobile layout. On mobile screens, all elements stack vertically and span nearly the full width of the screen (with small side margins for padding). The nav bar condenses to just a title and a menu icon (hamburger) to toggle the links, ensuring the header remains uncluttered on a small display. The Hero section features the circular portrait centered at the top, followed by Tom’s name and title centered on separate lines, and then social icon links in a row (which may also wrap to a second line if needed). The About section comes next, with its heading and paragraph taking the full width (making it easy to read without any side-by-side layout). The Achievements section on mobile is shown as a vertical list of items: each achievement icon is on the left and its text on the right, stacking one achievement per line. This linear layout guarantees that each point is given its own space and can be read without crowding – important for small screens. Finally, the Contact section shows a short prompt text and a large full-width button for the CTA (“Contact Me”), which is thumb-friendly and hard to miss. The wireframe highlights that even on mobile, each section has adequate padding above and below, preventing the page from feeling cramped. The overall effect is a straightforward, scroll-friendly design where the content hierarchy is preserved at every screen size.
+
+Tailwind CSS Implementation Examples
+
+Below are example code snippets using Tailwind CSS v4 utility classes to implement each major section according to the design. These demonstrate how the design details translate into structured HTML with Tailwind classes:
+
+Hero Section (HTML & Tailwind):
+
+<!-- Navigation Header -->
+<header class="flex items-center justify-between py-4 px-6 bg-transparent">
+  <!-- Site Name / Logo -->
+  <div class="text-xl font-bold text-gray-900">Tom Counsell</div>
+  <!-- Navigation Links (shown on desktop, hidden on mobile) -->
+  <nav class="hidden sm:block">
+    <ul class="flex space-x-6 text-gray-800 text-base font-medium">
+      <li><a href="#about" class="hover:text-gray-600">About</a></li>
+      <li><a href="#achievements" class="hover:text-gray-600">Achievements</a></li>
+      <li><a href="#contact" class="hover:text-gray-600">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Mobile Menu Button (visible on small screens) -->
+  <button class="sm:hidden focus:outline-none" aria-label="Toggle menu">
+    <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="bg-gray-50 text-gray-900 py-16 px-4 flex flex-col items-center text-center">
+  <!-- Profile Portrait -->
+  <img src="portrait.jpg" alt="Tom Counsell" class="w-32 h-32 rounded-full mb-6">
+  <!-- Name and Title -->
+  <h1 class="text-4xl font-extrabold mb-2">Tom Counsell</h1>
+  <p class="text-xl font-medium text-gray-700 mb-4">CTO & Technical Leader</p>
+  <!-- Social Media Links -->
+  <div class="flex space-x-4">
+    <a href="https://www.linkedin.com/in/tomcounsell" target="_blank"
+       class="text-gray-700 hover:text-gray-900" aria-label="LinkedIn">
+      <!-- LinkedIn Icon SVG -->
+      <svg class="w-6 h-6 fill-current"><!-- ... --></svg>
+    </a>
+    <a href="https://github.com/tomcounsell" target="_blank"
+       class="text-gray-700 hover:text-gray-900" aria-label="GitHub">
+      <!-- GitHub Icon SVG -->
+      <svg class="w-6 h-6 fill-current"><!-- ... --></svg>
+    </a>
+    <a href="https://stackoverflow.com/users/..." target="_blank"
+       class="text-gray-700 hover:text-gray-900" aria-label="Stack Overflow">
+      <!-- Stack Overflow Icon SVG -->
+      <svg class="w-6 h-6 fill-current"><!-- ... --></svg>
+    </a>
+    <!-- (Additional icons like AngelList, Telegram, etc., could be added similarly) -->
+  </div>
+</section>
+
+Explanation: The <header> uses a flex container to position the site name on the left and the nav menu on the right. On small screens (sm:hidden), the nav links are hidden and a hamburger menu button is shown instead. The Hero <section> is a flex column, centered both horizontally and vertically (via items-center text-center). The portrait image has Tailwind classes to make it a circle (rounded-full) and sized (w-32 h-32). The name is an H1 with a very large font (text-4xl) and extra-bold weight, followed by a smaller, gray subtitle. The social links are in a flex row (flex space-x-4) so they line up with equal spacing. Each icon uses fill-current so it inherits the text color (allowing the hover text color change to affect the icon color too). This code achieves the hero design: a clear, centered introduction with image, big name, subtitle, and icons.
+
+About Section (HTML & Tailwind):
+
+<section id="about" class="bg-gray-50 text-gray-900 py-16 px-6">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-6">About</h2>
+    <p class="text-base leading-relaxed">
+      Tom Counsell is a technology leader who has bootstrapped a successful startup
+      and led engineering teams at scale. He is known for balancing a visionary
+      approach with hands-on technical expertise, fostering environments where
+      innovation and team growth go hand in hand.
+    </p>
+  </div>
+</section>
+
+Explanation: This section is contained in a <div class="max-w-2xl mx-auto"> to cap the width and center the content. The heading “About” is styled with a size of 2xl (~24px) and semibold weight, with margin-bottom to separate it from the paragraph. The paragraph uses leading-relaxed to ensure comfortable line spacing. The text is left-aligned by default (since we haven’t applied a text-center here), which is good for multi-line readability. The wording in the paragraph is a placeholder that highlights leadership and expertise, matching the content goals. The classes here ensure our design constraints: plenty of vertical padding (py-16), consistent background color (bg-gray-50 matching the hero background so it feels continuous), and good readability through font sizing and line height.
+
+Key Achievements Section (HTML & Tailwind):
+
+<section id="achievements" class="bg-gray-50 text-gray-900 py-16 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold text-center mb-8">Key Achievements</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <!-- Achievement 1 -->
+      <div class="flex flex-col items-center">
+        <svg class="w-8 h-8 mb-2 text-gray-700"><!-- Icon for Leading Dev Teams --></svg>
+        <p class="text-lg font-medium">Leading Dev Teams</p>
+      </div>
+      <!-- Achievement 2 -->
+      <div class="flex flex-col items-center">
+        <svg class="w-8 h-8 mb-2 text-gray-700"><!-- Icon for Building Software --></svg>
+        <p class="text-lg font-medium">Building Software</p>
+      </div>
+      <!-- Achievement 3 -->
+      <div class="flex flex-col items-center">
+        <svg class="w-8 h-8 mb-2 text-gray-700"><!-- Icon for Millions Served --></svg>
+        <p class="text-lg font-medium">Millions Served</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+Explanation: We use a CSS grid (grid-cols-1 sm:grid-cols-3) so that on mobile we have one column, and on small screens and up (≥640px) we have three columns – one for each achievement. Each achievement item is a flex column (flex flex-col items-center) centering the icon and text. The icons are given a fixed width/height of 2rem (w-8 h-8) and a bottom margin for spacing from the text. The label text is text-lg (~18px) and medium weight, making it a bit more prominent than normal paragraph text. Everything is centered within its grid cell, which provides a neat, symmetric appearance on larger screens. The section heading “Key Achievements” is centered (text-center) because the content below is multi-column and we want the title to span across and be central. We gave it a bottom margin (mb-8) to separate from the grid. This snippet shows how we achieve the responsive grid easily with Tailwind’s utilities and maintain the minimalist look (icons and short phrases, plenty of whitespace via gap-8 between items, no extra ornamentation).
+
+Contact Section (HTML & Tailwind):
+
+<section id="contact" class="bg-gray-50 text-gray-900 py-16 px-6 text-center">
+  <div class="max-w-md mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
+    <p class="text-base mb-6">
+      Interested in working with Tom? Feel free to reach out.
+    </p>
+    <a href="/contact" class="inline-block bg-teal-600 text-white text-lg font-medium
+               py-3 px-6 rounded-md hover:bg-teal-500">
+      Contact Me
+    </a>
+  </div>
+</section>
+
+Explanation: The Contact section is also centered and narrow (max-width md). The heading is similar in style to previous section headings. The paragraph offers a friendly prompt and has a bit of bottom margin to separate it from the button. The CTA is an <a> styled as a button: by using inline-block, we can apply padding, and we’ve given it a background in the accent color (teal in this example), white text, and a hover state that slightly lightens the background (hover:bg-teal-500). The rounded corners (rounded-md) make it feel like a button. This button is large enough to be easily clickable on mobile (py-3 px-6 gives it a good touch target size). Because it’s an anchor link pointing to the contact page, no additional script is needed; it will simply navigate there. The /contact page (not shown in this snippet) would contain the actual contact form or contact info. We keep this main page section simple and focused on driving the user to that next step. The consistent use of spacing and typography here (notice the heading and text sizes match other sections) ties it into the whole design.
+
+(The code above illustrates the structure and Tailwind classes for each section. In a real implementation, we would also include the responsive behavior for the nav menu – e.g., using JavaScript to show/hide the mobile menu – and ensure the contact form on the separate page is styled in a matching minimal way. However, those details are omitted here for brevity since the focus is the design and layout.)
+
+Recommended Semantic HTML Structure
+
+The site should be built with semantic HTML5 elements to ensure clarity in markup and improved accessibility. Here’s an overview of the recommended structure, omitting most of the Tailwind classes for brevity:
+
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <nav>
+      <!-- Site name/logo and anchor links -->
+    </nav>
+  </header>
+
+  <!-- Main content wrapper -->
+  <main>
+    <!-- Hero Section (Introduction) -->
+    <section id="hero" role="region">
+      <h1>Tom Counsell</h1>
+      <p><!-- Title/Tagline --></p>
+      <!-- Social links, etc. -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" role="region">
+      <h2>About</h2>
+      <p><!-- About Tom --></p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" role="region">
+      <h2>Key Achievements</h2>
+      <ul><!-- Could use a UL for achievements or divs as shown --></ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" role="region">
+      <h2>Get in Touch</h2>
+      <p><!-- Call to action text --></p>
+      <a href="/contact">Contact Me</a>
+    </section>
+  </main>
+
+  <!-- Footer (optional for copyright or extra links) -->
+  <footer>
+    <p>&copy; 2025 Tom Counsell</p>
+  </footer>
+</body>
+
+Notes on this structure:
+	•	The <header> contains the primary navigation. Using a <nav> element inside it is ideal to semantically mark the group of links. The site title could be an <h1> inside the header if the hero’s text is not an H1. In our case, we’ve used the hero’s name as the H1, which is also acceptable. We just need to ensure we only have one H1 per page for semantics, so if “Tom Counsell” in the hero is H1, then the site name in the header could be a <div> or a link with a role of heading if needed. We will avoid multiple H1s.
+	•	Each section has an id that matches the anchor in the nav links. This allows the anchor navigation to scroll to the correct spot. For accessibility, adding role="region" and using an aria-label or the contained heading for identification can help screen reader users navigate by regions.
+	•	The Achievements section could be marked up as a list (<ul> with <li> items) since semantically it is a list of Tom’s key achievements. Using list markup would be good for accessibility (it lets screen readers announce the number of items, etc.). In the code snippet we showed it as divs for simplicity, but we can easily adapt that to <ul class="grid ..."> and each achievement as an <li class="flex flex-col items-center">.
+	•	The Contact section’s button is an anchor link in this design. Alternatively, it could be a <button> that triggers a modal or some script, but the simpler semantic is an anchor to another page. On the contact page itself (not shown above), we’d have a form:
+
+<form action="/send-message" method="POST">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name">
+  ... (email, message, submit button) ...
+</form>
+
+or just contact info (like an email link and maybe a phone or social links) if no form is desired. Keeping it separate ensures the main page remains uncluttered.
+
+	•	Notice we included a <footer> even though it wasn’t explicitly requested. This is optional. A minimalist site might omit a footer, or just include a small copyright line. In Tom’s current site content there isn’t a visible footer besides the “view source” link. We can include a minimal footer for completeness (it won’t detract from the minimalism if it’s just one line of text in a small font).
+
+Using semantic tags like <header>, <main>, <section>, <nav>, and <footer> clearly defines the page structure in the HTML. This makes the code easier to maintain and is better for SEO and accessibility. Search engines and assistive tech can understand the layout (for example, they know where the main content is versus navigation). It also inherently enforces some logical order: for instance, keeping the content within <main> separate from repetitive stuff like nav or footer.
+
+Finally, the site will be developed to be lean – leveraging Tailwind CSS utility classes means we avoid writing a lot of custom CSS, and we can purge unused styles for performance. The HTML structure paired with the Tailwind classes (as exemplified above) will result in a small, fast-loading page. There will be no heavy scripts (aside from possibly a small snippet for the mobile menu toggle), and no large images (only the portrait, which can be optimized). This aligns perfectly with the minimalist, content-first design goal.
+
+By adhering to this design brief, Tom Counsell’s personal website will have a clean, light-themed interface modeled on the aesthetic tone of the provided example. It will prioritize content and messaging – introducing Tom, summarizing his achievements, and prompting contact – without any superfluous design noise. The first impression will be one of clarity and professionalism, with the visual hierarchy immediately conveying the most important information and an intuitive path to learn more or get in touch. The design’s restraint and thoughtfulness will reflect on Tom’s brand as a CTO who values simplicity and effectiveness. Sources:
+	•	The importance of clear content structure in single-page designs ￼
+	•	Using off-white (#FAFAFA) for a modern minimalist background ￼
+	•	Visual hierarchy: users scan big elements first, so make the name/title prominent ￼
+	•	Example phrases highlighting Tom’s achievements (“Leading Dev Teams”, etc.) from his profile ￼
+	•	Tom’s bio emphasizes leadership and vision (as noted in his about section) ￼
+	•	Inclusion of social links (LinkedIn, GitHub, etc.) as seen on his current site ￼
+	•	Mobile-first single-page design ensures a smooth experience on all devices ￼
+	•	Color and contrast guidelines (dark text on light background, limited accents) ￼ ￼
