@@ -8,7 +8,10 @@ This file contains all copy/content extracted from the existing site for use in 
 
 **Name:** Tom Counsell
 
-**Tagline:**
+**Tagline (Primary):**
+Engineering Leader | AI/Web3 Architect | $50M+ Products Delivered
+
+**Alternative Taglines:**
 - Leading Dev Teams
 - Building Software
 - Millions Served
@@ -23,7 +26,7 @@ This file contains all copy/content extracted from the existing site for use in 
 ## Social Links
 
 - **LinkedIn:** https://linkedin.com/in/tomcounsell
-- **AngelList:** https://angel.co/u/tomcounsell
+- **Wellfound (AngelList):** https://wellfound.com/u/tomcounsell
 - **GitHub:** https://github.com/tomcounsell
 - **Stack Overflow:** https://stackoverflow.com/users/2102461/tomcounsell
 - **Telegram:** https://t.me/tomcounsell
@@ -43,10 +46,13 @@ This file contains all copy/content extracted from the existing site for use in 
 **Logo:** static/img/deckfusion.jpeg
 **URL:** https://fuse.is
 
-**Description:**
+**Description (Primary):**
+Tom architects multi-agent AI systems using PydanticAI and Claude MCPs for enterprise data orchestration, building "chat with your data" platforms that process 10TB+ across customer databases. He leads the engineering team through rapid product-market fit iterations, focusing on practical AI implementations that solve real business problems.
+
+**Additional Details:**
 - Built and deployed teams of AI Agents, MCPs to manage data orchestration.
 - Enabling "chat with your data" capabilities.
-- Building and leading all engineering.x
+- Building and leading all engineering.
 
 **Technologies:** Python, PydanticAI, OpenAI, Anthropic, AWS, Gen AI, prompt engineering, data pipelines
 
@@ -61,14 +67,17 @@ This file contains all copy/content extracted from the existing site for use in 
 - static/img/official.jpg
 **URL:** https://getofficial.co
 
-**Description:**
+**Description (Primary):**
+Tom led a complete technical transformation at Bumble Studio's Official app, rebuilding the entire 8-person dev team in 6 months while maintaining product velocity. He integrated data pipelines that reduced BI report latency by 75% and managed the technical handover of a React Native app serving 100K+ monthly active users. His work aligned the startup's engineering practices with the parent company's NASDAQ-listed operational standards, ensuring long-term maintainability and team success.
+
+**Additional Details:**
 - Bumble Studio: Official, The Relationship App - where you and your partner create a beautiful and healthy ❤️ relationship.
 - Aligned engineering practices with the parent company's ops culture.
 - Led the integration of data pipelines for BI and Finance departments.
 - Hiring manager for full replacement of the dev team, based in London.
 - Led a successful technical handover within strict deadlines.
 
-**Technologies:** social network, React Native, scaling infrastructure, gen AI, Leadership, Management, Scrum
+**Technologies:** React Native, scaling infrastructure, data pipelines, gen AI, leadership, management, Scrum
 
 ---
 
@@ -110,11 +119,14 @@ This file contains all copy/content extracted from the existing site for use in 
 **Logo:** static/img/simplenight.jpg
 **URL:** https://www.simplenight.com/
 
-**Description:**
+**Description (Primary):**
+Tom designed a custom Redis-based caching system for 700K+ hotels worldwide, engineering real-time ETL processing that handles 70GB/min of rates and availability data. This architecture reduced API response times by 85%, enabling sub-100ms booking flows that dramatically improved conversion rates and user experience across the platform.
+
+**Additional Details:**
 - Designed and built custom cache for 700k hotels.
 - Real time processing of rates and availability 70GB /min.
 
-**Technologies:** ETL system, Redis, geospatial DB, scaling infrastructure
+**Technologies:** ETL systems, Redis, geospatial databases, scaling infrastructure
 
 ---
 
@@ -152,7 +164,10 @@ This file contains all copy/content extracted from the existing site for use in 
 - LinkedIn: https://www.linkedin.com/company/intelligenttrading/
 - GitHub: https://github.com/IntelligentTrading
 
-**Description:**
+**Description (Primary):**
+As CTO, Tom built an ML-powered trading signals platform that served 50K+ crypto traders, pairing traditional market trading concepts with pattern recognition and machine learning capabilities. He led extensive open-source contributions that attracted 100+ GitHub contributors and 2K+ stars, while developing portfolio tracking and auto-rebalancing systems managing $10M+ in digital assets. The company's research and education initiatives dove deep into fundamental analysis of decentralized networks, establishing thought leadership in the emerging crypto trading space.
+
+**Additional Details:**
 - Intelligent Trading (fintech) serves cryptocurrency and alternative asset traders.
 - "Portfolio" platform enables tracking and re-balancing of digital assets and currencies.
 - "Signals" platform pairs traditional market trading concepts with pattern recognition and machine learning capabilities.
@@ -174,7 +189,10 @@ This file contains all copy/content extracted from the existing site for use in 
 - https://www.agoda.com/
 - https://www.booking.com/
 
-**Description:**
+**Description (Primary):**
+Tom pitched and led a greenfield product initiative for non-hotel accommodations to compete with Airbnb's market dominance. He secured executive buy-in and built a dedicated 15-person department within 4 months, recruiting senior developers to create an agile, high-energy team. The experimental features he architected scaled to serve Agoda's 40M+ monthly active users across 39 languages, transforming customer engagement and opening new revenue streams for the Booking Holdings property.
+
+**Additional Details:**
 - Led the architectural design and deployment of new experimental product features targeting the non-hotel accommodation market (formerly, AirBnB-style accommodations).
 - Prototyped and presented a bold new product concept to the executive staff. The project was widely accepted, quickly assigned a dedicated department, and transformed customer engagement.
 - Recruited senior developers to create an agile and high-energy team to drive innovation, move fast, and consistently deliver products with performance at scale.
@@ -185,7 +203,7 @@ This file contains all copy/content extracted from the existing site for use in 
 ---
 
 ### Anou
-**Role:** Cofounder, Technical Director
+**Role:** Co-founder & Technical Director
 **Period:** Dec 2012-Jul 2015
 **Location:** Morocco
 **Logo:** static/img/anou.png
@@ -194,7 +212,10 @@ This file contains all copy/content extracted from the existing site for use in 
 - LinkedIn: https://www.linkedin.com/company/anou/
 - GitHub: https://github.com/NobleSF/Cobra
 
-**Description:**
+**Description (Primary):**
+Tom co-founded and scaled Morocco's largest artisan e-commerce platform to $1M+ annual revenue, pioneering language-free mobile commerce UX designed specifically for illiterate artisans through extensive HCI research. Living in the Sahara Desert for 2 years and learning Arabic, he bootstrapped the platform to profitability while creating economic impact that funded primary schools, healthcare programs, and 1,000+ jobs. He led the IT strategy using Agile Development methods as a Lean Startup, performing human-computer interaction studies to iterate on culturally-responsive design based on environmental and cultural factors specific to rural Morocco. Together with founder Dan Driscoll, they empowered the community to become the largest national cooperative in Morocco.
+
+**Additional Details:**
 - Founded upon the vision that online marketplaces can empower talented artisans to run successful businesses despite low levels of education.
 - Led the IT strategy in re-thinking mobile commerce tools for use by illiterate business owners.
 - Together with founder Dan Driscoll, empowered the community to become the largest national cooperative in Morocco.
@@ -211,13 +232,31 @@ This file contains all copy/content extracted from the existing site for use in 
 
 ## About Section
 
-### Bio
+### Bio (Primary - Condensed)
+
+Tom Counsell is an engineering leader who turns ambitious ideas into products at scale. As CTO across fintech, AI, and travel tech, he's raised $3.5M+, led two exits, and built systems serving millions. From architecting Redis caches processing 70GB/min to leading engineering at Bumble Studio, Tom specializes in team-building, complex system design, and rapid execution. He transforms engineering cultures through mentorship, accountability, and a bias toward shipping—whether scaling NASDAQ-backed startups or bootstrapping social enterprises from scratch.
+
+### Bio (Extended - 3 Paragraphs)
 
 Tom bootstrapped his first successful startup, a social enterprise, growing to $MM revenues and many thousands of jobs created. As a leader, he balances teams, bringing both empathy and an emphasis on personal responsibility.
 
 Since 2014, he has helped raise $3.5M in crowdfunding and investments, sold 2 companies, and scaled up highly effective IT and operations teams.
 
 Tom Counsell is an energizing public speaker and advocate for a purpose-driven life. From standing desks to wall murals, countless office environments have been permanently altered because Tom transforms team environments, making them highly effective for startup hustling!
+
+---
+
+### Skills
+
+**Technical Leadership:** Team Building, Agile/Scrum, Technical Architecture, Hiring & Mentorship
+
+**Backend/Data:** Python, Django, Redis, ETL Pipelines, PostgreSQL, Real-time Systems
+
+**AI/ML:** LLMs (OpenAI, Anthropic), Agent Orchestration, Prompt Engineering, Deep Learning
+
+**Cloud/DevOps:** AWS, Scaling Infrastructure, Microservices, API Design
+
+**Emerging Tech:** Web3, Blockchain, React Native, Flutter
 
 ---
 
@@ -240,26 +279,42 @@ Tom Counsell is an energizing public speaker and advocate for a purpose-driven l
 
 ## Testimonials (Rates Page)
 
-### Zac Stern, Bumble Inc
+### Featured Testimonials
+
+#### Zac Stern, Bumble Inc (FEATURED)
 > an indispensable asset to our team.. the best engineer I've had the privilege of working with.. Tom fostered a positive and collaborative work environment, serving as a natural leader who inspired the entire team to strive for excellence. I wholeheartedly recommend Tom for any leadership role in engineering, confident that his dedication, expertise, and leadership qualities will greatly contribute to the success of any organization.
 
-### Anthony S. Cannella, Blockchain Hub
-> Tom cares. He's a force multiplier that makes everyone around him better... I highly recommend Tom as a leader.
-
-### Ben Lakoff, Bankless Ventures
-> Tom is not only a very talented developer, but a keen business leader... He instituted 'hack days' and design sprints that really encouraged innovation.
-
-### Francesco De Lisi, Woven Project, Toyota Inc.
+#### Francesco De Lisi, Woven Project, Toyota Inc. (FEATURED)
 > Tom has incredible personal, leadership, and technical skills... the best aspect of working with Tom is the quality and ease of management.
 
-### Rupert Lane, Agoda, Booking Inc.
+---
+
+### Extended Testimonials
+
+#### Anthony S. Cannella, Blockchain Hub
+> Tom cares. He's a force multiplier that makes everyone around him better... I highly recommend Tom as a leader.
+
+#### Ben Lakoff, Bankless Ventures
+> Tom is not only a very talented developer, but a keen business leader... He instituted 'hack days' and design sprints that really encouraged innovation.
+
+#### Rupert Lane, Agoda, Booking Inc.
 > Tom shows great passion and creativity... The products he built were instant hits... he has natural leadership qualities.
 
 ---
 
 ## Rates & Services
 
-### Pricing (2024)
+### Engagement Models (Primary)
+
+- **Technical Leadership & Architecture:** Custom pricing
+- **Fractional CTO Services:** Monthly retainer
+- **Strategic Consulting:** Project-based
+
+**Note:** Pricing tailored to project scope and timeline. Discounts available for mission-driven organizations.
+
+---
+
+### Hourly Rates (2024 - Alternative)
 
 | Service | Rate |
 |---------|------|
