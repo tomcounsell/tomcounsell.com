@@ -128,7 +128,6 @@
                         <a
                             href="https://linkedin.com/in/tomcounsell"
                             target="_blank"
-                            rel="noopener noreferrer"
                             class="text-accent hover:text-accent-light transition-colors"
                             title="LinkedIn"
                         >
@@ -137,7 +136,6 @@
                         <a
                             href="https://wellfound.com/u/tomcounsell"
                             target="_blank"
-                            rel="noopener noreferrer"
                             class="text-accent hover:text-accent-light transition-colors"
                             title="Wellfound"
                         >
@@ -146,7 +144,6 @@
                         <a
                             href="https://github.com/tomcounsell"
                             target="_blank"
-                            rel="noopener noreferrer"
                             class="text-accent hover:text-accent-light transition-colors"
                             title="GitHub"
                         >
@@ -155,7 +152,6 @@
                         <a
                             href="https://stackoverflow.com/users/2102461/tomcounsell"
                             target="_blank"
-                            rel="noopener noreferrer"
                             class="text-accent hover:text-accent-light transition-colors"
                             title="Stack Overflow"
                         >
@@ -164,7 +160,6 @@
                         <a
                             href="https://t.me/tomcounsell"
                             target="_blank"
-                            rel="noopener noreferrer"
                             class="text-accent hover:text-accent-light transition-colors"
                             title="Telegram"
                         >
@@ -175,7 +170,10 @@
             </section>
 
             <!-- Testimonials Section -->
-            <section class="py-16 md:py-20 px-4 bg-bg-secondary">
+            <section
+                id="testimonials"
+                class="py-16 md:py-20 px-4 bg-bg-secondary"
+            >
                 <div class="max-w-4xl mx-auto">
                     <h2
                         class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
@@ -449,29 +447,6 @@
                                     <div
                                         class="text-accent text-3xl flex-shrink-0"
                                     >
-                                        <i class="fas fa-mobile-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Flutter Mobile Apps
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Cross-platform mobile apps focusing
-                                            on user experience.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
-                                    >
                                         <i class="fas fa-plug"></i>
                                     </div>
                                     <div>
@@ -586,7 +561,13 @@
                                         </h4>
                                         <p class="text-text-secondary">
                                             High-performance Redis databases,
-                                            cache architecture.
+                                            cache architecture. Also relational:
+                                            <a
+                                                href="https://popoto.readthedocs.io/en/latest/"
+                                                style="color: darkred"
+                                                target="_blank"
+                                                >see Popoto</a
+                                            >
                                         </p>
                                     </div>
                                 </div>
@@ -594,12 +575,12 @@
                         </div>
                     </div>
 
-                    <!-- For Growth & Content Teams -->
+                    <!-- For AI & Intelligence Teams -->
                     <div>
                         <h3
                             class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
                         >
-                            For Growth & Content Teams
+                            For AI & Intelligence Teams
                         </h3>
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div
@@ -615,11 +596,11 @@
                                         <h4
                                             class="font-serif text-xl font-semibold mb-2"
                                         >
-                                            AI Content Generation
+                                            Agentic Systems
                                         </h4>
                                         <p class="text-text-secondary">
-                                            Automated content via advanced
-                                            machine learning.
+                                            Autonomous AI agents that reason,
+                                            plan, and execute complex workflows.
                                         </p>
                                     </div>
                                 </div>
@@ -632,17 +613,42 @@
                                     <div
                                         class="text-accent text-3xl flex-shrink-0"
                                     >
-                                        <i class="fas fa-edit"></i>
+                                        <i class="fas fa-search"></i>
                                     </div>
                                     <div>
                                         <h4
                                             class="font-serif text-xl font-semibold mb-2"
                                         >
-                                            CMS
+                                            Deep Research
                                         </h4>
                                         <p class="text-text-secondary">
-                                            Content Management Systems for
-                                            streamlined content updates.
+                                            Advanced information retrieval and
+                                            analysis systems for comprehensive
+                                            insights.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Context Engineering
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Dynamic prompt optimization and
+                                            context management for peak LLM
+                                            performance.
                                         </p>
                                     </div>
                                 </div>
@@ -662,6 +668,43 @@
                     </h2>
 
                     <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Assurances -->
+                        <div
+                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        >
+                            <h3 class="font-serif text-xl font-semibold mb-4">
+                                Assurances
+                            </h3>
+                            <ul class="space-y-3 text-base">
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span>Client confidentiality</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span>IP solely owned by Client</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span>Flexible agreement terms</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span
+                                        >Structured refund and arbitration</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Payment Terms -->
                         <div
                             class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
@@ -719,43 +762,6 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <!-- Assurances -->
-                        <div
-                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <h3 class="font-serif text-xl font-semibold mb-4">
-                                Assurances
-                            </h3>
-                            <ul class="space-y-3 text-base">
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span>Client confidentiality</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span>IP solely owned by Client</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span>Flexible agreement terms</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span
-                                        >Structured refund and arbitration</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -793,7 +799,6 @@
                             <a
                                 href="https://yuda.me"
                                 target="_blank"
-                                rel="noopener noreferrer"
                                 class="inline-block bg-[#f5d563] hover:bg-[#f4cf4a] text-black font-semibold px-6 py-3 rounded transition-colors"
                             >
                                 Visit Yudame
@@ -804,7 +809,9 @@
                         <div
                             class="bg-white border border-gray-200 rounded-lg p-8"
                         >
-                            <h3 class="font-serif text-2xl font-semibold mb-4">
+                            <h3
+                                class="font-serif text-2xl font-semibold mb-4 mt-1"
+                            >
                                 Message Tom
                             </h3>
                             <p class="text-text-secondary mb-6">
@@ -814,10 +821,9 @@
                             <a
                                 href="https://linkedin.com/in/tomcounsell"
                                 target="_blank"
-                                rel="noopener noreferrer"
                                 class="inline-block bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded transition-colors"
                             >
-                                LinkedIn
+                                <i class="fab fa-linkedin mr-2"></i>LinkedIn
                             </a>
                         </div>
                     </div>
@@ -835,7 +841,6 @@
                     <a
                         href="https://yuda.me"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                         >Yudame</a
                     >
@@ -847,35 +852,30 @@
                     <a
                         href="https://linkedin.com/in/tomcounsell"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                         >LinkedIn</a
                     >
                     <a
                         href="https://wellfound.com/u/tomcounsell"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                         >Wellfound</a
                     >
                     <a
                         href="https://github.com/tomcounsell"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                         >GitHub</a
                     >
                     <a
                         href="https://stackoverflow.com/users/2102461/tomcounsell"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                         >Stack Overflow</a
                     >
                     <a
                         href="https://t.me/tomcounsell"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                         >Telegram</a
                     >
@@ -886,7 +886,6 @@
                     <a
                         href="https://github.com/tomcounsell/tomcounsell.com"
                         target="_blank"
-                        rel="noopener noreferrer"
                         class="hover:text-accent transition-colors"
                     >
                         View Source
