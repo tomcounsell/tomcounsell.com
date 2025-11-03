@@ -6,3 +6,9 @@ public/
 public/360pro/img/chappy.jpg
 .idea/
 .DS_Store
+
+# Claude Code configuration
+CLAUDE.md
+
+# Design inspiration/branding resources
+static/img/branding/
