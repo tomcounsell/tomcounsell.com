@@ -1,561 +1,921 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tom Counsell - Rates & Services. CTO & Technical Leader consulting rates and testimonials.">
-    <title>Rates & Services - Tom Counsell</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Tom Counsell - Rates & Services. CTO & Technical Leader consulting rates and testimonials."
+        />
+        <title>Rates & Services - Tom Counsell</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
 
-    <!-- Tailwind CSS Browser v4 -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- Tailwind CSS Browser v4 -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Google Fonts - Playfair Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+        <!-- Google Fonts - Playfair Display -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
 
-    <!-- Custom Tailwind Theme -->
-    <style type="text/tailwindcss">
-        @theme {
-            --color-bg-primary: #FAFAFA;
-            --color-bg-secondary: #F0F0F0;
-            --color-text-primary: #1A1A1A;
-            --color-text-secondary: #666666;
-            --color-accent: #2C2C2C;
-            --color-accent-light: #4A4A4A;
-        }
-
-        /* Serif font for name and headings */
-        .font-serif {
-            font-family: "Playfair Display", Georgia, serif;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-<body class="bg-bg-primary text-text-primary font-sans">
-
-    <!-- Header Navigation -->
-    <header class="sticky top-0 bg-bg-primary/95 backdrop-blur-sm border-b border-gray-200 z-50">
-        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors">
-                Tom Counsell
-            </a>
-            <div class="flex items-center gap-6">
-                <a href="index.html#about" class="text-sm md:text-base hover:text-accent transition-colors">About</a>
-                <a href="index.html#experience" class="text-sm md:text-base hover:text-accent transition-colors">Experience</a>
-                <a href="rates.html" class="text-sm md:text-base hover:text-accent transition-colors">Rates</a>
-                <a href="index.html#contact" class="text-sm md:text-base hover:text-accent transition-colors">Contact</a>
-                <button id="shareBtn" class="text-sm md:text-base hover:text-accent transition-colors" title="Share this page">
-                    <i class="fas fa-share-alt"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Hero Section -->
-        <section class="py-16 md:py-24 px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <!-- Portrait Image -->
-                <img src="static/img/profile.jpg"
-                     alt="Tom Counsell - Professional portrait"
-                     class="w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full mx-auto mb-8 object-cover shadow-lg hover:shadow-2xl transition-shadow cursor-pointer">
-
-                <!-- Name -->
-                <h1 class="font-serif font-bold text-4xl md:text-5xl lg:text-6xl mb-4">
-                    Tom Counsell
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="font-serif text-xl md:text-2xl text-text-secondary mb-8">
-                    Engineering Leader | AI & Systems Architect
-                </p>
-
-                <!-- Social Links -->
-                <div class="flex justify-center gap-6 text-2xl">
-                    <a href="https://linkedin.com/in/tomcounsell"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-accent hover:text-accent-light transition-colors"
-                       title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://wellfound.com/u/tomcounsell"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-accent hover:text-accent-light transition-colors"
-                       title="Wellfound">
-                        <i class="fab fa-angellist"></i>
-                    </a>
-                    <a href="https://github.com/tomcounsell"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-accent hover:text-accent-light transition-colors"
-                       title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://stackoverflow.com/users/2102461/tomcounsell"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-accent hover:text-accent-light transition-colors"
-                       title="Stack Overflow">
-                        <i class="fab fa-stack-overflow"></i>
-                    </a>
-                    <a href="https://t.me/tomcounsell"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-accent hover:text-accent-light transition-colors"
-                       title="Telegram">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="py-16 md:py-20 px-4 bg-bg-secondary">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center">
-                    What People Say
-                </h2>
-
-                <div class="space-y-8">
-                    <!-- Testimonial 1 -->
-                    <blockquote class="border-l-2 border-accent pl-6 py-2">
-                        <p class="text-lg mb-4 italic">
-                            "an indispensable asset to our team.. the best engineer I've had the privilege of working with.. Tom fostered a positive and collaborative work environment, serving as a natural leader who inspired the entire team to strive for excellence. I wholeheartedly recommend Tom for any leadership role in engineering, confident that his dedication, expertise, and leadership qualities will greatly contribute to the success of any organization."
-                        </p>
-                        <footer class="text-text-secondary font-semibold">
-                            — Zac Stern, Bumble Inc
-                        </footer>
-                    </blockquote>
-
-                    <!-- Testimonial 2 -->
-                    <blockquote class="border-l-2 border-accent pl-6 py-2">
-                        <p class="text-lg mb-4 italic">
-                            "Tom cares. He's a force multiplier that makes everyone around him better... I highly recommend Tom as a leader."
-                        </p>
-                        <footer class="text-text-secondary font-semibold">
-                            — Anthony S. Cannella, Blockchain Hub
-                        </footer>
-                    </blockquote>
-
-                    <!-- Testimonial 3 -->
-                    <blockquote class="border-l-2 border-accent pl-6 py-2">
-                        <p class="text-lg mb-4 italic">
-                            "Tom is not only a very talented developer, but a keen business leader... He instituted 'hack days' and design sprints that really encouraged innovation."
-                        </p>
-                        <footer class="text-text-secondary font-semibold">
-                            — Ben Lakoff, Bankless Ventures
-                        </footer>
-                    </blockquote>
-
-                    <!-- Testimonial 4 -->
-                    <blockquote class="border-l-2 border-accent pl-6 py-2">
-                        <p class="text-lg mb-4 italic">
-                            "Tom has incredible personal, leadership, and technical skills... the best aspect of working with Tom is the quality and ease of management."
-                        </p>
-                        <footer class="text-text-secondary font-semibold">
-                            — Francesco De Lisi, Woven Project, Toyota Inc.
-                        </footer>
-                    </blockquote>
-
-                    <!-- Testimonial 5 -->
-                    <blockquote class="border-l-2 border-accent pl-6 py-2">
-                        <p class="text-lg mb-4 italic">
-                            "Tom shows great passion and creativity... The products he built were instant hits... he has natural leadership qualities."
-                        </p>
-                        <footer class="text-text-secondary font-semibold">
-                            — Rupert Lane, Agoda, Booking Inc.
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section class="py-16 md:py-20 px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center">
-                    2024 Rates
-                </h2>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead>
-                            <tr class="border-b border-gray-300">
-                                <th class="text-left py-4 px-4 font-serif text-xl">Service</th>
-                                <th class="text-right py-4 px-4 font-serif text-xl">Rate</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-gray-200">
-                                <td class="py-4 px-4 text-lg">Base Rate</td>
-                                <td class="text-right py-4 px-4 text-lg font-semibold text-accent">$324/hr</td>
-                            </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="py-4 px-4 text-lg">FinTech</td>
-                                <td class="text-right py-4 px-4 text-lg font-semibold text-accent">$486/hr</td>
-                            </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="py-4 px-4 text-lg">Consultancy</td>
-                                <td class="text-right py-4 px-4 text-lg font-semibold text-accent">$648/hr</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Core Services Section -->
-        <section class="py-16 md:py-20 px-4 bg-bg-secondary">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-16 text-center">
-                    Services
-                </h2>
-
-                <!-- For Executives & CTOs -->
-                <div class="mb-12">
-                    <h3 class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary">For Executives & CTOs</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Dev Team Leadership</h4>
-                                    <p class="text-text-secondary">Agile project management, code reviews, technical mentorship.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-user-plus"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Dev Team Hiring</h4>
-                                    <p class="text-text-secondary">Recruitment and vetting of engineering talent.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-sitemap"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Systems Architecture</h4>
-                                    <p class="text-text-secondary">Scalable design with monolith or microservices architectures.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- For Product & Engineering Teams -->
-                <div class="mb-12">
-                    <h3 class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary">For Product & Engineering Teams</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fab fa-python"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Python Development</h4>
-                                    <p class="text-text-secondary">Custom backend services, data analytics, machine learning solutions.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Flutter Mobile Apps</h4>
-                                    <p class="text-text-secondary">Cross-platform mobile apps focusing on user experience.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-plug"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">API Integration</h4>
-                                    <p class="text-text-secondary">Seamless third-party services integration including payment gateways.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Rapid Backend Dashboards</h4>
-                                    <p class="text-text-secondary">Quick development of backend admin panels.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- For Data & Infrastructure Teams -->
-                <div class="mb-12">
-                    <h3 class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary">For Data & Infrastructure Teams</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-exchange-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">ETL Services</h4>
-                                    <p class="text-text-secondary">Data extraction, transformation, loading for analytics and BI.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Database Design</h4>
-                                    <p class="text-text-secondary">Relational and document databases optimized for performance and reliability.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-bolt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">Redis Database Systems</h4>
-                                    <p class="text-text-secondary">High-performance Redis databases, cache architecture.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- For Growth & Content Teams -->
-                <div>
-                    <h3 class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary">For Growth & Content Teams</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-robot"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">AI Content Generation</h4>
-                                    <p class="text-text-secondary">Automated content via advanced machine learning.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                            <div class="flex items-start gap-4">
-                                <div class="text-accent text-3xl flex-shrink-0">
-                                    <i class="fas fa-edit"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-serif text-xl font-semibold mb-2">CMS</h4>
-                                    <p class="text-text-secondary">Content Management Systems for streamlined content updates.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Terms & Assurances Section -->
-        <section class="py-16 md:py-20 px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center">
-                    Terms & Assurances
-                </h2>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Payment Terms -->
-                    <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                        <h3 class="font-serif text-xl font-semibold mb-4">Payment Terms</h3>
-                        <ul class="space-y-3 text-base">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check text-accent mt-1 text-sm"></i>
-                                <span>50% of monthly invoice estimate as deposit</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check text-accent mt-1 text-sm"></i>
-                                <span>Invoices on 1st of each month, Net-15</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Discounts -->
-                    <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                        <h3 class="font-serif text-xl font-semibold mb-4">Discounts</h3>
-                        <ul class="space-y-3 text-base">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-star text-accent mt-1 text-sm"></i>
-                                <span>Up to 20% for active client referrals</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-star text-accent mt-1 text-sm"></i>
-                                <span>Reduced rates for Social Enterprises and Non-profits</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Assurances -->
-                    <div class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow">
-                        <h3 class="font-serif text-xl font-semibold mb-4">Assurances</h3>
-                        <ul class="space-y-3 text-base">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-shield-alt text-accent mt-1 text-sm"></i>
-                                <span>Client confidentiality</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-shield-alt text-accent mt-1 text-sm"></i>
-                                <span>IP solely owned by Client</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-shield-alt text-accent mt-1 text-sm"></i>
-                                <span>Flexible agreement terms</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-shield-alt text-accent mt-1 text-sm"></i>
-                                <span>Structured refund and arbitration</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Get in Touch Section -->
-        <section id="contact" class="py-16 md:py-20 px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-12">
-                    Get in Touch
-                </h2>
-
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <!-- Yudame -->
-                    <div class="bg-white border border-gray-200 rounded-lg p-8 hover:border-[#f5d563] transition-colors">
-                        <div class="flex items-center justify-center gap-3 mb-4">
-                            <img src="static/img/yudame.png" alt="Yudame logo" class="h-8">
-                            <h3 class="font-serif text-2xl font-semibold">Yudame</h3>
-                        </div>
-                        <p class="text-text-secondary mb-6">
-                            Partner with Tom's consultancy for engineering leadership and product development.
-                        </p>
-                        <a href="https://yuda.me"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="inline-block bg-[#f5d563] hover:bg-[#f4cf4a] text-black font-semibold px-6 py-3 rounded transition-colors">
-                            Visit Yudame
-                        </a>
-                    </div>
-
-                    <!-- Message on LinkedIn -->
-                    <div class="bg-white border border-gray-200 rounded-lg p-8">
-                        <h3 class="font-serif text-2xl font-semibold mb-4">Message Tom</h3>
-                        <p class="text-text-secondary mb-6">
-                            Connect directly on LinkedIn for opportunities, collaboration, or questions.
-                        </p>
-                        <a href="https://linkedin.com/in/tomcounsell"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="inline-block bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded transition-colors">
-                            LinkedIn
-                        </a>
-                    </div>
-                </div>
-
-                <p class="text-sm text-text-secondary">
-                    Want to learn more about services and rates? <a href="rates.html" class="text-accent hover:text-accent-light underline">View details</a>
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-200 py-8 px-4 text-sm text-text-secondary">
-        <div class="max-w-6xl mx-auto space-y-6">
-            <!-- Links Row -->
-            <div class="flex flex-wrap justify-center gap-6 text-center">
-                <a href="https://yuda.me" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Yudame</a>
-                <a href="rates.html" class="hover:text-accent transition-colors">Rates</a>
-                <a href="https://linkedin.com/in/tomcounsell" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a>
-                <a href="https://wellfound.com/u/tomcounsell" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Wellfound</a>
-                <a href="https://github.com/tomcounsell" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">GitHub</a>
-                <a href="https://stackoverflow.com/users/2102461/tomcounsell" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Stack Overflow</a>
-                <a href="https://t.me/tomcounsell" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Telegram</a>
-            </div>
-
-            <!-- Bottom Row -->
-            <div class="flex justify-between items-center text-xs">
-                <a href="https://github.com/tomcounsell/tomcounsell.com"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="hover:text-accent transition-colors">
-                    View Source
-                </a>
-                <p class="font-serif">
-                    &copy; 2025 Tom Counsell
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Share Button Script -->
-    <script>
-        document.getElementById('shareBtn').addEventListener('click', async function() {
-            const url = window.location.href;
-            try {
-                if (navigator.share) {
-                    await navigator.share({
-                        title: 'Rates & Services - Tom Counsell',
-                        url: url
-                    });
-                } else {
-                    await navigator.clipboard.writeText(url);
-                    alert('Link copied to clipboard!');
-                }
-            } catch (err) {
-                console.error('Error sharing:', err);
+        <!-- Custom Tailwind Theme -->
+        <style type="text/tailwindcss">
+            @theme {
+                --color-bg-primary: #fafafa;
+                --color-bg-secondary: #f0f0f0;
+                --color-text-primary: #1a1a1a;
+                --color-text-secondary: #666666;
+                --color-accent: #2c2c2c;
+                --color-accent-light: #4a4a4a;
             }
-        });
-    </script>
 
-</body>
+            /* Serif font for name and headings */
+            .font-serif {
+                font-family: "Playfair Display", Georgia, serif;
+            }
+
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="bg-bg-primary text-text-primary font-sans">
+        <!-- Header Navigation -->
+        <header
+            class="sticky top-0 bg-bg-primary/95 backdrop-blur-sm border-b border-gray-200 z-50"
+        >
+            <nav
+                class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+            >
+                <a
+                    href="index.html"
+                    class="text-xl md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors"
+                >
+                    Tom Counsell
+                </a>
+                <div class="flex items-center gap-6">
+                    <a
+                        href="index.html#about"
+                        class="text-sm md:text-base hover:text-accent transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="index.html#career"
+                        class="text-sm md:text-base hover:text-accent transition-colors"
+                        >Career</a
+                    >
+                    <a
+                        href="rates.html"
+                        class="text-sm md:text-base hover:text-accent transition-colors"
+                        >Rates</a
+                    >
+                    <a
+                        href="index.html#contact"
+                        class="text-sm md:text-base hover:text-accent transition-colors"
+                        >Contact</a
+                    >
+                    <button
+                        id="shareBtn"
+                        class="text-sm md:text-base hover:text-accent transition-colors"
+                        title="Share this page"
+                    >
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="py-16 md:py-24 px-4 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Portrait Image -->
+                    <img
+                        src="static/img/profile.jpg"
+                        alt="Tom Counsell - Professional portrait"
+                        class="w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full mx-auto mb-8 object-cover shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
+                    />
+
+                    <!-- Name -->
+                    <h1
+                        class="font-serif font-bold text-4xl md:text-5xl lg:text-6xl mb-4"
+                    >
+                        Tom Counsell
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p
+                        class="font-serif text-xl md:text-2xl text-text-secondary mb-8"
+                    >
+                        Engineering Leader | AI & Systems Architect
+                    </p>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center gap-6 text-2xl">
+                        <a
+                            href="https://linkedin.com/in/tomcounsell"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent hover:text-accent-light transition-colors"
+                            title="LinkedIn"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://wellfound.com/u/tomcounsell"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent hover:text-accent-light transition-colors"
+                            title="Wellfound"
+                        >
+                            <i class="fab fa-angellist"></i>
+                        </a>
+                        <a
+                            href="https://github.com/tomcounsell"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent hover:text-accent-light transition-colors"
+                            title="GitHub"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a
+                            href="https://stackoverflow.com/users/2102461/tomcounsell"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent hover:text-accent-light transition-colors"
+                            title="Stack Overflow"
+                        >
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                        <a
+                            href="https://t.me/tomcounsell"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent hover:text-accent-light transition-colors"
+                            title="Telegram"
+                        >
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="py-16 md:py-20 px-4 bg-bg-secondary">
+                <div class="max-w-4xl mx-auto">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                    >
+                        What People Say
+                    </h2>
+
+                    <div class="space-y-8">
+                        <!-- Testimonial 1 -->
+                        <blockquote class="border-l-2 border-accent pl-6 py-2">
+                            <p class="text-lg mb-4 italic">
+                                "an indispensable asset to our team.. the best
+                                engineer I've had the privilege of working
+                                with.. Tom fostered a positive and collaborative
+                                work environment, serving as a natural leader
+                                who inspired the entire team to strive for
+                                excellence. I wholeheartedly recommend Tom for
+                                any leadership role in engineering, confident
+                                that his dedication, expertise, and leadership
+                                qualities will greatly contribute to the success
+                                of any organization."
+                            </p>
+                            <footer class="text-text-secondary font-semibold">
+                                — Zac Stern, Bumble Inc
+                            </footer>
+                        </blockquote>
+
+                        <!-- Testimonial 2 -->
+                        <blockquote class="border-l-2 border-accent pl-6 py-2">
+                            <p class="text-lg mb-4 italic">
+                                "Tom cares. He's a force multiplier that makes
+                                everyone around him better... I highly recommend
+                                Tom as a leader."
+                            </p>
+                            <footer class="text-text-secondary font-semibold">
+                                — Anthony S. Cannella, Blockchain Hub
+                            </footer>
+                        </blockquote>
+
+                        <!-- Testimonial 3 -->
+                        <blockquote class="border-l-2 border-accent pl-6 py-2">
+                            <p class="text-lg mb-4 italic">
+                                "Tom is not only a very talented developer, but
+                                a keen business leader... He instituted 'hack
+                                days' and design sprints that really encouraged
+                                innovation."
+                            </p>
+                            <footer class="text-text-secondary font-semibold">
+                                — Ben Lakoff, Bankless Ventures
+                            </footer>
+                        </blockquote>
+
+                        <!-- Testimonial 4 -->
+                        <blockquote class="border-l-2 border-accent pl-6 py-2">
+                            <p class="text-lg mb-4 italic">
+                                "Tom has incredible personal, leadership, and
+                                technical skills... the best aspect of working
+                                with Tom is the quality and ease of management."
+                            </p>
+                            <footer class="text-text-secondary font-semibold">
+                                — Francesco De Lisi, Woven Project, Toyota Inc.
+                            </footer>
+                        </blockquote>
+
+                        <!-- Testimonial 5 -->
+                        <blockquote class="border-l-2 border-accent pl-6 py-2">
+                            <p class="text-lg mb-4 italic">
+                                "Tom shows great passion and creativity... The
+                                products he built were instant hits... he has
+                                natural leadership qualities."
+                            </p>
+                            <footer class="text-text-secondary font-semibold">
+                                — Rupert Lane, Agoda, Booking Inc.
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="py-16 md:py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                    >
+                        2024 Rates
+                    </h2>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-300">
+                                    <th
+                                        class="text-left py-4 px-4 font-serif text-xl"
+                                    >
+                                        Service
+                                    </th>
+                                    <th
+                                        class="text-right py-4 px-4 font-serif text-xl"
+                                    >
+                                        Rate
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-lg">Base Rate</td>
+                                    <td
+                                        class="text-right py-4 px-4 text-lg font-semibold text-accent"
+                                    >
+                                        $324/hr
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-lg">FinTech</td>
+                                    <td
+                                        class="text-right py-4 px-4 text-lg font-semibold text-accent"
+                                    >
+                                        $486/hr
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-lg">
+                                        Consultancy
+                                    </td>
+                                    <td
+                                        class="text-right py-4 px-4 text-lg font-semibold text-accent"
+                                    >
+                                        $648/hr
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Services Section -->
+            <section class="py-16 md:py-20 px-4 bg-bg-secondary">
+                <div class="max-w-6xl mx-auto">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-16 text-center"
+                    >
+                        Services
+                    </h2>
+
+                    <!-- For Executives & CTOs -->
+                    <div class="mb-12">
+                        <h3
+                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
+                        >
+                            For Executives & CTOs
+                        </h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Dev Team Leadership
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Agile project management, code
+                                            reviews, technical mentorship.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Dev Team Hiring
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Recruitment and vetting of
+                                            engineering talent.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-sitemap"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Systems Architecture
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Scalable design with monolith or
+                                            microservices architectures.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- For Product & Engineering Teams -->
+                    <div class="mb-12">
+                        <h3
+                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
+                        >
+                            For Product & Engineering Teams
+                        </h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Python Development
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Custom backend services, data
+                                            analytics, machine learning
+                                            solutions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Flutter Mobile Apps
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Cross-platform mobile apps focusing
+                                            on user experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-plug"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            API Integration
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Seamless third-party services
+                                            integration including payment
+                                            gateways.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Rapid Backend Dashboards
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Quick development of backend admin
+                                            panels.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- For Data & Infrastructure Teams -->
+                    <div class="mb-12">
+                        <h3
+                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
+                        >
+                            For Data & Infrastructure Teams
+                        </h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            ETL Services
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Data extraction, transformation,
+                                            loading for analytics and BI.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Database Design
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Relational and document databases
+                                            optimized for performance and
+                                            reliability.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            Redis Database Systems
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            High-performance Redis databases,
+                                            cache architecture.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- For Growth & Content Teams -->
+                    <div>
+                        <h3
+                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
+                        >
+                            For Growth & Content Teams
+                        </h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            AI Content Generation
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Automated content via advanced
+                                            machine learning.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                            >
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="text-accent text-3xl flex-shrink-0"
+                                    >
+                                        <i class="fas fa-edit"></i>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-serif text-xl font-semibold mb-2"
+                                        >
+                                            CMS
+                                        </h4>
+                                        <p class="text-text-secondary">
+                                            Content Management Systems for
+                                            streamlined content updates.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Terms & Assurances Section -->
+            <section class="py-16 md:py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                    >
+                        Terms & Assurances
+                    </h2>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Payment Terms -->
+                        <div
+                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        >
+                            <h3 class="font-serif text-xl font-semibold mb-4">
+                                Payment Terms
+                            </h3>
+                            <ul class="space-y-3 text-base">
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-check text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span
+                                        >50% of monthly invoice estimate as
+                                        deposit</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-check text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span
+                                        >Invoices on 1st of each month,
+                                        Net-15</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Discounts -->
+                        <div
+                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        >
+                            <h3 class="font-serif text-xl font-semibold mb-4">
+                                Discounts
+                            </h3>
+                            <ul class="space-y-3 text-base">
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-star text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span
+                                        >Up to 20% for active client
+                                        referrals</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-star text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span
+                                        >Reduced rates for Social Enterprises
+                                        and Non-profits</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Assurances -->
+                        <div
+                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        >
+                            <h3 class="font-serif text-xl font-semibold mb-4">
+                                Assurances
+                            </h3>
+                            <ul class="space-y-3 text-base">
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span>Client confidentiality</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span>IP solely owned by Client</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span>Flexible agreement terms</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i
+                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
+                                    ></i>
+                                    <span
+                                        >Structured refund and arbitration</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Get in Touch Section -->
+            <section id="contact" class="py-16 md:py-20 px-4 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-12"
+                    >
+                        Get in Touch
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <!-- Yudame -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg p-8 hover:border-[#f5d563] transition-colors"
+                        >
+                            <div
+                                class="flex items-center justify-center gap-3 mb-4"
+                            >
+                                <img
+                                    src="static/img/yudame.png"
+                                    alt="Yudame logo"
+                                    class="h-8"
+                                />
+                                <h3 class="font-serif text-2xl font-semibold">
+                                    Yudame
+                                </h3>
+                            </div>
+                            <p class="text-text-secondary mb-6">
+                                Partner with Tom's consultancy for engineering
+                                leadership and product development.
+                            </p>
+                            <a
+                                href="https://yuda.me"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-block bg-[#f5d563] hover:bg-[#f4cf4a] text-black font-semibold px-6 py-3 rounded transition-colors"
+                            >
+                                Visit Yudame
+                            </a>
+                        </div>
+
+                        <!-- Message on LinkedIn -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg p-8"
+                        >
+                            <h3 class="font-serif text-2xl font-semibold mb-4">
+                                Message Tom
+                            </h3>
+                            <p class="text-text-secondary mb-6">
+                                Connect directly on LinkedIn for opportunities,
+                                collaboration, or questions.
+                            </p>
+                            <a
+                                href="https://linkedin.com/in/tomcounsell"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-block bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded transition-colors"
+                            >
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-text-secondary">
+                        Want to learn more about services and rates?
+                        <a
+                            href="rates.html"
+                            class="text-accent hover:text-accent-light underline"
+                            >View details</a
+                        >
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="border-t border-gray-200 py-8 px-4 text-sm text-text-secondary"
+        >
+            <div class="max-w-6xl mx-auto space-y-6">
+                <!-- Links Row -->
+                <div class="flex flex-wrap justify-center gap-6 text-center">
+                    <a
+                        href="https://yuda.me"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                        >Yudame</a
+                    >
+                    <a
+                        href="rates.html"
+                        class="hover:text-accent transition-colors"
+                        >Rates</a
+                    >
+                    <a
+                        href="https://linkedin.com/in/tomcounsell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="https://wellfound.com/u/tomcounsell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                        >Wellfound</a
+                    >
+                    <a
+                        href="https://github.com/tomcounsell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                        >GitHub</a
+                    >
+                    <a
+                        href="https://stackoverflow.com/users/2102461/tomcounsell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                        >Stack Overflow</a
+                    >
+                    <a
+                        href="https://t.me/tomcounsell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                        >Telegram</a
+                    >
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="flex justify-between items-center text-xs">
+                    <a
+                        href="https://github.com/tomcounsell/tomcounsell.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-accent transition-colors"
+                    >
+                        View Source
+                    </a>
+                    <p class="font-serif">&copy; 2025 Tom Counsell</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Share Button Script -->
+        <script>
+            document
+                .getElementById("shareBtn")
+                .addEventListener("click", async function () {
+                    const url = window.location.href;
+                    try {
+                        if (navigator.share) {
+                            await navigator.share({
+                                title: "Rates & Services - Tom Counsell",
+                                url: url,
+                            });
+                        } else {
+                            await navigator.clipboard.writeText(url);
+                            alert("Link copied to clipboard!");
+                        }
+                    } catch (err) {
+                        console.error("Error sharing:", err);
+                    }
+                });
+        </script>
+    </body>
 </html>
