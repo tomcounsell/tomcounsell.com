@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Tom Counsell - Resume/CV. Engineering Leader, CTO, AI & Systems Architect with 15+ years experience."
+        />
+        <title>Resume - Tom Counsell</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+
+        <!-- Tailwind CSS Browser v4 -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- Google Fonts - Playfair Display -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+
+        <!-- Custom Tailwind Theme -->
+        <style type="text/tailwindcss">
+            @theme {
+                --color-bg-primary: #fafafa;
+                --color-bg-secondary: #f0f0f0;
+                --color-text-primary: #1a1a1a;
+                --color-text-secondary: #666666;
+                --color-accent: #2c2c2c;
+                --color-accent-light: #4a4a4a;
+            }
+
+            /* Serif font for name and headings */
+            .font-serif {
+                font-family: "Playfair Display", Georgia, serif;
+            }
+
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+
+        <!-- Print Styles -->
+        <style>
+            @media print {
+                /* Hide non-essential elements */
+                header,
+                footer,
+                .no-print,
+                .print-hide {
+                    display: none !important;
+                }
+
+                /* Reset background colors for print */
+                body {
+                    background: white !important;
+                    color: black !important;
+                    font-size: 10pt !important;
+                    line-height: 1.35 !important;
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
+
+                /* Page setup - supports both letter and A4 */
+                @page {
+                    margin: 0.4in 0.5in;
+                    size: letter;
+                }
+
+                @page :first {
+                    margin-top: 0.3in;
+                }
+
+                /* Typography for print */
+                h1 {
+                    font-size: 22pt !important;
+                }
+                h2 {
+                    font-size: 12pt !important;
+                    margin-bottom: 0.3rem !important;
+                    padding-bottom: 0.15rem !important;
+                }
+                h3 {
+                    font-size: 11pt !important;
+                }
+                p,
+                li {
+                    font-size: 10pt !important;
+                }
+
+                /* Ensure sections don't break awkwardly */
+                section {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
+                }
+
+                .experience-item {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
+                    margin-bottom: 0.5rem !important;
+                }
+
+                /* Force page break before a section if needed */
+                .print-page-break {
+                    page-break-before: always;
+                }
+
+                /* Compact spacing for print */
+                .print-compact {
+                    padding-top: 0.25rem !important;
+                    padding-bottom: 0.25rem !important;
+                    margin-bottom: 0.5rem !important;
+                }
+
+                /* Show print header */
+                .print-header {
+                    display: block !important;
+                }
+
+                /* Adjust main content for print */
+                main {
+                    padding: 0 !important;
+                    max-width: 100% !important;
+                }
+
+                /* Remove shadows and decorative elements */
+                * {
+                    box-shadow: none !important;
+                    text-shadow: none !important;
+                }
+
+                /* Links styling for print */
+                a {
+                    color: #1a1a1a !important;
+                    text-decoration: none !important;
+                }
+
+                /* Skill tags for print - inline, compact */
+                .skill-tag {
+                    background: #f5f5f5 !important;
+                    border: 1px solid #ddd !important;
+                    padding: 0.1rem 0.3rem !important;
+                    font-size: 8pt !important;
+                    margin: 0.1rem !important;
+                }
+
+                /* Grid adjustments for print */
+                .grid {
+                    gap: 0.5rem !important;
+                }
+
+                /* Section borders */
+                .border-b {
+                    border-bottom: 1px solid #ccc !important;
+                }
+
+                /* Tighter line heights */
+                .leading-relaxed {
+                    line-height: 1.4 !important;
+                }
+
+                /* Hide icons in print for cleaner look */
+                .print-header i,
+                section i.fas,
+                section i.fab {
+                    display: none !important;
+                }
+
+                /* Adjust spacing between experience items */
+                .space-y-6 > * + * {
+                    margin-top: 0.6rem !important;
+                }
+            }
+
+            /* Screen-only styles */
+            @media screen {
+                .print-header {
+                    display: none;
+                }
+                .print-only {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-bg-primary text-text-primary font-sans">
+        <!-- Header Navigation (hidden in print) -->
+        <header
+            class="sticky top-0 bg-bg-primary/95 backdrop-blur-sm border-b border-gray-200 z-50"
+        >
+            <nav
+                class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+            >
+                <a
+                    href="index.html"
+                    class="text-xl md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors"
+                >
+                    Tom Counsell
+                </a>
+                <div class="flex items-center gap-3 md:gap-6">
+                    <a
+                        href="index.html#about"
+                        class="text-sm md:text-base hover:text-accent transition-colors py-2"
+                        >About</a
+                    >
+                    <a
+                        href="index.html#career"
+                        class="text-sm md:text-base hover:text-accent transition-colors py-2"
+                        >Career</a
+                    >
+                    <a
+                        href="rates.html#rates"
+                        class="text-sm md:text-base hover:text-accent transition-colors py-2"
+                        >Rates</a
+                    >
+                    <a
+                        href="index.html#contact"
+                        class="text-sm md:text-base hover:text-accent transition-colors py-2"
+                        >Contact</a
+                    >
+                    <button
+                        onclick="window.print()"
+                        class="text-sm md:text-base hover:text-accent transition-colors py-2 px-2"
+                        title="Print / Save as PDF"
+                    >
+                        <i class="fas fa-print"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Print Header (only visible when printing) -->
+        <div class="print-header px-4 pt-2">
+            <div
+                class="flex justify-between items-start border-b-2 border-gray-800 pb-3 mb-2"
+            >
+                <div>
+                    <h1 class="font-serif text-3xl font-bold mb-1">
+                        Tom Counsell
+                    </h1>
+                    <p class="text-base text-text-secondary">
+                        Engineering Leader | AI & Systems Architect | CTO
+                    </p>
+                </div>
+                <div class="text-right text-xs leading-relaxed">
+                    <p class="font-semibold">tomcounsell.com</p>
+                    <p>linkedin.com/in/tomcounsell</p>
+                    <p>github.com/tomcounsell</p>
+                    <p class="text-text-secondary mt-1">
+                        Available for consulting & leadership roles
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+            <!-- Resume Header Section (hidden in print - replaced by print-header) -->
+            <section class="mb-8 md:mb-12 print-hide">
+                <div
+                    class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+                >
+                    <div class="flex items-center gap-6">
+                        <!-- Portrait (smaller for resume) -->
+                        <img
+                            src="static/img/profile.jpg"
+                            alt="Tom Counsell"
+                            class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg print-hide"
+                        />
+                        <div>
+                            <h1
+                                class="font-serif font-bold text-3xl md:text-4xl lg:text-5xl mb-2"
+                            >
+                                Tom Counsell
+                            </h1>
+                            <p
+                                class="font-serif text-lg md:text-xl text-text-secondary"
+                            >
+                                Engineering Leader | AI & Systems Architect
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Links -->
+                    <div
+                        class="flex flex-wrap gap-4 text-sm md:text-base print-hide"
+                    >
+                        <a
+                            href="https://linkedin.com/in/tomcounsell"
+                            target="_blank"
+                            class="flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                            <span class="hidden md:inline">LinkedIn</span>
+                        </a>
+                        <a
+                            href="https://github.com/tomcounsell"
+                            target="_blank"
+                            class="flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+                        >
+                            <i class="fab fa-github"></i>
+                            <span class="hidden md:inline">GitHub</span>
+                        </a>
+                        <a
+                            href="https://tomcounsell.com"
+                            class="flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+                        >
+                            <i class="fas fa-globe"></i>
+                            <span class="hidden md:inline">Website</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Summary -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <h2
+                    class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                >
+                    Professional Summary
+                </h2>
+                <p class="text-base leading-relaxed">
+                    Engineering leader with 15+ years building teams that ship
+                    and products that users love. <br />
+                    Currently serving as CTO at two AI-focused startups, Tom has
+                    been pioneering MCP server patterns for multi-agent
+                    marketing intelligence while simultaneously architecting
+                    psychological assessments that serve elite sports
+                    organizations including NBA teams and U.S. Special
+                    Operations. <br />Tom's decade of experience as CTO spans
+                    fintech, AI, and travel tech, raising $3.5M+ in funding,
+                    completing three successful exits, and repeatedly delivering
+                    systems that serve millions of users. At Official App, Tom
+                    directed IT through the acquisition then rebuild the
+                    engineering team inside Bumble Studio in six months without
+                    missing a sprint in the process. He excels at hiring
+                    exceptional teams, making decisive technical and strategic
+                    calls, and consistently shipping products that users love.
+                </p>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <h2
+                    class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                >
+                    Core Competencies
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-semibold mb-2">Technical Leadership</h3>
+                        <p class="text-sm text-text-secondary">
+                            Team Building, Agile/Scrum, Technical Architecture,
+                            Hiring & Mentorship, Strategic Planning
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Backend & Data</h3>
+                        <p class="text-sm text-text-secondary">
+                            Python, Django, Redis, ETL Pipelines, PostgreSQL,
+                            Real-time Systems, Blockchain, Web3
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">
+                            AI & Machine Learning
+                        </h3>
+                        <p class="text-sm text-text-secondary">
+                            LLMs (Claude, GPT-4, Gemini), Model Context Protocol
+                            (MCP), PydanticAI, Agent Orchestration, Prompt
+                            Engineering, Multi-Provider Orchestration
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Cloud & DevOps</h3>
+                        <p class="text-sm text-text-secondary">
+                            AWS, Scaling Infrastructure, Microservices, API
+                            Design, React Native, Dart/Flutter
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <h2
+                    class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                >
+                    Professional Experience
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- PsyOptimal -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">CTO</h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://psyoptimal.com"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >PsyOptimal</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    psyoptimal.com
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2024 - Present
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Built AI-ready sports psychology platform from
+                                ground up, digitizing 25+ years of elite
+                                methodologies used by NBA teams and U.S. Special
+                                Operations
+                            </li>
+                            <li>
+                                Architected normative analytics pipeline
+                                enabling coaches to benchmark athlete
+                                psychological profiles across team, league, and
+                                sport-wide data
+                            </li>
+                            <li>
+                                Shipped bilingual platform (English/Spanish)
+                                serving 5 market verticals with full GDPR/CCPA
+                                compliance
+                            </li>
+                            <li>
+                                Designed scalable assessment engine processing
+                                multi-dimensional psychological evaluations with
+                                real-time scoring
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Python</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Django</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >PostgreSQL</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >AWS</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >HealthTech</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Fuse -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">CTO</h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://fuse.is"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >Fuse</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    fuse.is
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2024 - 2026
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Architected multi-agent AI platform using Model
+                                Context Protocol (MCP) servers, enabling dynamic
+                                tool generation for Google Analytics, Google
+                                Ads, and Meta APIs
+                            </li>
+                            <li>
+                                Built MCP server pattern months before
+                                Anthropic's industry standardization,
+                                positioning platform as early adopter
+                            </li>
+                            <li>
+                                Engineered "zero hallucination" guarantee
+                                through verified data pipelines, eliminating
+                                AI-generated inaccuracies
+                            </li>
+                            <li>
+                                Developed PromptTemplate system achieving 40%
+                                token reduction, reducing API costs and
+                                improving response times
+                            </li>
+                            <li>
+                                Led engineering team from 0 to production MVP in
+                                6 months with enterprise-ready multi-tenant
+                                architecture
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >PydanticAI</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >MCP</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Claude</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >GPT-4</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Next.js</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Redis</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Bumble / Official -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">
+                                    Head of Engineering
+                                </h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://getofficial.co"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >Bumble Inc / Official</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    getofficial.co
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2022 - 2023
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Led complete technical transformation,
+                                rebuilding entire 8-person dev team in 6 months
+                                while maintaining sprint velocity
+                            </li>
+                            <li>
+                                Integrated data pipelines reducing BI report
+                                latency by 75%, enabling real-time business
+                                intelligence
+                            </li>
+                            <li>
+                                Managed technical handover of React Native app
+                                serving 100K+ MAU to Bumble Inc's engineering
+                                org
+                            </li>
+                            <li>
+                                Aligned engineering practices with NASDAQ-listed
+                                parent company (Bumble Inc) standards and
+                                compliance requirements
+                            </li>
+                            <li>
+                                Implemented Scrum methodology with zero missed
+                                sprint commitments during team transition period
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >React Native</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Data Pipelines</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Team Leadership</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Scrum</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- SIMPLENIGHT -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">
+                                    Cache Architect
+                                </h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://www.simplenight.com/"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >SIMPLENIGHT</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    simplenight.com
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2021 - 2024
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Designed custom Redis-based caching system for
+                                700K+ hotels worldwide, handling real-time
+                                inventory updates
+                            </li>
+                            <li>
+                                Engineered real-time ETL processing handling
+                                70GB/min of rates and availability data from
+                                multiple GDS providers
+                            </li>
+                            <li>
+                                Reduced API response times by 85%, enabling
+                                sub-100ms booking flows for improved conversion
+                                rates
+                            </li>
+                            <li>
+                                Implemented geospatial indexing for
+                                location-based hotel search across global
+                                inventory
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Redis</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >ETL Systems</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Geospatial</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Scaling</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Intelligent Trading Foundation -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">CTO</h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://intelligenttrading.org"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >Intelligent Trading Foundation</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    intelligenttrading.org
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2017 - 2020
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Built ML-powered trading signals platform
+                                serving 50K+ crypto traders with real-time
+                                market analysis
+                            </li>
+                            <li>
+                                Led open-source contributions attracting 100+
+                                GitHub contributors and 2K+ stars across
+                                multiple repositories
+                            </li>
+                            <li>
+                                Developed portfolio tracking and
+                                auto-rebalancing systems managing $10M+ in
+                                digital assets
+                            </li>
+                            <li>
+                                Implemented machine learning models for price
+                                prediction and sentiment analysis across 200+
+                                cryptocurrencies
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Machine Learning</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Blockchain</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Python</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Open Source</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Blockchain Hub Prague -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">
+                                    Executive Director
+                                </h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="http://bhubprague.com"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >Blockchain Hub Prague</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    bhubprague.com
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2017 - 2019
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Founded and led blockchain startup incubator
+                                supporting 20+ early-stage companies
+                            </li>
+                            <li>
+                                Member startups collectively raised $6M+ in seed
+                                funding through ICOs and traditional VC
+                            </li>
+                            <li>
+                                Built partnerships with local accelerator
+                                programs and university entrepreneurship centers
+                            </li>
+                            <li>
+                                Organized 100+ weekly education events with
+                                volunteer advisors from established blockchain
+                                projects
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Incubator</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Mentorship</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Fundraising</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Blockchain</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Agoda -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">
+                                    Senior Engineering Team Lead
+                                </h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://www.agoda.com/"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >Agoda (Booking Holdings)</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    agoda.com
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">2016</p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Pitched and led greenfield product initiative
+                                for non-hotel accommodations to compete with
+                                Airbnb
+                            </li>
+                            <li>
+                                Secured C-level executive buy-in and built
+                                dedicated 12-person department within 4 months
+                            </li>
+                            <li>
+                                Architected product features that scaled to
+                                serve 40M+ MAU across 39 languages
+                            </li>
+                            <li>
+                                Delivered inventory management system processing
+                                100K+ property listings across Southeast Asia
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Product Architecture</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >API Design</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Scaling</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Leadership</span
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Anou -->
+                    <article class="experience-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h3 class="font-semibold text-lg">
+                                    Cofounder & Technical Director
+                                </h3>
+                                <p class="text-accent">
+                                    <a
+                                        href="https://theanou.com"
+                                        target="_blank"
+                                        class="hover:text-accent-light"
+                                        >Anou</a
+                                    >
+                                </p>
+                                <p class="text-xs text-text-secondary">
+                                    theanou.com
+                                </p>
+                            </div>
+                            <p class="text-sm text-text-secondary">
+                                2012 - 2015
+                            </p>
+                        </div>
+                        <ul
+                            class="text-sm mb-2 list-disc list-inside space-y-1"
+                        >
+                            <li>
+                                Co-founded and scaled Morocco's largest artisan
+                                e-commerce platform to $1M+ annual revenue
+                            </li>
+                            <li>
+                                Pioneered language-free mobile commerce UX
+                                enabling 200+ illiterate artisans to manage
+                                inventory and sales
+                            </li>
+                            <li>
+                                Created economic impact funding 3 primary
+                                schools, healthcare programs, and 1,000+ jobs in
+                                rural communities
+                            </li>
+                            <li>
+                                Built Python/Django platform connecting Moroccan
+                                artisans directly to international buyers,
+                                eliminating middlemen
+                            </li>
+                            <li>
+                                Served as US Peace Corps volunteer during
+                                founding phase
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >E-commerce</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Python Django</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >HCI Research</span
+                            >
+                            <span
+                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                                >Social Impact</span
+                            >
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Additional Roles (Condensed) -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <h2
+                    class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                >
+                    Additional Roles
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <p class="font-semibold">
+                            Strategic Advisor
+                            <span class="font-normal text-text-secondary"
+                                >@ Chainstarters</span
+                            >
+                        </p>
+                        <p class="text-text-secondary">
+                            May 2018 - Present | Asset tokenization platform,
+                            technical whitepaper author
+                        </p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">
+                            Owner
+                            <span class="font-normal text-text-secondary"
+                                >@ Yudame</span
+                            >
+                        </p>
+                        <p class="text-text-secondary">
+                            Mar 2019 - Present | Mission-driven software
+                            consultancy
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open Source & Research -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <h2
+                    class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                >
+                    Open Source & Research
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                        <p class="font-semibold">AI Projects</p>
+                        <p class="text-text-secondary mb-1">
+                            Open source AI experiments, agent frameworks, and
+                            tooling
+                        </p>
+                        <a
+                            href="https://github.com/tomcounsell/ai"
+                            target="_blank"
+                            class="text-accent hover:text-accent-light text-xs"
+                            >github.com/tomcounsell/ai</a
+                        >
+                    </div>
+                    <div>
+                        <p class="font-semibold">Research</p>
+                        <p class="text-text-secondary mb-1">
+                            Technical research and deep-dives through Yudame
+                        </p>
+                        <a
+                            href="https://research.yuda.me"
+                            target="_blank"
+                            class="text-accent hover:text-accent-light text-xs"
+                            >research.yuda.me</a
+                        >
+                    </div>
+                    <div>
+                        <p class="font-semibold">AI Lab</p>
+                        <p class="text-text-secondary mb-1">
+                            AI applications and experiments in production
+                        </p>
+                        <a
+                            href="https://ai.yuda.me"
+                            target="_blank"
+                            class="text-accent hover:text-accent-light text-xs"
+                            >ai.yuda.me</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Highlights -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Education -->
+                    <div>
+                        <h2
+                            class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                        >
+                            Education
+                        </h2>
+                        <div>
+                            <p class="font-semibold">Purdue University</p>
+                            <p class="text-sm text-text-secondary">
+                                B.S. Computer Science, 2009
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div>
+                        <h2
+                            class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                        >
+                            Highlights
+                        </h2>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-start gap-2">
+                                <i
+                                    class="fas fa-certificate text-accent mt-1 text-xs"
+                                ></i>
+                                <span
+                                    >AWS Certified Solutions Architect,
+                                    Singapore 2015</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i
+                                    class="fas fa-trophy text-accent mt-1 text-xs"
+                                ></i>
+                                <span
+                                    >EOS Global Hackathon Finalist, Hong Kong
+                                    2018</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i
+                                    class="fas fa-book text-accent mt-1 text-xs"
+                                ></i>
+                                <span
+                                    >Featured in World Development Report 2016,
+                                    World Bank</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i
+                                    class="fas fa-newspaper text-accent mt-1 text-xs"
+                                ></i>
+                                <span>Featured in Fast Company, 2015</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i
+                                    class="fas fa-globe-americas text-accent mt-1 text-xs"
+                                ></i>
+                                <span>US Peace Corps, Morocco, 2012-14</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial (compact) -->
+            <section class="mb-8 print-compact print-hide">
+                <blockquote
+                    class="border-l-2 border-accent pl-4 py-2 italic text-text-secondary"
+                >
+                    "Tom cares. He's a force multiplier that makes everyone
+                    around him better... the best engineer I've had the
+                    privilege of working with."
+                    <footer class="not-italic font-semibold mt-2 text-sm">
+                        — Zac Stern, Bumble Inc
+                    </footer>
+                </blockquote>
+            </section>
+
+            <!-- Action Buttons (hidden in print) -->
+            <section class="text-center print-hide">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button
+                        onclick="window.print()"
+                        class="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded transition-colors"
+                    >
+                        <i class="fas fa-print"></i>
+                        Print / Save as PDF
+                    </button>
+                    <a
+                        href="index.html"
+                        class="inline-flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white font-semibold px-6 py-3 rounded transition-colors"
+                    >
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Portfolio
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/tomcounsell"
+                        target="_blank"
+                        class="inline-flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white font-semibold px-6 py-3 rounded transition-colors"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer (hidden in print) -->
+        <footer
+            class="border-t border-gray-200 py-8 px-4 text-sm text-text-secondary mt-12"
+        >
+            <div class="max-w-6xl mx-auto space-y-6">
+                <!-- Links Row -->
+                <div
+                    class="flex flex-wrap justify-center gap-4 md:gap-6 text-center"
+                >
+                    <a
+                        href="https://yuda.me"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                        >Yudame</a
+                    >
+                    <a
+                        href="rates.html"
+                        class="hover:text-accent transition-colors"
+                        >Rates</a
+                    >
+                    <a
+                        href="https://linkedin.com/in/tomcounsell"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="https://wellfound.com/u/tomcounsell"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                        >Wellfound</a
+                    >
+                    <a
+                        href="https://github.com/tomcounsell"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                        >GitHub</a
+                    >
+                    <a
+                        href="https://stackoverflow.com/users/2102461/tomcounsell"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                        >Stack Overflow</a
+                    >
+                    <a
+                        href="https://t.me/tomcounsell"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                        >Telegram</a
+                    >
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="flex justify-between items-center text-xs">
+                    <a
+                        href="https://github.com/tomcounsell/tomcounsell.com"
+                        target="_blank"
+                        class="hover:text-accent transition-colors"
+                    >
+                        View Source
+                    </a>
+                    <p class="font-serif">&copy; 2025 Tom Counsell</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
