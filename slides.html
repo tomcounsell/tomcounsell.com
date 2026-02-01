@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Claude Event Talk - Tom Counsell's Workflow Presentation"
+        />
+        <title>Workflow Talk - Tom Counsell</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="static/favicon.svg?v=3" />
+        <link rel="icon" type="image/png" href="static/favicon.png?v=3" />
+        <link rel="apple-touch-icon" href="static/apple-touch-icon.png?v=3" />
+
+        <!-- Reveal.js CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css"
+        />
+
+        <!-- Google Fonts - Playfair Display -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+
+        <!-- Mermaid.js -->
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+        <style>
+            :root {
+                --color-bg-primary: #fafafa;
+                --color-bg-secondary: #f0f0f0;
+                --color-text-primary: #1a1a1a;
+                --color-text-secondary: #666666;
+                --color-accent: #2c2c2c;
+                --color-accent-light: #4a4a4a;
+                --color-highlight: #cc5500;
+            }
+
+            .reveal {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                    Roboto, sans-serif;
+            }
+
+            .reveal h1,
+            .reveal h2,
+            .reveal h3 {
+                font-family: "Playfair Display", Georgia, serif;
+                color: var(--color-text-primary);
+                text-transform: none;
+            }
+
+            .reveal h1 {
+                font-size: 2.5em;
+            }
+
+            .reveal h2 {
+                font-size: 1.8em;
+            }
+
+            .reveal h3 {
+                font-size: 1.3em;
+            }
+
+            .reveal p,
+            .reveal li {
+                color: var(--color-text-secondary);
+                font-size: 0.9em;
+                line-height: 1.6;
+            }
+
+            .reveal .slides section {
+                padding: 20px;
+            }
+
+            .reveal a {
+                color: var(--color-highlight);
+            }
+
+            .reveal .highlight {
+                color: var(--color-highlight);
+                font-weight: 600;
+            }
+
+            .reveal .tag {
+                display: inline-block;
+                padding: 4px 12px;
+                background: var(--color-bg-secondary);
+                border-radius: 4px;
+                font-size: 0.7em;
+                margin: 4px;
+                font-family: monospace;
+            }
+
+            .reveal .profile-img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .reveal .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                font-size: 1.5em;
+                margin-top: 20px;
+            }
+
+            .reveal .social-icons a {
+                color: var(--color-accent);
+                transition: color 0.3s;
+            }
+
+            .reveal .social-icons a:hover {
+                color: var(--color-highlight);
+            }
+
+            .reveal .two-column {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                text-align: left;
+            }
+
+            .reveal .three-column {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
+                text-align: left;
+            }
+
+            .reveal .book-card {
+                background: var(--color-bg-secondary);
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .reveal .book-card h4 {
+                font-family: "Playfair Display", serif;
+                font-size: 0.9em;
+                margin-bottom: 8px;
+                color: var(--color-text-primary);
+            }
+
+            .reveal .book-card p {
+                font-size: 0.7em;
+                margin: 0;
+            }
+
+            .reveal .mermaid {
+                font-size: 0.8em;
+            }
+
+            .reveal .quote {
+                font-style: italic;
+                border-left: 3px solid var(--color-highlight);
+                padding-left: 20px;
+                margin: 20px 0;
+                text-align: left;
+            }
+
+            .reveal .strikethrough {
+                text-decoration: line-through;
+                color: #999;
+            }
+
+            .reveal .fade-text {
+                opacity: 0.4;
+            }
+
+            .reveal .bonus-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                text-align: left;
+            }
+
+            .reveal .bonus-item {
+                background: var(--color-bg-secondary);
+                padding: 15px 20px;
+                border-radius: 8px;
+            }
+
+            .reveal .bonus-item h4 {
+                font-family: "Playfair Display", serif;
+                font-size: 0.85em;
+                margin: 0 0 8px 0;
+                color: var(--color-text-primary);
+            }
+
+            .reveal .bonus-item p {
+                font-size: 0.65em;
+                margin: 0;
+            }
+
+            .reveal .timeline {
+                text-align: left;
+                padding-left: 20px;
+                border-left: 2px solid var(--color-bg-secondary);
+            }
+
+            .reveal .timeline-item {
+                position: relative;
+                margin-bottom: 15px;
+                padding-left: 15px;
+            }
+
+            .reveal .timeline-item::before {
+                content: "";
+                position: absolute;
+                left: -21px;
+                top: 8px;
+                width: 10px;
+                height: 10px;
+                background: var(--color-highlight);
+                border-radius: 50%;
+            }
+
+            .reveal .emoji {
+                font-size: 2em;
+                margin: 10px;
+            }
+
+            .reveal .vs {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+            }
+
+            .reveal .vs-item {
+                text-align: center;
+                padding: 20px;
+            }
+
+            .reveal .vs-divider {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: var(--color-accent);
+            }
+
+            .reveal .controls button {
+                color: var(--color-accent);
+            }
+
+            .reveal .progress {
+                color: var(--color-highlight);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!-- Slide 1: Title / About -->
+                <section>
+                    <img
+                        src="static/img/profile.jpg"
+                        alt="Tom Counsell"
+                        class="profile-img"
+                    />
+                    <h1>Tom Counsell</h1>
+                    <p>Engineering Leader | AI & Systems Architect</p>
+                    <p style="font-size: 0.7em; margin-top: 30px">
+                        10+ years CTO | $50M+ products | 3 exits
+                    </p>
+                    <div class="social-icons">
+                        <a
+                            href="https://linkedin.com/in/tomcounsell"
+                            target="_blank"
+                            title="LinkedIn"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://github.com/tomcounsell"
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a
+                            href="https://stackoverflow.com/users/2102461/tomcounsell"
+                            target="_blank"
+                            title="Stack Overflow"
+                        >
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                        <a
+                            href="https://t.me/tomcounsell"
+                            target="_blank"
+                            title="Telegram"
+                        >
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Slide 2: Stack Overflow Profile -->
+                <section>
+                    <h2><i class="fab fa-stack-overflow"></i> Stack Overflow</h2>
+                    <p style="margin-bottom: 30px">
+                        <a
+                            href="https://stackoverflow.com/users/2102461/tomcounsell"
+                            target="_blank"
+                            >stackoverflow.com/users/2102461/tomcounsell</a
+                        >
+                    </p>
+                    <div class="mermaid">
+                        %%{init: {'theme': 'base', 'themeVariables': {
+                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
+                        'primaryBorderColor': '#cc5500', 'lineColor':
+                        '#666666'}}}%% pie title Contribution Areas "Django" :
+                        35 "Python" : 30 "JavaScript" : 15 "Redis" : 10 "AWS" :
+                        10
+                    </div>
+                    <p style="margin-top: 20px">
+                        Teaching through answering questions builds deeper
+                        understanding
+                    </p>
+                </section>
+
+                <!-- Slide 3: Yudame Team -->
+                <section>
+                    <h2>The Yudame Team</h2>
+                    <p style="margin-bottom: 30px">
+                        <a href="https://yuda.me" target="_blank">yuda.me</a>
+                    </p>
+                    <div class="vs">
+                        <div class="vs-item">
+                            <div class="emoji">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Human</h3>
+                            <p>Product vision</p>
+                            <p>Architecture decisions</p>
+                            <p>Client relationships</p>
+                        </div>
+                        <div class="vs-divider">+</div>
+                        <div class="vs-item">
+                            <div class="emoji">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Cyborg</h3>
+                            <p>Code generation</p>
+                            <p>Testing & debugging</p>
+                            <p>Documentation</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 30px" class="highlight">
+                        1 human + AI agents = 10x output
+                    </p>
+                </section>
+
+                <!-- Slide 4: Valor GitHub History -->
+                <section>
+                    <h2>Valor: 2 Years of AI Development</h2>
+                    <p style="margin-bottom: 20px">GitHub contribution history</p>
+                    <div class="mermaid">
+                        %%{init: {'theme': 'base', 'themeVariables': {
+                        'primaryColor': '#cc5500'}}}%% timeline title Valor
+                        Evolution 2024 Q1 : Initial prototypes : Basic prompts :
+                        Manual workflows 2024 Q2 : Function calling : Tool use
+                        patterns : Context management 2024 Q3 : Agent
+                        orchestration : MCP integration : Automated testing 2024
+                        Q4 : Production deployment : Multi-agent systems : CI/CD
+                        hooks 2025 Q1 : Self-improving agents : Advanced context
+                        : Workflow automation
+                    </div>
+                </section>
+
+                <!-- Slide 5: What Matters - Process -->
+                <section>
+                    <h2>What Matters</h2>
+                    <h3 class="highlight">Having a Process</h3>
+                    <div class="mermaid">
+                        %%{init: {'theme': 'base', 'themeVariables': {
+                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
+                        'primaryBorderColor': '#cc5500'}}}%% flowchart LR A[Idea]
+                        --> B[Spec] B --> C[Build] C --> D[Test] D --> E[Ship] E
+                        --> F[Measure] F --> A style A fill:#f0f0f0,stroke:#cc5500
+                        style E fill:#f0f0f0,stroke:#cc5500,stroke-width:3px
+                    </div>
+                    <div class="quote" style="margin-top: 30px">
+                        <p>
+                            "The goal isn't to be productive. The goal is to
+                            ship things that matter."
+                        </p>
+                    </div>
+                    <p style="margin-top: 20px">
+                        Consistent process > sporadic brilliance
+                    </p>
+                </section>
+
+                <!-- Slide 6: Passing Fad - Bots -->
+                <section>
+                    <h2>What's a Passing Fad</h2>
+                    <h3 class="strikethrough">Clawbot as a Bot</h3>
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 40px;
+                            margin: 30px 0;
+                        "
+                    >
+                        <div style="text-align: center">
+                            <div class="emoji">
+                                <i class="fas fa-comment-dots fade-text"></i>
+                            </div>
+                            <p class="fade-text">Chatbots</p>
+                        </div>
+                        <div style="font-size: 2em">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="text-align: center">
+                            <div class="emoji">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <p class="highlight">Agents with Tools</p>
+                        </div>
+                    </div>
+                    <div class="two-column" style="margin-top: 30px">
+                        <div>
+                            <h4 style="color: #999">Fading</h4>
+                            <ul>
+                                <li>Scripted conversations</li>
+                                <li>Fixed decision trees</li>
+                                <li>Chat-only interfaces</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="highlight">Rising</h4>
+                            <ul>
+                                <li>Tool-using agents</li>
+                                <li>Autonomous workflows</li>
+                                <li>IDE integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 7: What Lasts - Brands & Identities -->
+                <section>
+                    <h2>What Lasts</h2>
+                    <h3 class="highlight">Brands & Identities</h3>
+                    <div class="mermaid">
+                        %%{init: {'theme': 'base', 'themeVariables': {
+                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
+                        'primaryBorderColor': '#cc5500'}}}%% mindmap root((Brand))
+                        Trust Consistency Quality Reliability Identity Voice
+                        Values Mission Recognition Logo Name Reputation
+                    </div>
+                    <p style="margin-top: 30px">
+                        Tools change. Frameworks evolve.
+                        <span class="highlight"
+                            >Reputation compounds forever.</span
+                        >
+                    </p>
+                </section>
+
+                <!-- Slide 8: What to Ignore -->
+                <section>
+                    <h2>What to Ignore</h2>
+                    <h3 class="strikethrough">Learning CSS</h3>
+                    <p style="margin: 20px 0">...and equivalents</p>
+                    <div class="three-column">
+                        <div class="book-card">
+                            <div class="emoji" style="font-size: 1.5em">
+                                <i class="fas fa-paint-brush fade-text"></i>
+                            </div>
+                            <h4>CSS Details</h4>
+                            <p>Tailwind + AI handles it</p>
+                        </div>
+                        <div class="book-card">
+                            <div class="emoji" style="font-size: 1.5em">
+                                <i class="fas fa-database fade-text"></i>
+                            </div>
+                            <h4>SQL Syntax</h4>
+                            <p>ORMs + copilot</p>
+                        </div>
+                        <div class="book-card">
+                            <div class="emoji" style="font-size: 1.5em">
+                                <i class="fas fa-file-code fade-text"></i>
+                            </div>
+                            <h4>Boilerplate</h4>
+                            <p>Generated, not memorized</p>
+                        </div>
+                    </div>
+                    <div class="quote" style="margin-top: 30px">
+                        <p>
+                            Focus on <span class="highlight">architecture</span>,
+                            <span class="highlight">product thinking</span>, and
+                            <span class="highlight">systems design</span>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Slide 9: CEOs are Teachers -->
+                <section>
+                    <h2>CEOs are Teachers</h2>
+                    <div class="mermaid">
+                        %%{init: {'theme': 'base', 'themeVariables': {
+                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
+                        'primaryBorderColor': '#cc5500', 'lineColor':
+                        '#666666'}}}%% flowchart TB A[CEO] --> B[Teaches Vision]
+                        A --> C[Teaches Culture] A --> D[Teaches Process] B -->
+                        E[Team Alignment] C --> E D --> E E --> F[Autonomous
+                        Execution] style A fill:#cc5500,color:#fff style F
+                        fill:#f0f0f0,stroke:#cc5500,stroke-width:3px
+                    </div>
+                    <div class="two-column" style="margin-top: 30px">
+                        <div>
+                            <h4>Teaching means:</h4>
+                            <ul>
+                                <li>Explaining the "why"</li>
+                                <li>Repeating core principles</li>
+                                <li>Enabling independence</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Not teaching means:</h4>
+                            <ul>
+                                <li>Bottlenecked decisions</li>
+                                <li>Dependent teams</li>
+                                <li>Burnout</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 10: Ship What Matters / Books -->
+                <section>
+                    <h2>Ship What Matters</h2>
+                    <p style="margin-bottom: 30px">Recommended reading</p>
+                    <div class="three-column">
+                        <div class="book-card">
+                            <div class="emoji" style="font-size: 1.2em">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>Basecamp Books</h4>
+                            <p>
+                                <em>Rework</em>, <em>Shape Up</em>,
+                                <em>It Doesn't Have to Be Crazy at Work</em>
+                            </p>
+                            <p
+                                style="
+                                    margin-top: 10px;
+                                    font-size: 0.9em;
+                                    color: var(--color-highlight);
+                                "
+                            >
+                                Calm, focused shipping
+                            </p>
+                        </div>
+                        <div class="book-card">
+                            <div class="emoji" style="font-size: 1.2em">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h4>The Dip</h4>
+                            <p>Seth Godin</p>
+                            <p
+                                style="
+                                    margin-top: 10px;
+                                    font-size: 0.9em;
+                                    color: var(--color-highlight);
+                                "
+                            >
+                                Know when to quit
+                            </p>
+                        </div>
+                        <div class="book-card">
+                            <div class="emoji" style="font-size: 1.2em">
+                                <i class="fas fa-hook" style="font-family: sans-serif">&#129693;</i>
+                            </div>
+                            <h4>Hooked</h4>
+                            <p>Nir Eyal</p>
+                            <p
+                                style="
+                                    margin-top: 10px;
+                                    font-size: 0.9em;
+                                    color: var(--color-highlight);
+                                "
+                            >
+                                Think like a Product Owner
+                            </p>
+                        </div>
+                    </div>
+                    <div class="quote" style="margin-top: 30px">
+                        <p>
+                            "Real artists ship." - Steve Jobs
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Slide 11: Bonus -->
+                <section>
+                    <h2>Bonus Resources</h2>
+                    <div class="bonus-grid">
+                        <div class="bonus-item">
+                            <h4><i class="fas fa-podcast"></i> Podcasts</h4>
+                            <p>
+                                Latent Space, Changelog, Lex Fridman (AI episodes)
+                            </p>
+                        </div>
+                        <div class="bonus-item">
+                            <h4><i class="fas fa-plug"></i> MCPs</h4>
+                            <p>
+                                Model Context Protocol - connect Claude to your tools, databases, APIs
+                            </p>
+                        </div>
+                        <div class="bonus-item">
+                            <h4><i class="fas fa-code-branch"></i> Valor Workflow</h4>
+                            <p>
+                                Git hooks, pre-commit checks, automated testing, CI/CD integration
+                            </p>
+                        </div>
+                        <div class="bonus-item">
+                            <h4><i class="fas fa-vial"></i> How to Test</h4>
+                            <p>
+                                <strong>Web:</strong> Playwright, Cypress<br />
+                                <strong>Mobile:</strong> Detox, Maestro<br />
+                                <strong>API:</strong> pytest, httpx
+                            </p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px">
+                        <p>
+                            <a
+                                href="https://tomcounsell.com"
+                                target="_blank"
+                                style="font-size: 1.1em"
+                                >tomcounsell.com</a
+                            >
+                        </p>
+                        <div class="social-icons" style="margin-top: 15px">
+                            <a
+                                href="https://linkedin.com/in/tomcounsell"
+                                target="_blank"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a
+                                href="https://github.com/tomcounsell"
+                                target="_blank"
+                            >
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a
+                                href="https://t.me/tomcounsell"
+                                target="_blank"
+                            >
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Reveal.js -->
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+        <script>
+            // Initialize Mermaid
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: "base",
+                themeVariables: {
+                    primaryColor: "#f0f0f0",
+                    primaryTextColor: "#1a1a1a",
+                    primaryBorderColor: "#cc5500",
+                    lineColor: "#666666",
+                    secondaryColor: "#fafafa",
+                    tertiaryColor: "#f0f0f0",
+                },
+            });
+
+            // Initialize Reveal.js
+            Reveal.initialize({
+                hash: true,
+                slideNumber: true,
+                progress: true,
+                center: true,
+                transition: "slide",
+                backgroundTransition: "fade",
+            }).then(() => {
+                // Render Mermaid diagrams after Reveal is ready
+                mermaid.run();
+            });
+
+            // Re-render Mermaid on slide change (for fragments)
+            Reveal.on("slidechanged", () => {
+                mermaid.run();
+            });
+        </script>
+    </body>
+</html>
