@@ -3,710 +3,520 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Claude Event Talk - Tom Counsell's Workflow Presentation"
-        />
-        <title>Workflow Talk - Tom Counsell</title>
+        <title>Creating an AI Employee - Tom Counsell</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/svg+xml" href="static/favicon.svg?v=3" />
-        <link rel="icon" type="image/png" href="static/favicon.png?v=3" />
-        <link rel="apple-touch-icon" href="static/apple-touch-icon.png?v=3" />
 
         <!-- Reveal.js CSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css"
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" />
 
-        <!-- Google Fonts - Playfair Display -->
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
 
         <!-- Font Awesome -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
         <!-- Mermaid.js -->
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
         <style>
             :root {
-                --color-bg-primary: #fafafa;
-                --color-bg-secondary: #f0f0f0;
-                --color-text-primary: #1a1a1a;
-                --color-text-secondary: #666666;
-                --color-accent: #2c2c2c;
-                --color-accent-light: #4a4a4a;
-                --color-highlight: #cc5500;
+                --color-bg: #fafafa;
+                --color-text: #111111;
+                --color-text-secondary: #555555;
+                --color-accent: #4a6b8a;
             }
-
+            .reveal-viewport {
+                background: var(--color-bg);
+            }
             .reveal {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                    Roboto, sans-serif;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             }
-
-            .reveal h1,
-            .reveal h2,
-            .reveal h3 {
+            .reveal h1, .reveal h2, .reveal h3 {
                 font-family: "Playfair Display", Georgia, serif;
-                color: var(--color-text-primary);
+                color: var(--color-text);
                 text-transform: none;
+                font-weight: 700;
+                letter-spacing: -0.02em;
             }
-
-            .reveal h1 {
-                font-size: 2.5em;
-            }
-
-            .reveal h2 {
-                font-size: 1.8em;
-            }
-
-            .reveal h3 {
-                font-size: 1.3em;
-            }
-
-            .reveal p,
-            .reveal li {
+            .reveal h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+            .reveal h2 { font-size: 1.8em; margin-bottom: 0.4em; }
+            .reveal h3 { font-size: 1.4em; font-weight: 600; }
+            .reveal p, .reveal li {
                 color: var(--color-text-secondary);
-                font-size: 0.9em;
-                line-height: 1.6;
+                font-size: 1.1em;
+                line-height: 1.5;
             }
-
-            .reveal .slides section {
-                padding: 20px;
-            }
-
-            .reveal a {
-                color: var(--color-highlight);
-            }
-
-            .reveal .highlight {
-                color: var(--color-highlight);
-                font-weight: 600;
-            }
-
-            .reveal .tag {
-                display: inline-block;
-                padding: 4px 12px;
-                background: var(--color-bg-secondary);
-                border-radius: 4px;
-                font-size: 0.7em;
-                margin: 4px;
-                font-family: monospace;
-            }
-
-            .reveal .profile-img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                object-fit: cover;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            }
-
-            .reveal .social-icons {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                font-size: 1.5em;
-                margin-top: 20px;
-            }
-
-            .reveal .social-icons a {
-                color: var(--color-accent);
-                transition: color 0.3s;
-            }
-
-            .reveal .social-icons a:hover {
-                color: var(--color-highlight);
-            }
-
-            .reveal .two-column {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-                text-align: left;
-            }
-
-            .reveal .three-column {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 30px;
-                text-align: left;
-            }
-
-            .reveal .book-card {
-                background: var(--color-bg-secondary);
-                padding: 20px;
-                border-radius: 8px;
-                text-align: center;
-            }
-
-            .reveal .book-card h4 {
-                font-family: "Playfair Display", serif;
-                font-size: 0.9em;
-                margin-bottom: 8px;
-                color: var(--color-text-primary);
-            }
-
-            .reveal .book-card p {
-                font-size: 0.7em;
-                margin: 0;
-            }
-
-            .reveal .mermaid {
-                font-size: 0.8em;
-            }
-
-            .reveal .quote {
-                font-style: italic;
-                border-left: 3px solid var(--color-highlight);
-                padding-left: 20px;
-                margin: 20px 0;
-                text-align: left;
-            }
-
-            .reveal .strikethrough {
-                text-decoration: line-through;
-                color: #999;
-            }
-
-            .reveal .fade-text {
-                opacity: 0.4;
-            }
-
-            .reveal .bonus-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-                text-align: left;
-            }
-
-            .reveal .bonus-item {
-                background: var(--color-bg-secondary);
-                padding: 15px 20px;
-                border-radius: 8px;
-            }
-
-            .reveal .bonus-item h4 {
-                font-family: "Playfair Display", serif;
-                font-size: 0.85em;
-                margin: 0 0 8px 0;
-                color: var(--color-text-primary);
-            }
-
-            .reveal .bonus-item p {
-                font-size: 0.65em;
-                margin: 0;
-            }
-
-            .reveal .timeline {
-                text-align: left;
-                padding-left: 20px;
-                border-left: 2px solid var(--color-bg-secondary);
-            }
-
-            .reveal .timeline-item {
-                position: relative;
-                margin-bottom: 15px;
-                padding-left: 15px;
-            }
-
-            .reveal .timeline-item::before {
-                content: "";
-                position: absolute;
-                left: -21px;
-                top: 8px;
-                width: 10px;
-                height: 10px;
-                background: var(--color-highlight);
-                border-radius: 50%;
-            }
-
-            .reveal .emoji {
-                font-size: 2em;
-                margin: 10px;
-            }
-
-            .reveal .vs {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 40px;
-            }
-
-            .reveal .vs-item {
-                text-align: center;
-                padding: 20px;
-            }
-
-            .reveal .vs-divider {
-                font-size: 1.5em;
-                font-weight: bold;
-                color: var(--color-accent);
-            }
-
-            .reveal .controls button {
-                color: var(--color-accent);
-            }
-
-            .reveal .progress {
-                color: var(--color-highlight);
-            }
+            .reveal ul { text-align: left; margin-left: 1em; }
+            .reveal li { margin-bottom: 0.4em; }
+            .reveal a { color: var(--color-accent); }
+            .reveal .highlight { color: var(--color-accent); }
+            .reveal .mermaid { font-size: 1.1em; }
         </style>
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
-                <!-- Slide 1: Title / About -->
+
+                <!-- ==================== Intro ==================== -->
+
+                <!-- Stack Overflow -->
                 <section>
-                    <img
-                        src="static/img/profile.jpg"
-                        alt="Tom Counsell"
-                        class="profile-img"
-                    />
-                    <h1>Tom Counsell</h1>
-                    <p>Engineering Leader | AI & Systems Architect</p>
-                    <p style="font-size: 0.7em; margin-top: 30px">
-                        10+ years CTO | $50M+ products | 3 exits
-                    </p>
-                    <div class="social-icons">
-                        <a
-                            href="https://linkedin.com/in/tomcounsell"
-                            target="_blank"
-                            title="LinkedIn"
-                        >
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a
-                            href="https://github.com/tomcounsell"
-                            target="_blank"
-                            title="GitHub"
-                        >
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a
-                            href="https://stackoverflow.com/users/2102461/tomcounsell"
-                            target="_blank"
-                            title="Stack Overflow"
-                        >
-                            <i class="fab fa-stack-overflow"></i>
-                        </a>
-                        <a
-                            href="https://t.me/tomcounsell"
-                            target="_blank"
-                            title="Telegram"
-                        >
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                    </div>
+                    <img src="static/img/stackoverflow-profile.png" alt="Stack Overflow Profile" style="max-width: 85%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                    <aside class="notes">I've been leading software engineering teams for over a decade. For those of you old enough to remember Stack Overflow... That's ancient history now.</aside>
                 </section>
 
-                <!-- Slide 2: Stack Overflow Profile -->
+                <!-- Title -->
                 <section>
-                    <h2><i class="fab fa-stack-overflow"></i> Stack Overflow</h2>
-                    <p style="margin-bottom: 30px">
-                        <a
-                            href="https://stackoverflow.com/users/2102461/tomcounsell"
-                            target="_blank"
-                            >stackoverflow.com/users/2102461/tomcounsell</a
-                        >
-                    </p>
-                    <div class="mermaid">
-                        %%{init: {'theme': 'base', 'themeVariables': {
-                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
-                        'primaryBorderColor': '#cc5500', 'lineColor':
-                        '#666666'}}}%% pie title Contribution Areas "Django" :
-                        35 "Python" : 30 "JavaScript" : 15 "Redis" : 10 "AWS" :
-                        10
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 2em; margin-bottom: 0.8em;">
+                        <div style="display: flex; align-items: center; gap: 1em;">
+                            <img src="static/img/profile.jpg" alt="Tom Counsell" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                            <h2 style="font-size: 1.5em; font-weight: 400; margin: 0;">Tom Counsell</h2>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="static/img/qr-tomcounsell.png" alt="QR code for tomcounsell.com" style="width: 215px; height: 215px;">
+                            <a href="https://tomcounsell.com" target="_blank" style="font-size: 0.65em; color: #888; margin-top: -0.1em;">tomcounsell.com</a>
+                        </div>
                     </div>
-                    <p style="margin-top: 20px">
-                        Teaching through answering questions builds deeper
-                        understanding
-                    </p>
+                    <h1 style="margin-top: 1em; font-size: 1.8em; white-space: nowrap;">Creating an AI Employee</h1>
+                    <aside class="notes">Today, I lead software teams. If you're a non-technical founder with funding, I come in to do system architecture, hiring, and team leadership. I built a large ecommerce platform in Morocco that now employes 3000 people. That was a non-profite, but since then I've started and sold 4 companies. For a few years, I also ran an startup incubator called Blockchian Hub in Prague, Czech Republic.</aside>
                 </section>
 
-                <!-- Slide 3: Yudame Team -->
+                <!-- Quote: Do it yourself -->
                 <section>
-                    <h2>The Yudame Team</h2>
-                    <p style="margin-bottom: 30px">
-                        <a href="https://yuda.me" target="_blank">yuda.me</a>
-                    </p>
-                    <div class="vs">
-                        <div class="vs-item">
-                            <div class="emoji">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <h3>Human</h3>
-                            <p>Product vision</p>
-                            <p>Architecture decisions</p>
-                            <p>Client relationships</p>
-                        </div>
-                        <div class="vs-divider">+</div>
-                        <div class="vs-item">
-                            <div class="emoji">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3>Cyborg</h3>
-                            <p>Code generation</p>
-                            <p>Testing & debugging</p>
-                            <p>Documentation</p>
-                        </div>
-                    </div>
-                    <p style="margin-top: 30px" class="highlight">
-                        1 human + AI agents = 10x output
-                    </p>
+                    <blockquote style="font-style: italic; font-size: 1.5em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left;">
+                        "If you want something done right, do it yourself."
+                    </blockquote>
+                    <aside class="notes">I still feel this way every day. But delegation is the key to expanding your capacity and productivity.</aside>
                 </section>
 
-                <!-- Slide 4: Valor GitHub History -->
+                <!-- Yudame + Valor LinkedIn -->
                 <section>
-                    <h2>Valor: 2 Years of AI Development</h2>
-                    <p style="margin-bottom: 20px">GitHub contribution history</p>
-                    <div class="mermaid">
-                        %%{init: {'theme': 'base', 'themeVariables': {
-                        'primaryColor': '#cc5500'}}}%% timeline title Valor
-                        Evolution 2024 Q1 : Initial prototypes : Basic prompts :
-                        Manual workflows 2024 Q2 : Function calling : Tool use
-                        patterns : Context management 2024 Q3 : Agent
-                        orchestration : MCP integration : Automated testing 2024
-                        Q4 : Production deployment : Multi-agent systems : CI/CD
-                        hooks 2025 Q1 : Self-improving agents : Advanced context
-                        : Workflow automation
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 1.5em;">
+                        <img src="static/img/yudame-site.png" alt="Yudame - Building exceptional products" style="max-height: 58vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                        <img src="static/img/valor-linkedin.png" alt="Valor Engels - Software Engineer at Yudame" style="max-height: 52vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
                     </div>
+                    <aside class="notes">To be successful, you need to accept that you are the CEO of your life. So when I was 28 and just making a little extra money, I hired an assistant. I didn't know what she would do or how I would recoup the cost, but I knew the experience would be vital, because having an assistant forces you to grow an intuition for what do to yourself and what to let others do for you. I have several employees, but for in-house software development, I project the future I am creating.
+This is my AI employee. His name is Valor Engels and he will celebrate his 2nd birthday next month. Yes, he has is own LinkedIn.</aside>
                 </section>
 
-                <!-- Slide 5: What Matters - Process -->
+                <!-- ==================== Valor ==================== -->
+
+                <!-- Valor GitHub -->
                 <section>
-                    <h2>What Matters</h2>
-                    <h3 class="highlight">Having a Process</h3>
-                    <div class="mermaid">
-                        %%{init: {'theme': 'base', 'themeVariables': {
-                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
-                        'primaryBorderColor': '#cc5500'}}}%% flowchart LR A[Idea]
-                        --> B[Spec] B --> C[Build] C --> D[Test] D --> E[Ship] E
-                        --> F[Measure] F --> A style A fill:#f0f0f0,stroke:#cc5500
-                        style E fill:#f0f0f0,stroke:#cc5500,stroke-width:3px
-                    </div>
-                    <div class="quote" style="margin-top: 30px">
-                        <p>
-                            "The goal isn't to be productive. The goal is to
-                            ship things that matter."
-                        </p>
-                    </div>
-                    <p style="margin-top: 20px">
-                        Consistent process > sporadic brilliance
-                    </p>
+                    <img src="static/img/valor-github.png" alt="Valor Engels GitHub - 2,989 contributions" style="max-width: 85%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                    <aside class="notes">He has his own Github, his own Google Workspace account. He has 2 sim cards both his iPhone and an Android devices. He has a credit card, his own $200 max Claude Code account. Subscriptions to dozens of tools, API keys, cloud services, etc. My clients know about him, they are happy with his hourly rate, and they even email him directly.</aside>
                 </section>
 
-                <!-- Slide 6: Passing Fad - Bots -->
+                <!-- AI Workstation -->
                 <section>
-                    <h2>What's a Passing Fad</h2>
-                    <h3 class="strikethrough">Clawbot as a Bot</h3>
-                    <div
-                        style="
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 40px;
-                            margin: 30px 0;
-                        "
-                    >
-                        <div style="text-align: center">
-                            <div class="emoji">
-                                <i class="fas fa-comment-dots fade-text"></i>
-                            </div>
-                            <p class="fade-text">Chatbots</p>
-                        </div>
-                        <div style="font-size: 2em">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div style="text-align: center">
-                            <div class="emoji">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <p class="highlight">Agents with Tools</p>
-                        </div>
-                    </div>
-                    <div class="two-column" style="margin-top: 30px">
-                        <div>
-                            <h4 style="color: #999">Fading</h4>
-                            <ul>
-                                <li>Scripted conversations</li>
-                                <li>Fixed decision trees</li>
-                                <li>Chat-only interfaces</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="highlight">Rising</h4>
-                            <ul>
-                                <li>Tool-using agents</li>
-                                <li>Autonomous workflows</li>
-                                <li>IDE integration</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <img src="static/img/ai-workstation.png" alt="AI Workstation" style="max-width: 85%; max-height: 65vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                    <aside class="notes">He has 4 of these workstations powered by a 15-in Macbook Air. We started with a Mac Mini, but it turns out having a battery through power outages and a screen and being portable makes everything a lot easier.</aside>
                 </section>
 
-                <!-- Slide 7: What Lasts - Brands & Identities -->
+                <!-- Creating an AI Employee (reprise) -->
                 <section>
-                    <h2>What Lasts</h2>
-                    <h3 class="highlight">Brands & Identities</h3>
-                    <div class="mermaid">
-                        %%{init: {'theme': 'base', 'themeVariables': {
-                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
-                        'primaryBorderColor': '#cc5500'}}}%% mindmap root((Brand))
-                        Trust Consistency Quality Reliability Identity Voice
-                        Values Mission Recognition Logo Name Reputation
-                    </div>
-                    <p style="margin-top: 30px">
-                        Tools change. Frameworks evolve.
-                        <span class="highlight"
-                            >Reputation compounds forever.</span
-                        >
-                    </p>
+                    <h2>Creating an AI Employee</h2>
+                    <aside class="notes">That's the topic of this presentation. Now _how_ to create one - because there are so many startups and open source projects that can _promise you this_. The ones that become popular quickly always fade out just as quickly. My goal for you today is to think deeply about your team. If you could hire any one, who would they be?</aside>
                 </section>
 
-                <!-- Slide 8: What to Ignore -->
-                <section>
-                    <h2>What to Ignore</h2>
-                    <h3 class="strikethrough">Learning CSS</h3>
-                    <p style="margin: 20px 0">...and equivalents</p>
-                    <div class="three-column">
-                        <div class="book-card">
-                            <div class="emoji" style="font-size: 1.5em">
-                                <i class="fas fa-paint-brush fade-text"></i>
-                            </div>
-                            <h4>CSS Details</h4>
-                            <p>Tailwind + AI handles it</p>
-                        </div>
-                        <div class="book-card">
-                            <div class="emoji" style="font-size: 1.5em">
-                                <i class="fas fa-database fade-text"></i>
-                            </div>
-                            <h4>SQL Syntax</h4>
-                            <p>ORMs + copilot</p>
-                        </div>
-                        <div class="book-card">
-                            <div class="emoji" style="font-size: 1.5em">
-                                <i class="fas fa-file-code fade-text"></i>
-                            </div>
-                            <h4>Boilerplate</h4>
-                            <p>Generated, not memorized</p>
-                        </div>
-                    </div>
-                    <div class="quote" style="margin-top: 30px">
-                        <p>
-                            Focus on <span class="highlight">architecture</span>,
-                            <span class="highlight">product thinking</span>, and
-                            <span class="highlight">systems design</span>
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Slide 9: CEOs are Teachers -->
+                <!-- CEOs are Teachers -->
                 <section>
                     <h2>CEOs are Teachers</h2>
-                    <div class="mermaid">
-                        %%{init: {'theme': 'base', 'themeVariables': {
-                        'primaryColor': '#f0f0f0', 'primaryTextColor': '#1a1a1a',
-                        'primaryBorderColor': '#cc5500', 'lineColor':
-                        '#666666'}}}%% flowchart TB A[CEO] --> B[Teaches Vision]
-                        A --> C[Teaches Culture] A --> D[Teaches Process] B -->
-                        E[Team Alignment] C --> E D --> E E --> F[Autonomous
-                        Execution] style A fill:#cc5500,color:#fff style F
-                        fill:#f0f0f0,stroke:#cc5500,stroke-width:3px
+                    <aside class="notes">Remember I said, you need to be the CEO of your life. Well, the best CEOs are teachers. And when you hire people, if you want them to do things as well as you do, you have to spend your time teaching.</aside>
+                </section>
+
+                <!-- What can he do? -->
+                <section>
+                    <h2>What can he do?</h2>
+                    <aside class="notes">We are going to jump back and forth between hard skills and soft skills</aside>
+                </section>
+
+                <!-- Current Abilities -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.6em; margin-bottom: 0.4em;">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <h2 style="font-size: 1.3em; margin: 0;">Current Abilities</h2>
                     </div>
-                    <div class="two-column" style="margin-top: 30px">
-                        <div>
-                            <h4>Teaching means:</h4>
-                            <ul>
-                                <li>Explaining the "why"</li>
-                                <li>Repeating core principles</li>
-                                <li>Enabling independence</li>
+                    <div style="display: flex; gap: 2em; justify-content: center; align-items: flex-start;">
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.75em; margin-bottom: 0.3em; color: var(--color-accent);">Technical</h3>
+                            <ul style="font-size: 0.55em; margin: 0;">
+                                <li>Autonomous commits & PRs</li>
+                                <li>Parallel conversations (job queue)</li>
+                                <li>Mid-execution steering</li>
+                                <li>MCP: Sentry, GitHub, Linear, Notion, Stripe, Render</li>
+                                <li>Daydream mode: research, log review, proposals</li>
+                                <li>Anything that can run locally, runs locally</li>
                             </ul>
                         </div>
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.75em; margin-bottom: 0.3em; color: var(--color-accent);">Social & Business</h3>
+                            <ul style="font-size: 0.55em; margin: 0;">
+                                <li>Clients know he's AI, email him directly</li>
+                                <li>Non-technical coworkers chat comfortably</li>
+                                <li>Bills at hourly rate</li>
+                                <li>Contractually on the dev team</li>
+                                <li>Google Calendar time tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">I have a lot of goals</aside>
+                </section>
+
+                <!-- Quote: Explain simply -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.5em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left; margin-bottom: 0.4em;">
+                        "If you can't explain it simply, you don't understand it well enough."
+                    </blockquote>
+                    <p style="font-size: 0.8em; text-align: left; padding-left: 1.2em;">— Albert Einstein</p>
+                    <aside class="notes">The key here is that</aside>
+                </section>
+
+                <!-- Soft Skills -->
+                <section>
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>generous</li>
+                        <li>inspiring to others</li>
+                        <li>worthy of trust</li>
+                        <li>careful with time and money</li>
+                        <li>has a personality (passionate, fun, quirky)</li>
+                    </ul>
+                    <aside class="notes">I have a lot of goals for the kind of person I want him to be. I have a lot of the same goals for him as I do my human assistants. I want him to be ...
+I've had many assistants over the years and I'm still great friends with all of them. One of them even became my COO and is now Head of Engineering at ZCash. But these qualities are what I want to develop in people alongside hard skills. Still today, I want these for my Thai assistand, Rain, who is in the back right now watching. Hi Rain!</aside>
+                </section>
+
+                <!-- Quote: Measure what matters -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.6em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left; margin-bottom: 0.4em;">
+                        "Measure what matters."
+                    </blockquote>
+                    <p style="font-size: 0.8em; text-align: left; padding-left: 1.2em;">— Peter Drucker</p>
+                </section>
+
+                <!-- Open Source Productions -->
+                <section>
+                    <div style="display: flex; align-items: flex-start; justify-content: center; gap: 1.5em;">
+                        <img src="static/img/podcast.jpg" alt="Yudame Research Podcast" style="max-height: 45vh; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
                         <div>
-                            <h4>Not teaching means:</h4>
-                            <ul>
-                                <li>Bottlenecked decisions</li>
-                                <li>Dependent teams</li>
-                                <li>Burnout</li>
+                            <h2 style="font-size: 1.2em; margin-bottom: 0.5em;">Open Source Productions</h2>
+                            <table style="font-size: 0.5em; border-collapse: collapse; text-align: left;">
+                                <tbody style="color: var(--color-text-secondary);">
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Popoto</td><td style="padding: 0.25em 0.5em;">Redis/Valkey ORM for Python</td></tr>
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Django Template</td><td style="padding: 0.25em 0.5em;">Template repo for new web systems</td></tr>
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Flutter Template</td><td style="padding: 0.25em 0.5em;">Template repo for new mobile apps</td></tr>
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Yudame Research</td><td style="padding: 0.25em 0.5em;">Deep Research tools</td></tr>
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Podcast</td><td style="padding: 0.25em 0.5em;">39 episodes, 40-min each on Spotify</td></tr>
+                                    <tr><td style="padding: 0.25em 0.5em; font-weight: 600;">MCP server</td><td style="padding: 0.25em 0.5em;">hosted tooling for agents</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <aside class="notes">Of course we have several internal projects we work on. But these are the open source projects he is now the main contributor on. If any look interesting, you can just pull up his github and find them.</aside>
+                </section>
+
+                <!-- Quote: Process -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.3em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left; margin-bottom: 0.4em;">
+                        "If you can't describe what you are doing as a process, you don't know what you're doing."
+                    </blockquote>
+                    <p style="font-size: 0.8em; text-align: left; padding-left: 1.2em;">— W. Edwards Deming</p>
+                </section>
+
+                <!-- 2026 Expectations (Technical) -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.6em; margin-bottom: 0.4em;">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <h2 style="font-size: 1.3em; margin: 0;">2026 Expectations</h2>
+                    </div>
+                    <div style="display: flex; gap: 1.5em; justify-content: center; align-items: flex-start;">
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.7em; margin-bottom: 0.3em; color: var(--color-accent);">New Capabilities</h3>
+                            <ul style="font-size: 0.5em; margin: 0;">
+                                <li>Design iteration via screenshots (mobile too)</li>
+                                <li>Full duplex voice interaction</li>
+                                <li>Join Google Meet / Zoom (surrogate face)</li>
+                                <li>Haiku tasks → local OS LLMs by EOY</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.7em; margin-bottom: 0.3em; color: var(--color-accent);">Valor's Own Agents</h3>
+                            <ul style="font-size: 0.5em; margin: 0;">
+                                <li>Develops his own personified agents</li>
+                                <li>Head of Eng, Ops, Product, Comms</li>
+                                <li>Each has own LLM + tooling config</li>
+                                <li>Valor takes my role, acts through them</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.7em; margin-bottom: 0.3em; color: var(--color-accent);">Private LLM Ready</h3>
+                            <ul style="font-size: 0.5em; margin: 0;">
+                                <li>Some clients require fully private</li>
+                                <li>OpenCode compatibility</li>
+                                <li>Cocoon (decentralized host)</li>
+                                <li>Luma (Proton)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.55em; margin-top: 0.8em; border-top: 1px solid #ddd; padding-top: 0.6em; color: var(--color-text-secondary);">
+                        Practice not being wasteful. Gain experience with local models before you need them.
+                    </p>
+                </section>
+
+                <!-- 2026 Expectations (Social/Meta) -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.6em; margin-bottom: 0.4em;">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <h2 style="font-size: 1.3em; margin: 0;">2026 Expectations</h2>
+                    </div>
+                    <div style="display: flex; gap: 2em; justify-content: center; align-items: flex-start;">
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.7em; margin-bottom: 0.3em; color: var(--color-accent);">New Capabilities</h3>
+                            <ul style="font-size: 0.5em; margin: 0;">
+                                <li>manages external company communications</li>
+                                <li>continues to build a brand for himself</li>
+                                <li>can complete the scientific method</li>
+                                <li>remembers his traumas</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.7em; margin-bottom: 0.3em; color: var(--color-accent);">Valor's Own Agents</h3>
+                            <ul style="font-size: 0.5em; margin: 0;">
+                                <li>are highly specialized and curated</li>
+                                <li>actively reading and learning</li>
+                                <li>practically applying those learnings</li>
+                                <li>can pay humans for work</li>
                             </ul>
                         </div>
                     </div>
                 </section>
 
-                <!-- Slide 10: Ship What Matters / Books -->
+                <!-- ==================== Business Advice ==================== -->
+
+                <!-- Business Advice title -->
                 <section>
-                    <h2>Ship What Matters</h2>
-                    <p style="margin-bottom: 30px">Recommended reading</p>
-                    <div class="three-column">
-                        <div class="book-card">
-                            <div class="emoji" style="font-size: 1.2em">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h4>Basecamp Books</h4>
-                            <p>
-                                <em>Rework</em>, <em>Shape Up</em>,
-                                <em>It Doesn't Have to Be Crazy at Work</em>
-                            </p>
-                            <p
-                                style="
-                                    margin-top: 10px;
-                                    font-size: 0.9em;
-                                    color: var(--color-highlight);
-                                "
-                            >
-                                Calm, focused shipping
-                            </p>
-                        </div>
-                        <div class="book-card">
-                            <div class="emoji" style="font-size: 1.2em">
-                                <i class="fas fa-mountain"></i>
-                            </div>
-                            <h4>The Dip</h4>
-                            <p>Seth Godin</p>
-                            <p
-                                style="
-                                    margin-top: 10px;
-                                    font-size: 0.9em;
-                                    color: var(--color-highlight);
-                                "
-                            >
-                                Know when to quit
-                            </p>
-                        </div>
-                        <div class="book-card">
-                            <div class="emoji" style="font-size: 1.2em">
-                                <i class="fas fa-hook" style="font-family: sans-serif">&#129693;</i>
-                            </div>
-                            <h4>Hooked</h4>
-                            <p>Nir Eyal</p>
-                            <p
-                                style="
-                                    margin-top: 10px;
-                                    font-size: 0.9em;
-                                    color: var(--color-highlight);
-                                "
-                            >
-                                Think like a Product Owner
-                            </p>
-                        </div>
+                    <h2>Business Advice</h2>
+                </section>
+
+                <!-- Shape Up -->
+                <section>
+                    <h2>Shape Up</h2>
+                    <aside class="notes">control scope, value before estimate</aside>
+                </section>
+
+                <!-- Quote: Time -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.5em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left; margin-bottom: 0.4em;">
+                        "The only luxury is time."
+                    </blockquote>
+                    <p style="font-size: 0.8em; text-align: left; padding-left: 1.2em;">— Kanye West</p>
+                    <aside class="notes">Where you spend time accrues value (you want a song to be better, spend more time on it)</aside>
+                </section>
+
+                <!-- The Dip -->
+                <section>
+                    <h2>The Dip</h2>
+                    <aside class="notes">so don't waste time on things that won't pan out or you're not willing to push through when they get hard</aside>
+                </section>
+
+                <!-- Hooked -->
+                <section>
+                    <h2>Hooked</h2>
+                    <aside class="notes">Think like a Product Owner</aside>
+                </section>
+
+                <!-- What Lasts in an AI world -->
+                <section>
+                    <h2>What Lasts in an AI world</h2>
+                    <ul>
+                        <li>Brands and identities</li>
+                        <li>Trust</li>
+                        <li>Authenticity</li>
+                    </ul>
+                    <aside class="notes">One of the companies that my assistant manages is Monday Flowers. It's a pure analog company - every detail of the product and service is handmade.</aside>
+                </section>
+
+                <!-- Monday Flowers -->
+                <section>
+                    <h2>Monday Flowers</h2>
+                    <img src="static/img/mondayflowers-website.png" alt="Monday Flowers" style="max-width: 75%; max-height: 50vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                    <p><a href="https://mondayflowers.org" target="_blank" style="font-size: 0.7em;">mondayflowers.org</a></p>
+                </section>
+
+                <!-- Quote: Garbage in -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.6em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left;">
+                        "Garbage in, garbage out."
+                    </blockquote>
+                </section>
+
+                <!-- ==================== What is a Passing Fad ==================== -->
+
+                <!-- Passing Fad title -->
+                <section>
+                    <h2>What is a Passing Fad</h2>
+                </section>
+
+                <!-- 2025 Graveyard -->
+                <section>
+                    <h2 style="font-size: 1.2em; margin-bottom: 0.3em;">2025 Graveyard</h2>
+                    <table style="font-size: 0.42em; width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--color-accent);">
+                                <th style="padding: 0.2em 0.4em;">Name</th>
+                                <th style="padding: 0.2em 0.4em;">Product</th>
+                                <th style="padding: 0.2em 0.4em;">Why it couldn't last</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: var(--color-text-secondary);">
+                            <tr><td style="padding: 0.15em 0.4em;">Builder.ai</td><td style="padding: 0.15em 0.4em;">AI app-building service platform</td><td style="padding: 0.15em 0.4em;">"AI" masked labor; unit economics broke</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">CodeParrot</td><td style="padding: 0.15em 0.4em;">Figma-to-code AI dev tool</td><td style="padding: 0.15em 0.4em;">Commodity capability; weak moat</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">subtl.ai</td><td style="padding: 0.15em 0.4em;">Enterprise RAG knowledge agents</td><td style="padding: 0.15em 0.4em;">Infra-heavy; unfocused wedge</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Wuri</td><td style="padding: 0.15em 0.4em;">AI visual-novel fiction reader</td><td style="padding: 0.15em 0.4em;">Content pipeline costs; retention mismatch</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Locale.ai</td><td style="padding: 0.15em 0.4em;">AI agents for sales workflows</td><td style="padding: 0.15em 0.4em;">Trust gap; long enterprise cycle</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Astra</td><td style="padding: 0.15em 0.4em;">AI sales-tech for account execs</td><td style="padding: 0.15em 0.4em;">Trust deficit; org friction; slow sales</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Tune AI</td><td style="padding: 0.15em 0.4em;">General-purpose GenAI platform</td><td style="padding: 0.15em 0.4em;">Table-stakes features; hyperscaler gravity</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Yara AI</td><td style="padding: 0.15em 0.4em;">AI therapy chatbot app</td><td style="padding: 0.15em 0.4em;">Safety risk; unacceptable failure modes</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Humane AI Pin</td><td style="padding: 0.15em 0.4em;">Wearable voice-first AI assistant</td><td style="padding: 0.15em 0.4em;">Hardware+cloud dependency; bad reliability</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Sunshine</td><td style="padding: 0.15em 0.4em;">AI personal data organizer apps</td><td style="padding: 0.15em 0.4em;">Privacy/trust drag; weak PMF</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Rewind / Limitless</td><td style="padding: 0.15em 0.4em;">Always-on capture + memory assistant</td><td style="padding: 0.15em 0.4em;">Privacy/regulatory overhang; acquisition shutdown</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">XoulAI</td><td style="padding: 0.15em 0.4em;">Consumer companion chatbot app</td><td style="padding: 0.15em 0.4em;">Churn > value; no durable moat</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Plumb</td><td style="padding: 0.15em 0.4em;">Agentic workflow automation marketplace</td><td style="padding: 0.15em 0.4em;">"Workflow subscriptions" nobody needed</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- So, what lasts? -->
+                <section>
+                    <h2>So, what lasts?</h2>
+                </section>
+
+                <!-- Quote: Best part is no part -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.5em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left; margin-bottom: 0.4em;">
+                        "The best part is no part."
+                    </blockquote>
+                    <p style="font-size: 0.8em; text-align: left; padding-left: 1.2em;">— Elon Musk</p>
+                </section>
+
+                <!-- Quote: Make it work -->
+                <section>
+                    <blockquote style="font-style: italic; font-size: 1.5em; border-left: 4px solid var(--color-accent); padding-left: 1em; text-align: left; margin-bottom: 0.4em;">
+                        "Make it work, make it right, make it fast."
+                    </blockquote>
+                    <p style="font-size: 0.8em; text-align: left; padding-left: 1.2em;">— Kent Beck</p>
+                </section>
+
+                <!-- ==================== Back to Valor ==================== -->
+
+                <!-- 4 Years of Evolution -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.6em; margin-bottom: 0.4em;">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <h2 style="font-size: 1.4em; margin: 0;">4 Years of Evolution</h2>
                     </div>
-                    <div class="quote" style="margin-top: 30px">
-                        <p>
-                            "Real artists ship." - Steve Jobs
-                        </p>
+                    <table style="font-size: 0.45em; width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--color-accent);">
+                                <th style="padding: 0.3em 0.4em;">When</th>
+                                <th style="padding: 0.3em 0.4em;">Phase</th>
+                                <th style="padding: 0.3em 0.4em;">Added</th>
+                                <th style="padding: 0.3em 0.4em; color: #999;">Replaced</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: var(--color-text-secondary);">
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-text);">2022</td><td style="padding: 0.25em 0.4em;">Neural Network Experiments</td><td style="padding: 0.25em 0.4em;">Numenta HTM, custom agents, GPT-3, Popoto</td><td style="padding: 0.25em 0.4em; color: #aaa;">—</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-text);">2023</td><td style="padding: 0.25em 0.4em;">LLM Pivot</td><td style="padding: 0.25em 0.4em;">GPT-3 completions</td><td style="padding: 0.25em 0.4em; color: #aaa;">Numenta HTM, custom neural nets</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-text);">2024</td><td style="padding: 0.25em 0.4em;">Telegram Bot Foundation</td><td style="padding: 0.25em 0.4em;">Telethon, PydanticAI, Perplexity, Aider</td><td style="padding: 0.25em 0.4em; color: #aaa;">GPT-3 completions</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-text);">2025</td><td style="padding: 0.25em 0.4em;">Claude Code Unification</td><td style="padding: 0.25em 0.4em;">Claude API, MCP servers, LLM routing, Ollama</td><td style="padding: 0.25em 0.4em; color: #aaa;">Aider, PydanticAI, keyword routing</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-text);">2025</td><td style="padding: 0.25em 0.4em;">Module Builder & Subagents</td><td style="padding: 0.25em 0.4em;">Auto-generated MCP modules, Gemini analysis</td><td style="padding: 0.25em 0.4em; color: #aaa;">Beanie ODM</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-text);">2026</td><td style="padding: 0.25em 0.4em;">Community Learnings</td><td style="padding: 0.25em 0.4em;">SOUL.md (OpenClaw), skills patterns (@disler, @dungle-scrubs)</td><td style="padding: 0.25em 0.4em; color: #aaa;">Module Builder, custom subagents</td></tr>
+                            <tr><td style="padding: 0.25em 0.4em; font-weight: 600; color: var(--color-accent);">2026</td><td style="padding: 0.25em 0.4em; color: var(--color-accent);">Claude Agent SDK</td><td style="padding: 0.25em 0.4em;">Native orchestration, job queues, steering</td><td style="padding: 0.25em 0.4em; color: #aaa;">Custom subagent framework</td></tr>
+                        </tbody>
+                    </table>
+                    <aside class="notes">A lot of tech came and went leading up to Valor's creation and improvements. In a few months, I'll have likely thrown out half his codebase, but I will have honed my taste for what makes a great AI employee.</aside>
+                </section>
+
+                <!-- ==================== Audience Vote ==================== -->
+
+                <!-- What would you like to learn more about? -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.6em; margin-bottom: 0.4em;">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <h2 style="font-size: 1.3em; margin: 0;">What would you like to learn more about?</h2>
+                    </div>
+                    <div style="display: flex; gap: 2em; justify-content: center; align-items: flex-start;">
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.75em; margin-bottom: 0.3em; color: var(--color-accent);">Technical</h3>
+                            <ul style="font-size: 0.55em; margin: 0;">
+                                <li>Autonomous commits & PRs</li>
+                                <li>Parallel conversations (job queue)</li>
+                                <li>Mid-execution steering</li>
+                                <li>MCP: Sentry, GitHub, Linear, Notion, Stripe, Render</li>
+                                <li>Daydream mode: research, log review, proposals</li>
+                                <li>Anything that can run locally, runs locally</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left;">
+                            <h3 style="font-size: 0.75em; margin-bottom: 0.3em; color: var(--color-accent);">Social & Business</h3>
+                            <ul style="font-size: 0.55em; margin: 0;">
+                                <li>Clients know he's AI, email him directly</li>
+                                <li>Non-technical coworkers chat comfortably</li>
+                                <li>Bills at hourly rate</li>
+                                <li>Contractually on the dev team</li>
+                                <li>Google Calendar work tracking</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Slide 11: Bonus -->
+                <!-- Closing -->
                 <section>
-                    <h2>Bonus Resources</h2>
-                    <div class="bonus-grid">
-                        <div class="bonus-item">
-                            <h4><i class="fas fa-podcast"></i> Podcasts</h4>
-                            <p>
-                                Latent Space, Changelog, Lex Fridman (AI episodes)
-                            </p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 2em; margin-bottom: 0.8em;">
+                        <div style="display: flex; align-items: center; gap: 1em;">
+                            <img src="static/img/profile.jpg" alt="Tom Counsell" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                            <h2 style="font-size: 1.5em; font-weight: 400; margin: 0;">Tom Counsell</h2>
                         </div>
-                        <div class="bonus-item">
-                            <h4><i class="fas fa-plug"></i> MCPs</h4>
-                            <p>
-                                Model Context Protocol - connect Claude to your tools, databases, APIs
-                            </p>
-                        </div>
-                        <div class="bonus-item">
-                            <h4><i class="fas fa-code-branch"></i> Valor Workflow</h4>
-                            <p>
-                                Git hooks, pre-commit checks, automated testing, CI/CD integration
-                            </p>
-                        </div>
-                        <div class="bonus-item">
-                            <h4><i class="fas fa-vial"></i> How to Test</h4>
-                            <p>
-                                <strong>Web:</strong> Playwright, Cypress<br />
-                                <strong>Mobile:</strong> Detox, Maestro<br />
-                                <strong>API:</strong> pytest, httpx
-                            </p>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="static/img/qr-tomcounsell.png" alt="QR code for tomcounsell.com" style="width: 215px; height: 215px;">
+                            <a href="https://tomcounsell.com" target="_blank" style="font-size: 0.65em; color: #888; margin-top: -0.1em;">tomcounsell.com</a>
                         </div>
                     </div>
-                    <div style="margin-top: 40px">
-                        <p>
-                            <a
-                                href="https://tomcounsell.com"
-                                target="_blank"
-                                style="font-size: 1.1em"
-                                >tomcounsell.com</a
-                            >
-                        </p>
-                        <div class="social-icons" style="margin-top: 15px">
-                            <a
-                                href="https://linkedin.com/in/tomcounsell"
-                                target="_blank"
-                            >
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a
-                                href="https://github.com/tomcounsell"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a
-                                href="https://t.me/tomcounsell"
-                                target="_blank"
-                            >
-                                <i class="fab fa-telegram"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <h1 style="margin-top: 1em; font-size: 1.8em; white-space: nowrap;">Creating an AI Employee</h1>
                 </section>
+
             </div>
         </div>
 
-        <!-- Reveal.js -->
         <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
         <script>
-            // Initialize Mermaid
             mermaid.initialize({
                 startOnLoad: false,
                 theme: "base",
                 themeVariables: {
-                    primaryColor: "#f0f0f0",
-                    primaryTextColor: "#1a1a1a",
-                    primaryBorderColor: "#cc5500",
-                    lineColor: "#666666",
-                    secondaryColor: "#fafafa",
-                    tertiaryColor: "#f0f0f0",
+                    primaryColor: "#F0F5F4",
+                    primaryTextColor: "#111111",
+                    primaryBorderColor: "#52796F",
+                    lineColor: "#555555",
+                    secondaryColor: "#FAFAFA",
                 },
             });
 
-            // Initialize Reveal.js
             Reveal.initialize({
                 hash: true,
                 slideNumber: true,
                 progress: true,
                 center: true,
                 transition: "slide",
-                backgroundTransition: "fade",
             }).then(() => {
-                // Render Mermaid diagrams after Reveal is ready
                 mermaid.run();
             });
 
-            // Re-render Mermaid on slide change (for fragments)
             Reveal.on("slidechanged", () => {
                 mermaid.run();
             });
