@@ -544,6 +544,95 @@ The rates page provides detailed information and maintains consistent styling wi
 
 ---
 
+## Presentation Slides: slides.html
+
+The slides page uses Reveal.js for presentations, maintaining consistent branding with the main site while optimizing for projection/screen viewing.
+
+### Framework & Libraries
+- **Reveal.js 5.1.0** - Presentation framework
+- **Mermaid.js 10** - Diagram rendering
+- **Google Fonts** - Playfair Display
+- **Font Awesome 6.5.1** - Icons
+
+### Color Palette (Slides)
+```css
+--color-bg: #FAFAFA;        /* Off-white background */
+--color-text: #111111;       /* Dark charcoal */
+--color-text-secondary: #555555;  /* Medium gray */
+--color-accent: #4A6B8A;     /* Light navy blue */
+```
+
+Note: Slides use light navy blue (#4A6B8A) as accent instead of teal (#52796F) for better projection visibility.
+
+### Typography (Slides)
+- **Headings (H1-H3):** Playfair Display, serif
+  - H1: 2.2em, bold, -0.02em letter-spacing
+  - H2: 1.8em, bold
+  - H3: 1.4em, semibold
+- **Body/Lists:** System sans-serif stack
+  - 1.1em, line-height 1.5
+
+### Layout Constraints
+
+**16:9 Safe Area Rule:**
+All content must fit within a 16:9 presentation area inside the browser window. This accounts for browser chrome and ensures content is fully visible during presentations.
+
+- **Images:** Use `max-height: 65vh` or less
+- **Tables:** Reduce font size and padding for dense content
+- **Dual-content slides:** Further reduce sizing (58vh, 52vh)
+
+### Slide Types
+
+**1. Title Slide**
+- Speaker info (photo + name) and QR code positioned horizontally at top
+- QR code: 215px, with URL centered below (tight spacing)
+- Talk title below in single line (font-size: 1.8em, white-space: nowrap)
+
+**2. Quote Slides**
+- No section header/title
+- Blockquote with left border (4px solid accent color)
+- Italic text, left-aligned
+- Attribution below in smaller text (0.6-0.8em)
+- Single quotes: larger font (1.5-1.6em)
+- Dual quotes: smaller font (0.95-1.2em) to fit both
+
+**3. Image Slides**
+- Full-bleed images with rounded corners (8-12px)
+- Subtle shadow (0 4px 20px rgba(0,0,0,0.15))
+- Section title in top-left corner if part of a series (0.9em, accent color)
+
+**4. Table Slides**
+- Compact styling for many rows
+- Font size: 0.42-0.55em
+- Minimal padding (0.15-0.2em vertical)
+- Header row with accent color bottom border
+
+**5. Section Title Slides**
+- Large H2 centered
+- Optional H3 subtitle in accent color
+
+### Reveal.js Configuration
+```javascript
+Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    progress: true,
+    center: true,
+    transition: "slide",
+});
+```
+
+### QR Code
+- Generated via qrserver.com API
+- Stored in `static/img/qr-tomcounsell.png`
+- Links to tomcounsell.com
+
+### Speaker Notes
+- Companion document: `talk-notes.md`
+- Contains slide-by-slide headers and talking points
+
+---
+
 ## References
 
 **Design Inspiration:**

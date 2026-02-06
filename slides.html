@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creating an AI Employee - Tom Counsell</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="static/favicon.svg?v=3" />
+
+        <!-- Reveal.js CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+
+        <style>
+            :root {
+                --color-bg: #fafafa;
+                --color-text: #111111;
+                --color-text-secondary: #555555;
+                --color-accent: #4a6b8a;
+            }
+            .reveal-viewport {
+                background: var(--color-bg);
+            }
+            .reveal {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+            .reveal h1, .reveal h2, .reveal h3 {
+                font-family: "Playfair Display", Georgia, serif;
+                color: var(--color-text);
+                text-transform: none;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+            }
+            .reveal h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+            .reveal h2 { font-size: 1.8em; margin-bottom: 0.4em; }
+            .reveal h3 { font-size: 1.4em; font-weight: 600; }
+            .reveal p, .reveal li {
+                color: var(--color-text-secondary);
+                font-size: 1.1em;
+                line-height: 1.5;
+            }
+            .reveal ul { text-align: left; margin-left: 1em; }
+            .reveal li { margin-bottom: 0.4em; }
+            .reveal a { color: var(--color-accent); }
+            .reveal .highlight { color: var(--color-accent); }
+            .reveal blockquote {
+                background: none;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+
+            /* Shared slide component styles */
+            .slide-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6em;
+                margin-bottom: 0.4em;
+            }
+            .slide-header img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .slide-header h2 {
+                font-size: 1.3em;
+                margin: 0;
+            }
+            .slide-columns {
+                display: flex;
+                gap: 2em;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            .slide-columns > div {
+                text-align: left;
+            }
+            .slide-columns h3 {
+                font-size: 0.75em;
+                margin-bottom: 0.3em;
+                color: var(--color-accent);
+            }
+            .slide-columns ul {
+                font-size: 0.55em;
+                margin: 0;
+            }
+            .slide-img {
+                max-width: 85%;
+                max-height: 65vh;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            }
+            .slide-blockquote {
+                font-family: "Playfair Display", Georgia, serif;
+                font-style: normal;
+                font-size: 1.5em;
+                font-weight: 400;
+                color: var(--color-text);
+                border: none;
+                padding: 0;
+                margin: 0 auto 0.4em;
+                text-align: center;
+                max-width: 80%;
+            }
+            .slide-attribution {
+                font-size: 0.8em;
+                text-align: center;
+                color: var(--color-text-secondary);
+            }
+            .slide-table {
+                font-size: 0.45em;
+                width: 100%;
+                border-collapse: collapse;
+                text-align: left;
+            }
+            .slide-table thead tr {
+                border-bottom: 2px solid var(--color-accent);
+            }
+            .slide-table th {
+                padding: 0.3em 0.4em;
+            }
+            .slide-table td {
+                padding: 0.25em 0.4em;
+            }
+            .slide-table tbody {
+                color: var(--color-text-secondary);
+            }
+            .slide-table tbody tr {
+                border-bottom: 1px solid #ddd;
+            }
+            .slide-table tbody tr:last-child {
+                border-bottom: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <!-- ==================== Hook ==================== -->
+
+                <!-- 1. Hook quote -->
+                <section>
+                    <blockquote class="slide-blockquote" style="font-size: 1.6em;">
+                        If you want something done right, do it yourself.
+                    </blockquote>
+                    <aside class="notes">We all feel this. But the most productive people I know have learned to let go. The question is: who do you let go TO? What if your next hire wasn't human?</aside>
+                </section>
+
+                <!-- ==================== Intro ==================== -->
+
+                <!-- 2. Profile / Title -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 4em; margin-bottom: 0.8em;">
+                        <div style="display: flex; align-items: center; gap: 1.2em;">
+                            <img src="static/img/profile.jpg" alt="Tom Counsell" style="width: 176px; height: 176px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                            <h2 style="font-size: 1.5em; font-weight: 400; margin: 0; line-height: 1.2;">Tom<br>Counsell</h2>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="static/img/qr-tomcounsell.png" alt="QR code for tomcounsell.com" style="width: 160px; height: 160px;">
+                            <a href="https://tomcounsell.com" target="_blank" style="font-size: 0.52em; color: #888; margin-top: 0.3em;">tomcounsell.com</a>
+                        </div>
+                    </div>
+                    <h1 style="margin-top: 1em; font-size: 1.8em; white-space: nowrap;">Creating an AI Employee</h1>
+                    <aside class="notes">I lead software teams and do system architecture for funded startups. I've built and sold 4 companies across 3 continents.</aside>
+                </section>
+
+                <!-- 3. CEOs are Teachers -->
+                <section>
+                    <h2>CEOs are Teachers</h2>
+                    <aside class="notes">The best CEOs are teachers. Everything Valor can do, I had to teach him — the same way I've taught every junior dev and assistant I've ever managed. The difference is he never forgets.</aside>
+                </section>
+
+                <!-- 4. Meet Valor intro -->
+                <section>
+                    <img src="static/img/valor-linkedin.png" alt="Valor Engels - Software Engineer at Yudame" class="slide-img" style="max-height: 60vh;">
+                    <aside class="notes">Years ago I hired my first assistant — not because I could afford it, but to force myself to learn delegation. So I asked: what if my next hire was an AI? Meet Valor Engels — he turns 2 next month, and yes, he has his own LinkedIn.</aside>
+                </section>
+
+                <!-- ==================== Meet Valor ==================== -->
+
+                <!-- 5. Valor's setup (3 buckets) -->
+                <section>
+                    <div style="display: flex; justify-content: center; gap: 1.2em; margin-bottom: 0.6em;">
+                        <img src="static/img/valor-github.png" alt="Valor Engels GitHub" style="max-height: 30vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                        <img src="static/img/ai-workstation.jpg" alt="AI Workstation" style="max-height: 30vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                    </div>
+                    <div class="slide-columns" style="gap: 1.5em;">
+                        <div>
+                            <h3>Digital Identity</h3>
+                            <ul>
+                                <li>LinkedIn</li>
+                                <li>GitHub</li>
+                                <li>Google Workspace</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Tools & Access</h3>
+                            <ul>
+                                <li>2 SIM cards, credit card, $200/mo Claude Code</li>
+                                <li>Subscriptions, API keys, cloud services</li>
+                                <li>4 workstations on 15-in MacBook Airs</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Client Facing</h3>
+                            <ul>
+                                <li>Clients know he's AI, email him directly</li>
+                                <li>Billed at hourly rate</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">In every meaningful way, he's provisioned like any human developer on the team. We started with Mac Minis, but it turns out having a battery through power outages, a screen, and portability makes everything a lot easier.</aside>
+                </section>
+
+                <!-- 6. Current Abilities -->
+                <section>
+                    <div class="slide-header">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels">
+                        <h2>Current Abilities</h2>
+                    </div>
+                    <div class="slide-columns">
+                        <div>
+                            <h3>Technical</h3>
+                            <ul>
+                                <li>Autonomous commits & PRs</li>
+                                <li>Parallel conversations (job queue)</li>
+                                <li>Mid-execution steering</li>
+                                <li>MCP: Sentry, GitHub, Linear, Notion, Stripe, Render</li>
+                                <li>Daydream mode: research, log review, proposals</li>
+                                <li>Anything that can run locally, runs locally</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Social & Business</h3>
+                            <ul>
+                                <li>Clients know he's AI, email him directly</li>
+                                <li>Non-technical coworkers chat comfortably</li>
+                                <li>Bills at hourly rate</li>
+                                <li>Contractually on the dev team</li>
+                                <li>Google Calendar time tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">Here's what Valor can actually do today — not a roadmap, not a demo, this is production. The most surprising things to people are usually daydream mode, mid-execution steering, and the fact that non-technical coworkers chat with him comfortably.</aside>
+                </section>
+
+                <!-- ==================== Philosophy ==================== -->
+
+                <!-- 7. Einstein quote -->
+                <section>
+                    <blockquote class="slide-blockquote">
+                        If you can't explain it simply, you don't understand it well enough.
+                    </blockquote>
+                    <p class="slide-attribution">— Albert Einstein</p>
+                    <aside class="notes">This is why process documentation matters. If I can't explain a workflow simply enough for Valor to execute it, I don't actually understand my own process.</aside>
+                </section>
+
+                <!-- 8. Soft Skills -->
+                <section>
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>generous</li>
+                        <li>inspiring to others</li>
+                        <li>worthy of trust</li>
+                        <li>careful with time and money</li>
+                        <li>has a personality (passionate, fun, quirky)</li>
+                    </ul>
+                    <aside class="notes">But a great employee is more than a list of capabilities. If I only optimized Valor for throughput, nobody would want to work with him. These are the same qualities I develop in every person I manage. Valor is no different.</aside>
+                </section>
+
+                <!-- 9. Open Source Productions -->
+                <section>
+                    <div style="display: flex; align-items: flex-start; justify-content: center; gap: 1.5em;">
+                        <img src="static/img/podcast.jpg" alt="Yudame Research Podcast" style="max-height: 45vh; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <div>
+                            <h2 style="font-size: 1.2em; margin-bottom: 0.5em;">Open Source Productions</h2>
+                            <table style="font-size: 0.5em; border-collapse: collapse; text-align: left;">
+                                <tbody style="color: var(--color-text-secondary);">
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Popoto</td><td style="padding: 0.25em 0.5em;">Redis/Valkey ORM for Python</td></tr>
+                                    <tr style="border-bottom: 1px solid #eee;"><td style="padding: 0.25em 0.5em; font-weight: 600;">Django Template</td><td style="padding: 0.25em 0.5em;">Template repo for new web systems</td></tr>
+                                    <tr><td style="padding: 0.25em 0.5em; font-weight: 600;">Podcast</td><td style="padding: 0.25em 0.5em;">39 episodes, 40-min each on Spotify</td></tr>
+                                </tbody>
+                            </table>
+                            <p style="font-size: 0.45em; color: #999; margin-top: 0.6em;">…and several more on his GitHub</p>
+                        </div>
+                    </div>
+                    <aside class="notes">Valor is now the primary contributor on multiple open source projects. These are the highlights — and several more are on his GitHub.</aside>
+                </section>
+
+                <!-- 10. Deming quote -->
+                <section>
+                    <blockquote class="slide-blockquote" style="font-size: 1.3em;">
+                        If you can't describe what you are doing as a process, you don't know what you're doing.
+                    </blockquote>
+                    <p class="slide-attribution">— W. Edwards Deming</p>
+                    <aside class="notes">This is the single most important idea behind Valor. Every capability he has started as a process I wrote down, tested, and taught him — just like onboarding a new hire.</aside>
+                </section>
+
+                <!-- ==================== Roadmap ==================== -->
+
+                <!-- 11. 2026 Expectations (combined) -->
+                <section>
+                    <div class="slide-header">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels">
+                        <h2>2026 Expectations</h2>
+                    </div>
+                    <div class="slide-columns" style="gap: 1.5em;">
+                        <div>
+                            <h3>New Capabilities</h3>
+                            <ul style="font-size: 0.5em;">
+                                <li>Design iteration via screenshots (mobile too)</li>
+                                <li>Full duplex voice interaction</li>
+                                <li>Join Google Meet / Zoom (surrogate face)</li>
+                                <li>Manages external company communications</li>
+                                <li>Continues to build a brand for himself</li>
+                                <li>Haiku tasks → local OS LLMs by EOY</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Valor's Own Agents</h3>
+                            <ul style="font-size: 0.5em;">
+                                <li>Develops his own personified agents</li>
+                                <li>Head of Eng, Ops, Product, Comms</li>
+                                <li>Each has own LLM + tooling config</li>
+                                <li><strong>Valor takes my role, acts through them</strong></li>
+                                <li>Can pay humans for work</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Private LLM Ready</h3>
+                            <ul style="font-size: 0.5em;">
+                                <li>Some clients need fully private infrastructure — we're preparing for that</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.5em; margin-top: 0.8em; border-top: 1px solid #ddd; padding-top: 0.5em; color: var(--color-text-secondary);">
+                        Practice not being wasteful. Gain experience with local models before you need them.
+                    </p>
+                    <aside class="notes">So that's where Valor is today. Here's where I expect him to be by end of 2026. The recursive delegation concept — Valor taking my role and acting through his own agents — is the biggest idea here. Also note: "can pay humans for work" is a provocative reversal. An AI hiring humans. By "preserves hard lessons" I mean like a senior engineer who never forgets a bad outage — institutional memory, not suffering.</aside>
+                </section>
+
+                <!-- ==================== What Lasts ==================== -->
+
+                <!-- 12. What Lasts -->
+                <section>
+                    <h2>What Lasts in an AI World</h2>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 2em;">
+                        <ul style="margin: 0;">
+                            <li>Brands and identities</li>
+                            <li>Trust</li>
+                            <li>Authenticity</li>
+                        </ul>
+                        <img src="static/img/ai-workstation.jpg" alt="AI Workstation" style="max-height: 45vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                    </div>
+                    <aside class="notes">This is exactly why Valor has a name, a LinkedIn, a personality. These are the things that won't be commoditized.</aside>
+                </section>
+
+                <!-- 13. 2025 Graveyard -->
+                <section>
+                    <h2 style="font-size: 1.2em; margin-bottom: 0.3em;">2025 Graveyard</h2>
+                    <table style="font-size: 0.42em; width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--color-accent);">
+                                <th style="padding: 0.2em 0.4em;">Name</th>
+                                <th style="padding: 0.2em 0.4em;">Product</th>
+                                <th style="padding: 0.2em 0.4em;">Why it couldn't last</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: var(--color-text-secondary);">
+                            <tr><td style="padding: 0.15em 0.4em;">Builder.ai</td><td style="padding: 0.15em 0.4em;">AI app-building service platform</td><td style="padding: 0.15em 0.4em;">"AI" masked labor; unit economics broke</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">CodeParrot</td><td style="padding: 0.15em 0.4em;">Figma-to-code AI dev tool</td><td style="padding: 0.15em 0.4em;">Commodity capability; weak moat</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">subtl.ai</td><td style="padding: 0.15em 0.4em;">Enterprise RAG knowledge agents</td><td style="padding: 0.15em 0.4em;">Infra-heavy; unfocused wedge</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Wuri</td><td style="padding: 0.15em 0.4em;">AI visual-novel fiction reader</td><td style="padding: 0.15em 0.4em;">Content pipeline costs; retention mismatch</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Locale.ai</td><td style="padding: 0.15em 0.4em;">AI agents for sales workflows</td><td style="padding: 0.15em 0.4em;">Trust gap; long enterprise cycle</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Astra</td><td style="padding: 0.15em 0.4em;">AI sales-tech for account execs</td><td style="padding: 0.15em 0.4em;">Trust deficit; org friction; slow sales</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Tune AI</td><td style="padding: 0.15em 0.4em;">General-purpose GenAI platform</td><td style="padding: 0.15em 0.4em;">Table-stakes features; hyperscaler gravity</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Yara AI</td><td style="padding: 0.15em 0.4em;">AI therapy chatbot app</td><td style="padding: 0.15em 0.4em;">Safety risk; unacceptable failure modes</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Humane AI Pin</td><td style="padding: 0.15em 0.4em;">Wearable voice-first AI assistant</td><td style="padding: 0.15em 0.4em;">Hardware+cloud dependency; bad reliability</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Sunshine</td><td style="padding: 0.15em 0.4em;">AI personal data organizer apps</td><td style="padding: 0.15em 0.4em;">Privacy/trust drag; weak PMF</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Rewind / Limitless</td><td style="padding: 0.15em 0.4em;">Always-on capture + memory assistant</td><td style="padding: 0.15em 0.4em;">Privacy/regulatory overhang; acquisition shutdown</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">XoulAI</td><td style="padding: 0.15em 0.4em;">Consumer companion chatbot app</td><td style="padding: 0.15em 0.4em;">Churn > value; no durable moat</td></tr>
+                            <tr><td style="padding: 0.15em 0.4em;">Plumb</td><td style="padding: 0.15em 0.4em;">Agentic workflow automation marketplace</td><td style="padding: 0.15em 0.4em;">"Workflow subscriptions" nobody needed</td></tr>
+                        </tbody>
+                    </table>
+                    <aside class="notes">So what do all these have in common?</aside>
+                </section>
+
+                <!-- 14. 3 Books -->
+                <section>
+                    <h2 style="font-size: 1.3em; margin-bottom: 0.6em;">3 Books That Shaped Valor</h2>
+                    <div style="display: flex; justify-content: center; align-items: flex-end; gap: 2em;">
+                        <img src="static/book-shape-up.png" alt="Shape Up by Ryan Singer" style="max-height: 50vh; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.18);">
+                        <img src="static/book-the-dip.jpg" alt="The Dip by Seth Godin" style="max-height: 50vh; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.18);">
+                        <img src="static/book-working-backwards.jpg" alt="Working Backwards by Colin Bryar and Bill Carr" style="max-height: 50vh; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.18);">
+                    </div>
+                </section>
+
+                <!-- ==================== Evolution ==================== -->
+
+                <!-- 15. Kent Beck quote -->
+                <section>
+                    <blockquote class="slide-blockquote">
+                        Make it work, make it right, make it fast.
+                    </blockquote>
+                    <p class="slide-attribution">— Kent Beck</p>
+                    <aside class="notes">This is exactly how I built Valor. First, make it work — a janky Telegram bot. Then make it right — proper architecture. Then make it fast — Claude Code, MCP, job queues.</aside>
+                </section>
+
+                <!-- 16. 4 Years of Evolution -->
+                <section>
+                    <div class="slide-header">
+                        <img src="static/img/valor-profile.jpg" alt="Valor Engels">
+                        <h2 style="font-size: 1.4em;">4 Years of Evolution</h2>
+                    </div>
+                    <table class="slide-table">
+                        <thead>
+                            <tr>
+                                <th>When</th>
+                                <th>Phase</th>
+                                <th>Added</th>
+                                <th style="color: #999;">Replaced</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="font-weight: 600; color: var(--color-text);">2022</td><td>Neural Network Experiments</td><td>Numenta HTM, custom agents, GPT-3, Popoto</td><td style="color: #aaa;">—</td></tr>
+                            <tr><td style="font-weight: 600; color: var(--color-text);">2023</td><td>LLM Pivot</td><td>GPT-3 completions</td><td style="color: #aaa;">Numenta HTM, custom neural nets</td></tr>
+                            <tr><td style="font-weight: 600; color: var(--color-text);">2024</td><td>Telegram Client Interface</td><td>Telethon, PydanticAI, Perplexity, Aider</td><td style="color: #aaa;">GPT-3 completions</td></tr>
+                            <tr><td style="font-weight: 600; color: var(--color-text);">2025</td><td>Claude Code Unification</td><td>Claude API, MCP servers, LLM routing, Ollama</td><td style="color: #aaa;">Aider, PydanticAI, keyword routing</td></tr>
+                            <tr><td style="font-weight: 600; color: var(--color-text);">2025</td><td>Module Builder & Subagents</td><td>Auto-generated MCP modules, Gemini analysis</td><td style="color: #aaa;">Beanie ODM</td></tr>
+                            <tr><td style="font-weight: 600; color: var(--color-text);">2026</td><td>Community Learnings</td><td>SOUL.md (OpenClaw), skills patterns (@disler, @dungle-scrubs)</td><td style="color: #aaa;">Module Builder, custom subagents</td></tr>
+                            <tr><td style="font-weight: 600; color: var(--color-accent);">2026</td><td style="color: var(--color-accent);">Claude Agent SDK</td><td>Native orchestration, job queues, steering</td><td style="color: #aaa;">Custom subagent framework</td></tr>
+                        </tbody>
+                    </table>
+                    <aside class="notes">In a few months, I'll have likely thrown out half his codebase, but I will have honed my taste for what makes a great AI employee.</aside>
+                </section>
+
+                <!-- ==================== Closing ==================== -->
+
+                <!-- 17. CTA -->
+                <section>
+                    <h2 style="font-size: 1.4em; margin-bottom: 0.8em;">3 Things to Do This Week</h2>
+                    <ol style="text-align: left; margin-left: 1.5em; font-size: 1em;">
+                        <li style="margin-bottom: 0.6em;">Write down the job description for your ideal hire</li>
+                        <li style="margin-bottom: 0.6em;">Document one process well enough to teach it</li>
+                        <li style="margin-bottom: 0.6em;">Start training a personified AI team member</li>
+                        <li style="margin-bottom: 0.6em;">Measuring their ability as you add improvements</li>
+                    </ol>
+                </section>
+
+                <!-- 19. Closing contact -->
+                <section>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 4em; margin-bottom: 0.8em;">
+                        <div style="display: flex; align-items: center; gap: 1.2em;">
+                            <img src="static/img/profile.jpg" alt="Tom Counsell" style="width: 176px; height: 176px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+                            <h2 style="font-size: 1.5em; font-weight: 400; margin: 0; line-height: 1.2;">Tom<br>Counsell</h2>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="static/img/qr-tomcounsell.png" alt="QR code for tomcounsell.com" style="width: 160px; height: 160px;">
+                            <a href="https://tomcounsell.com" target="_blank" style="font-size: 0.52em; color: #888; margin-top: 0.3em;">tomcounsell.com</a>
+                        </div>
+                    </div>
+                    <h1 style="margin-top: 1em; font-size: 1.8em; white-space: nowrap;">Creating an AI Employee</h1>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                slideNumber: true,
+                progress: true,
+                center: true,
+                transition: "slide",
+            });
+        </script>
+    </body>
+</html>
