@@ -21,7 +21,7 @@
 ### slide
 
 - [title] CEOs are Teachers
-- [notes] Let's talk about how creating an AI employee is similar to developing human staff? When I hired my first assistant I could barely afford it, but honestly the main reason was to intentionally force myself to learn how to delegate and teach.
+- [notes] So how is creating an AI employee is similar to developing human staff? When I hired my first assistant I could barely afford it, but honestly the main reason was to intentionally force myself to learn how to delegate and teach.
 
 ### slide
 
@@ -212,3 +212,6 @@
 - image: qr-tomcounsell.png
 - tomcounsell.com
 - [title] Creating an AI Employee
+
+markdown files are the thing
+it's for having an employee, not just personal productivity
