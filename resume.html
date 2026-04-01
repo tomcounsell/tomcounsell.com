@@ -101,10 +101,10 @@
                     font-size: 10pt !important;
                 }
 
-                /* Ensure sections don't break awkwardly */
+                /* Allow sections to break across pages */
                 section {
-                    break-inside: avoid;
-                    page-break-inside: avoid;
+                    break-inside: auto;
+                    page-break-inside: auto;
                 }
 
                 .experience-item {
@@ -332,23 +332,19 @@
                 >
                     Professional Summary
                 </h2>
+                <p class="hidden">
+                    Tom Counsell is an engineering leader who turns ambitious ideas into products at scale. Over 15+ years as CTO across fintech, AI, travel tech, and e-commerce, he has raised $3.5M+ in crowdfunding and investments, completed three successful exits (including selling two companies), and built systems serving tens of millions of users. He bootstrapped his first startup — a social enterprise in Morocco — to $1M+ revenue, then went on to lead engineering at companies ranging from Agoda (Booking Holdings, NASDAQ: BKNG, 40M+ MAU) to Bumble Inc (NASDAQ: BMBL). Tom specializes in team-building, complex distributed systems, and rapid execution. He transforms engineering cultures through mentorship, accountability, and a bias toward shipping. As a leader, he balances empathy with personal responsibility, consistently building high-performing teams even under pressure — rebuilding an entire 8-person dev team in 6 months without missing a sprint. He is currently deep in AI agent architecture, building production multi-agent systems with PydanticAI and Model Context Protocol (MCP). Tom holds a B.S. in Computer Science from Purdue University (2009) and served as a US Peace Corps volunteer in Morocco.
+                </p>
                 <p class="text-base leading-relaxed">
-                    Engineering leader with 15+ years building teams that ship
-                    and products that users love. <br />
-                    Currently serving as CTO at two AI-focused startups, Tom has
-                    been pioneering MCP server patterns for multi-agent
-                    marketing intelligence while simultaneously architecting
-                    psychological assessments that serve elite sports
-                    organizations including NBA teams and U.S. Special
-                    Operations. <br />Tom's decade of experience as CTO spans
-                    fintech, AI, and travel tech, raising $3.5M+ in funding,
-                    completing three successful exits, and repeatedly delivering
-                    systems that serve millions of users. At Official App, Tom
-                    directed IT through the acquisition then rebuild the
-                    engineering team inside Bumble Studio in six months without
-                    missing a sprint in the process. He excels at hiring
-                    exceptional teams, making decisive technical and strategic
-                    calls, and consistently shipping products that users love.
+                    Engineering leader with 15+ years building software
+                    products and the teams behind them — across AI, fintech,
+                    travel tech, and e-commerce. Platforms serving millions of
+                    users, systems processing billions of data points, teams
+                    that stay focused under pressure. Has raised $3.5M+ in
+                    funding, completed three exits, and rebuilt an engineering
+                    org inside a public company without missing a single sprint.
+                    Currently deep in AI agent architecture and multi-agent
+                    systems, building tools that work in production.
                 </p>
             </section>
 
@@ -407,49 +403,32 @@
                     <article class="experience-item">
                         <div class="flex justify-between items-start mb-1">
                             <div>
-                                <h3 class="font-semibold text-lg">CTO</h3>
-                                <p class="text-accent">
+                                <h3 class="font-semibold text-lg">
                                     <a
                                         href="https://psyoptimal.com"
                                         target="_blank"
-                                        class="hover:text-accent-light"
+                                        class="text-accent hover:text-accent-light"
                                         >PsyOptimal</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    psyoptimal.com
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— CTO</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2024 - Present
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Built AI-ready sports psychology platform from
-                                ground up, digitizing 25+ years of elite
-                                methodologies used by NBA teams and U.S. Special
-                                Operations
-                            </li>
-                            <li>
-                                Architected normative analytics pipeline
-                                enabling coaches to benchmark athlete
-                                psychological profiles across team, league, and
-                                sport-wide data
-                            </li>
-                            <li>
-                                Shipped bilingual platform (English/Spanish)
-                                serving 5 market verticals with full GDPR/CCPA
-                                compliance
-                            </li>
-                            <li>
-                                Designed scalable assessment engine processing
-                                multi-dimensional psychological evaluations with
-                                real-time scoring
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            PsyOptimal is an AI-ready sports psychology platform that digitizes 25+ years of elite mental performance methodologies. The company's clients include NBA teams and U.S. Special Operations units. As CTO, Tom built the entire platform from the ground up — architecture, backend, data layer, and deployment. The core product is a scalable assessment engine that processes multi-dimensional psychological evaluations with real-time scoring, enabling normative analytics where coaches can benchmark individual athlete psychological profiles against team-level, league-level, and sport-wide datasets. The platform ships in English and Spanish, serves 5 distinct market verticals (professional sports, military, collegiate athletics, youth development, and corporate performance), and is fully GDPR/CCPA compliant. Built on Python/Django with PostgreSQL on AWS infrastructure.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Digitized 25+ years of elite sports psychology methods
+                            — used by NBA teams and U.S. Special Operations — into
+                            a platform built from scratch. Shipped a real-time
+                            assessment engine that benchmarks athlete psychological
+                            profiles against team, league, and sport-wide norms.
+                            Bilingual (English/Spanish), 5 market verticals,
+                            GDPR/CCPA compliant.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -467,10 +446,6 @@
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >AWS</span
                             >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >HealthTech</span
-                            >
                         </div>
                     </article>
 
@@ -478,53 +453,33 @@
                     <article class="experience-item">
                         <div class="flex justify-between items-start mb-1">
                             <div>
-                                <h3 class="font-semibold text-lg">CTO</h3>
-                                <p class="text-accent">
+                                <h3 class="font-semibold text-lg">
                                     <a
                                         href="https://fuse.is"
                                         target="_blank"
-                                        class="hover:text-accent-light"
+                                        class="text-accent hover:text-accent-light"
                                         >Fuse</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    fuse.is
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— CTO</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2024 - 2026
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Architected multi-agent AI platform using Model
-                                Context Protocol (MCP) servers, enabling dynamic
-                                tool generation for Google Analytics, Google
-                                Ads, and Meta APIs
-                            </li>
-                            <li>
-                                Built MCP server pattern months before
-                                Anthropic's industry standardization,
-                                positioning platform as early adopter
-                            </li>
-                            <li>
-                                Engineered "zero hallucination" guarantee
-                                through verified data pipelines, eliminating
-                                AI-generated inaccuracies
-                            </li>
-                            <li>
-                                Developed PromptTemplate system achieving 40%
-                                token reduction, reducing API costs and
-                                improving response times
-                            </li>
-                            <li>
-                                Led engineering team from 0 to production MVP in
-                                6 months with enterprise-ready multi-tenant
-                                architecture
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            Fuse (formerly DeckFusion) is an enterprise "chat with your data" platform that processes 10TB+ across customer databases using multi-agent AI. As CTO, Tom architected the entire system using PydanticAI and Claude MCP servers for data orchestration, building and leading all engineering. He pioneered the MCP server pattern for dynamic tool generation months before Anthropic released their industry standardization — connecting Google Analytics, Google Ads, and Meta APIs through auto-generated tool interfaces. Tom engineered a "zero hallucination" guarantee through verified data pipelines that eliminated AI-generated inaccuracies, a critical requirement for enterprise customers relying on the platform for business decisions. He developed a PromptTemplate system that achieved 40% token reduction, directly reducing API costs and improving response times. Led the engineering team from zero to production MVP in 6 months with enterprise-ready multi-tenant architecture. The platform enables practical AI implementations that solve real business problems through rapid product-market fit iterations. Technologies: Python, PydanticAI, OpenAI, Anthropic Claude, AWS, Next.js, Redis, prompt engineering, data pipelines.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Built a multi-agent AI platform for marketing
+                            intelligence — zero to production MVP in 6 months.
+                            Pioneered MCP server patterns before Anthropic's
+                            standardization, connecting Google Analytics, Ads,
+                            and Meta APIs through auto-generated tools. Delivered
+                            verified data pipelines with zero hallucination
+                            guarantees and a prompt system that cut token costs
+                            40%.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -537,10 +492,6 @@
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >Claude</span
-                            >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >GPT-4</span
                             >
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -558,52 +509,29 @@
                         <div class="flex justify-between items-start mb-1">
                             <div>
                                 <h3 class="font-semibold text-lg">
-                                    Head of Engineering
-                                </h3>
-                                <p class="text-accent">
                                     <a
                                         href="https://getofficial.co"
                                         target="_blank"
-                                        class="hover:text-accent-light"
+                                        class="text-accent hover:text-accent-light"
                                         >Bumble Inc / Official</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    getofficial.co
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— Head of Engineering</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2022 - 2023
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Led complete technical transformation,
-                                rebuilding entire 8-person dev team in 6 months
-                                while maintaining sprint velocity
-                            </li>
-                            <li>
-                                Integrated data pipelines reducing BI report
-                                latency by 75%, enabling real-time business
-                                intelligence
-                            </li>
-                            <li>
-                                Managed technical handover of React Native app
-                                serving 100K+ MAU to Bumble Inc's engineering
-                                org
-                            </li>
-                            <li>
-                                Aligned engineering practices with NASDAQ-listed
-                                parent company (Bumble Inc) standards and
-                                compliance requirements
-                            </li>
-                            <li>
-                                Implemented Scrum methodology with zero missed
-                                sprint commitments during team transition period
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            Official is "The Relationship App" — a couples-focused product within Bumble Studio (Bumble Inc, NASDAQ: BMBL). Tom initially joined as Technical Advisor (Oct 2022 - May 2023) before taking over as Head of Engineering (Apr - Dec 2023), based remotely in Greater London. He led a complete technical transformation: rebuilding the entire 8-person dev team in 6 months while maintaining product velocity — zero missed sprint commitments throughout the transition. He was the hiring manager for full replacement of the London-based dev team. Tom integrated data pipelines for the BI and Finance departments that reduced report latency by 75%, enabling real-time business intelligence for the first time. He managed the technical handover of the React Native app (serving 100K+ monthly active users) to Bumble Inc's engineering organization, aligning the startup's engineering practices with the NASDAQ-listed parent company's operational standards and compliance requirements. Implemented Scrum methodology throughout. Testimonial from Zac Stern at Bumble Inc: "an indispensable asset to our team.. the best engineer I've had the privilege of working with.. Tom fostered a positive and collaborative work environment, serving as a natural leader who inspired the entire team to strive for excellence." Technologies: React Native, data pipelines, scaling infrastructure, gen AI, Scrum.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            After Bumble acquired Official, rebuilt the entire
+                            8-person engineering team in 6 months — zero missed
+                            sprint commitments throughout. Handed over the React
+                            Native app (100K+ MAU) to Bumble's org, integrated
+                            data pipelines that cut BI report latency by 75%.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -615,11 +543,7 @@
                             >
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >Team Leadership</span
-                            >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >Scrum</span
+                                >Team Building</span
                             >
                         </div>
                     </article>
@@ -629,48 +553,30 @@
                         <div class="flex justify-between items-start mb-1">
                             <div>
                                 <h3 class="font-semibold text-lg">
-                                    Cache Architect
-                                </h3>
-                                <p class="text-accent">
                                     <a
                                         href="https://www.simplenight.com/"
                                         target="_blank"
-                                        class="hover:text-accent-light"
-                                        >SIMPLENIGHT</a
+                                        class="text-accent hover:text-accent-light"
+                                        >Simplenight</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    simplenight.com
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— Cache Architect</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2021 - 2024
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Designed custom Redis-based caching system for
-                                700K+ hotels worldwide, handling real-time
-                                inventory updates
-                            </li>
-                            <li>
-                                Engineered real-time ETL processing handling
-                                70GB/min of rates and availability data from
-                                multiple GDS providers
-                            </li>
-                            <li>
-                                Reduced API response times by 85%, enabling
-                                sub-100ms booking flows for improved conversion
-                                rates
-                            </li>
-                            <li>
-                                Implemented geospatial indexing for
-                                location-based hotel search across global
-                                inventory
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            Simplenight is a travel technology platform aggregating hotel inventory from multiple Global Distribution System (GDS) providers. As Cache Architect, Tom designed and built a custom Redis-based caching system for 700K+ hotels worldwide, engineering real-time ETL processing that handles 70GB/min of rates and availability data from multiple GDS providers. This architecture reduced API response times by 85%, enabling sub-100ms booking flows that dramatically improved conversion rates and user experience across the platform. He implemented geospatial indexing for location-based hotel search across the global inventory, allowing users to find nearby properties with minimal latency. The caching layer sat between the GDS data feeds and the consumer-facing API, ensuring that availability and pricing data was always fresh while keeping response times under 100ms. Technologies: Redis, ETL systems, geospatial databases, scaling infrastructure.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Designed a custom Redis caching layer for 700K+
+                            hotels worldwide, processing 70GB/min of real-time
+                            rates from multiple GDS providers. Cut API response
+                            times by 85% — sub-100ms booking flows that directly
+                            improved conversion. Added geospatial indexing for
+                            location-based search.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -684,10 +590,6 @@
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >Geospatial</span
                             >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >Scaling</span
-                            >
                         </div>
                     </article>
 
@@ -695,55 +597,35 @@
                     <article class="experience-item">
                         <div class="flex justify-between items-start mb-1">
                             <div>
-                                <h3 class="font-semibold text-lg">CTO</h3>
-                                <p class="text-accent">
+                                <h3 class="font-semibold text-lg">
                                     <a
                                         href="https://intelligenttrading.org"
                                         target="_blank"
-                                        class="hover:text-accent-light"
+                                        class="text-accent hover:text-accent-light"
                                         >Intelligent Trading Foundation</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    intelligenttrading.org
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— CTO</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2017 - 2020
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Built ML-powered trading signals platform
-                                serving 50K+ crypto traders with real-time
-                                market analysis
-                            </li>
-                            <li>
-                                Led open-source contributions attracting 100+
-                                GitHub contributors and 2K+ stars across
-                                multiple repositories
-                            </li>
-                            <li>
-                                Developed portfolio tracking and
-                                auto-rebalancing systems managing $10M+ in
-                                digital assets
-                            </li>
-                            <li>
-                                Implemented machine learning models for price
-                                prediction and sentiment analysis across 200+
-                                cryptocurrencies
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            Intelligent Trading Foundation (ITF) is a fintech company serving cryptocurrency and alternative asset traders, based in Prague, Czech Republic. As CTO, Tom built the entire platform from the ground up. The "Signals" platform pairs traditional market trading concepts with pattern recognition and machine learning capabilities — price prediction and sentiment analysis models covering 200+ cryptocurrencies with real-time market analysis. The "Portfolio" platform enables tracking and auto-rebalancing of digital assets and currencies, managing $10M+ in aggregate digital assets. The company served 50K+ active crypto traders. Tom led extensive open-source contributions (github.com/IntelligentTrading) that attracted 100+ GitHub contributors and 2K+ stars across multiple repositories. The company's research and education initiatives dove deep into fundamental analysis of decentralized networks, establishing thought leadership in the emerging crypto trading space. Technologies: Python, blockchain, machine learning, deep learning, neural networks, AI, statistical data analysis.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Built an ML-powered trading signals platform that
+                            grew to 50K+ active crypto traders — price prediction
+                            and sentiment analysis across 200+ cryptocurrencies,
+                            plus portfolio auto-rebalancing managing $10M+ in
+                            assets. Went fully open source, attracting 100+
+                            contributors and 2K+ GitHub stars.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >Machine Learning</span
-                            >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >Blockchain</span
                             >
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -761,45 +643,30 @@
                         <div class="flex justify-between items-start mb-1">
                             <div>
                                 <h3 class="font-semibold text-lg">
-                                    Executive Director
-                                </h3>
-                                <p class="text-accent">
                                     <a
                                         href="http://bhubprague.com"
                                         target="_blank"
-                                        class="hover:text-accent-light"
+                                        class="text-accent hover:text-accent-light"
                                         >Blockchain Hub Prague</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    bhubprague.com
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— Founder & Executive Director</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2017 - 2019
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Founded and led blockchain startup incubator
-                                supporting 20+ early-stage companies
-                            </li>
-                            <li>
-                                Member startups collectively raised $6M+ in seed
-                                funding through ICOs and traditional VC
-                            </li>
-                            <li>
-                                Built partnerships with local accelerator
-                                programs and university entrepreneurship centers
-                            </li>
-                            <li>
-                                Organized 100+ weekly education events with
-                                volunteer advisors from established blockchain
-                                projects
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            B Hub Prague was a blockchain startup incubator in Prague's Karlin financial district, providing shared office space (40 desks in a fully serviced 220sqm office), mentorship, funding connections, and legal support to early-stage companies. Tom founded and led the incubator as Executive Director (part-time, Sep 2017 - Oct 2019). The incubator supported 20+ early-stage blockchain companies, whose members collectively raised $6M+ in seed funding through ICOs and traditional VC. Notably, B Hub took no equity from member startups. Tom built partnerships with local incubator and accelerator programs and university entrepreneurship centers. He organized 100+ weekly education events led by volunteer advisors from established blockchain projects, ran a Founders Club for first-time entrepreneurs, and facilitated Design Sprints 2.0. Active advisors covered legal, finance, Czech accounting, blockchain technology, and mobile apps.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Founded a startup incubator supporting 20+
+                            early-stage blockchain companies — members
+                            collectively raised $6M+ in seed funding. Organized
+                            100+ weekly education events and built partnerships
+                            with local accelerators and universities. Took no
+                            equity from member startups.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -813,10 +680,6 @@
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >Fundraising</span
                             >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >Blockchain</span
-                            >
                         </div>
                     </article>
 
@@ -825,43 +688,28 @@
                         <div class="flex justify-between items-start mb-1">
                             <div>
                                 <h3 class="font-semibold text-lg">
-                                    Senior Engineering Team Lead
-                                </h3>
-                                <p class="text-accent">
                                     <a
                                         href="https://www.agoda.com/"
                                         target="_blank"
-                                        class="hover:text-accent-light"
-                                        >Agoda (Booking Holdings)</a
+                                        class="text-accent hover:text-accent-light"
+                                        >Agoda</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    agoda.com
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— Senior Engineering Team Lead</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">2016</p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Pitched and led greenfield product initiative
-                                for non-hotel accommodations to compete with
-                                Airbnb
-                            </li>
-                            <li>
-                                Secured C-level executive buy-in and built
-                                dedicated 12-person department within 4 months
-                            </li>
-                            <li>
-                                Architected product features that scaled to
-                                serve 40M+ MAU across 39 languages
-                            </li>
-                            <li>
-                                Delivered inventory management system processing
-                                100K+ property listings across Southeast Asia
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            Agoda is a Booking Holdings property (NASDAQ: BKNG) and Asia's leading online hotel reservation service with over 40 million monthly active users across 39 languages, based in Bangkok, Thailand. As Senior Engineering Team Lead (Jan - Sep 2016), Tom pitched and led a greenfield product initiative for non-hotel accommodations — Airbnb-style vacation rentals — to compete with Airbnb's market dominance. He prototyped and presented the bold new product concept to the executive staff, secured C-level buy-in, and the project was widely accepted and quickly assigned a dedicated department. Tom recruited senior developers to create an agile, high-energy team, building a 15-person department within 4 months. The experimental features he architected scaled to serve Agoda's 40M+ MAU across 39 languages, transforming customer engagement and opening new revenue streams. He delivered an inventory management system processing 100K+ property listings across Southeast Asia. Technologies: messaging, chat, AI, API design, product architecture, scaling infrastructure.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Pitched a greenfield non-hotel accommodations product
+                            to compete with Airbnb, secured executive buy-in, and
+                            built a 15-person department in 4 months. The features
+                            shipped to Agoda's 40M+ MAU across 39 languages,
+                            opening a new revenue stream for the Booking Holdings
+                            property.
+                        </p>
                         <div class="flex flex-wrap gap-1">
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
@@ -875,10 +723,6 @@
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >Scaling</span
                             >
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >Leadership</span
-                            >
                         </div>
                     </article>
 
@@ -887,56 +731,31 @@
                         <div class="flex justify-between items-start mb-1">
                             <div>
                                 <h3 class="font-semibold text-lg">
-                                    Cofounder & Technical Director
-                                </h3>
-                                <p class="text-accent">
                                     <a
                                         href="https://theanou.com"
                                         target="_blank"
-                                        class="hover:text-accent-light"
+                                        class="text-accent hover:text-accent-light"
                                         >Anou</a
                                     >
-                                </p>
-                                <p class="text-xs text-text-secondary">
-                                    theanou.com
-                                </p>
+                                    <span class="font-normal text-sm text-text-secondary">— Cofounder & Technical Director</span>
+                                </h3>
                             </div>
                             <p class="text-sm text-text-secondary">
                                 2012 - 2015
                             </p>
                         </div>
-                        <ul
-                            class="text-sm mb-2 list-disc list-inside space-y-1"
-                        >
-                            <li>
-                                Co-founded and scaled Morocco's largest artisan
-                                e-commerce platform to $1M+ annual revenue
-                            </li>
-                            <li>
-                                Pioneered language-free mobile commerce UX
-                                enabling 200+ illiterate artisans to manage
-                                inventory and sales
-                            </li>
-                            <li>
-                                Created economic impact funding 3 primary
-                                schools, healthcare programs, and 1,000+ jobs in
-                                rural communities
-                            </li>
-                            <li>
-                                Built Python/Django platform connecting Moroccan
-                                artisans directly to international buyers,
-                                eliminating middlemen
-                            </li>
-                            <li>
-                                Served as US Peace Corps volunteer during
-                                founding phase
-                            </li>
-                        </ul>
+                        <p class="hidden">
+                            Anou is Morocco's largest artisan e-commerce platform, founded on the vision that online marketplaces can empower talented artisans to run successful businesses despite low levels of education. Tom co-founded the company with Dan Driscoll while serving as a US Peace Corps volunteer, living in Morocco's Sahara desert for 2 years and learning Arabic — an incredible test of perseverance and resourcefulness. As Technical Director, he led the IT strategy, building a Python/Django platform that connected Moroccan artisans directly to international buyers and eliminated middlemen. He pioneered a language-free mobile commerce UX designed specifically for illiterate artisans — 200+ illiterate business owners could manage their own inventory and sales through the app. This was achieved through extensive human-computer interaction (HCI) research, performing studies to iterate on culturally-responsive design based on environmental and cultural factors specific to rural Morocco. Tom bootstrapped the platform to profitability using Agile Development methods as a Lean Startup. Today, Anou does $1M+ in annual sales and is the largest artisan e-commerce site in North Africa. Together with founder Dan Driscoll, they empowered the community to become the largest national cooperative in Morocco. The economic impact includes creation of primary schools, community orchards, health and wellness programs, and 1,000+ jobs in rural communities. Technologies: Python Django, e-commerce, HCI research, AWS S3, Telerivet, Cloudinary, Sendgrid, Etsy and eBay APIs.
+                        </p>
+                        <p class="text-sm mb-2 leading-relaxed">
+                            Co-founded Morocco's largest artisan e-commerce
+                            platform while serving as a Peace Corps volunteer in
+                            the Sahara. Pioneered a language-free mobile UX so
+                            200+ illiterate artisans could manage their own
+                            businesses. Scaled to $1M+ annual revenue, creating
+                            1,000+ jobs, funding schools and healthcare programs.
+                        </p>
                         <div class="flex flex-wrap gap-1">
-                            <span
-                                class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
-                                >E-commerce</span
-                            >
                             <span
                                 class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
                                 >Python Django</span
@@ -961,6 +780,9 @@
                 >
                     Additional Roles
                 </h2>
+                <p class="hidden">
+                    Additional concurrent roles: (1) Strategic Advisor at Chainstarters (chainstarters.com, Portland, Oregon, May 2018 - Present) — Chainstarters makes Web3 easy for brands and marketplaces, offering a no-code platform for web3 applications including NFT sites and ticketing apps. Tom serves as strategic advisor and authored the technical whitepaper. Technologies: Web3, React, React Native, SaaS. (2) Owner of Yudame (yuda.me, Mar 2019 - Present) — Yudame is a mission-driven software consultancy that only partners with founders building software that creates lasting value in people's lives. Projects include finding kidney donors, helping insomniacs fall asleep, repetition-based language learning, newsletter summaries, AI agents, and a flower delivery service (mondayflowers.org) in Chiang Mai, Thailand. Tom also runs research.yuda.me for technical research and ai.yuda.me for AI applications and experiments in production.
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                     <div>
                         <p class="font-semibold">
@@ -987,6 +809,66 @@
                         </p>
                     </div>
                 </div>
+            </section>
+
+            <!-- Featured Project -->
+            <section class="mb-8 md:mb-10 print-compact">
+                <h2
+                    class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
+                >
+                    Featured Project
+                </h2>
+                <p class="hidden">
+                    Valor (github.com/tomcounsell/ai) is an open-source autonomous development system — an AI coworker that executes full software development lifecycles independently. Unlike AI coding assistants that generate code on demand, Valor is a persistent agent with its own identity, machine, memory, and professional judgment. It communicates via Telegram as a regular user account, receives work assignments, and autonomously plans, builds, tests, patches, reviews, documents, and merges code — only escalating when genuinely blocked. The system is built on the Claude Agent SDK with Python (~4M lines), actively developed since September 2020 with 2,300+ total commits. Valor itself is the primary contributor (1,970 commits vs 351 from Tom Counsell), demonstrating that the system meaningfully develops its own codebase. Architecture highlights: (1) Full SDLC pipeline with 10+ composable stages (Plan → Critique → Build → Test → Patch → PR Review → Docs → Merge → Deploy), each implemented as a distinct skill. (2) Multi-agent orchestration via the P-Thread pattern — spawning parallel sub-agents, chaining sequential work, fusing results, and running nested agent hierarchies. (3) Subconscious memory system using bloom filter-based recall with importance-weighted records, decay over time, and outcome-based reinforcement — memories surface automatically during work without explicit retrieval. (4) Self-healing infrastructure with 5-level crash escalation (restart → kill stale → clear locks → revert commit → alert human), a bridge watchdog, and crash tracking with git commit correlation. (5) Daily autonomous maintenance ("Reflections") — a 14-unit pipeline running at 6 AM that handles legacy code scanning, log review, documentation audits, behavioral learning, and auto-generated daily reports filed as GitHub issues. (6) 35+ skills/commands, 30+ local Python tools (browser automation, image analysis, SMS reading for 2FA, memory search, code impact analysis, etc.), and MCP integrations with Sentry, Notion, GitHub, and Google Workspace. (7) Autoexperiment framework that iteratively optimizes its own prompts through measured experiments. (8) Session isolation with per-work-item git worktrees and task lists enabling true parallel work. Tom's clients deploy Valor as a team member on their engineering teams — it receives assignments, ships code, and reports outcomes. The system embodies a "build the system that builds the system" philosophy, with a stated goal of zero-touch autonomous delivery where agents ship verified results while the human sleeps.
+                </p>
+                <article class="experience-item">
+                    <div class="flex justify-between items-start mb-1">
+                        <div>
+                            <h3 class="font-semibold text-lg">
+                                <a
+                                    href="https://github.com/tomcounsell/ai"
+                                    target="_blank"
+                                    class="text-accent hover:text-accent-light"
+                                    >Valor</a
+                                >
+                                <span class="font-normal text-sm text-text-secondary">— Open Source Autonomous Development System</span>
+                            </h3>
+                        </div>
+                        <p class="text-sm text-text-secondary">
+                            2020 - Present
+                        </p>
+                    </div>
+                    <p class="text-sm mb-2 leading-relaxed">
+                        An open-source AI system that executes full development
+                        lifecycles autonomously — planning, building, testing,
+                        reviewing, and merging code with minimal supervision.
+                        Built on the Claude Agent SDK with 35+ composable
+                        skills, multi-agent orchestration, self-healing
+                        infrastructure, and a memory system that learns from
+                        past sessions. Valor is the primary contributor to its
+                        own codebase — 1,970 of 2,300+ commits. Deployed by
+                        clients as an independent team member on their
+                        engineering teams.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span
+                            class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                            >Claude Agent SDK</span
+                        >
+                        <span
+                            class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                            >Python</span
+                        >
+                        <span
+                            class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                            >Multi-Agent Systems</span
+                        >
+                        <span
+                            class="skill-tag px-2 py-0.5 bg-bg-secondary text-xs rounded"
+                            >Open Source</span
+                        >
+                    </div>
+                </article>
             </section>
 
             <!-- Open Source & Research -->
@@ -1040,19 +922,27 @@
             <!-- Education & Highlights -->
             <section class="mb-8 md:mb-10 print-compact">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Education -->
+                    <!-- Education & Certifications -->
                     <div>
                         <h2
                             class="font-serif text-xl md:text-2xl font-semibold mb-4 pb-2 border-b border-gray-300"
                         >
                             Education
                         </h2>
-                        <div>
-                            <p class="font-semibold">Purdue University</p>
-                            <p class="text-sm text-text-secondary">
-                                B.S. Computer Science, 2009
-                            </p>
-                        </div>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <p class="font-semibold">Purdue University</p>
+                                <p class="text-text-secondary">
+                                    B.S. Computer Science, 2009
+                                </p>
+                            </li>
+                            <li>
+                                <p class="font-semibold">AWS Certified Solutions Architect</p>
+                                <p class="text-text-secondary">
+                                    Singapore, 2015
+                                </p>
+                            </li>
+                        </ul>
                     </div>
 
                     <!-- Highlights -->
@@ -1065,12 +955,15 @@
                         <ul class="text-sm space-y-1">
                             <li class="flex items-start gap-2">
                                 <i
-                                    class="fas fa-certificate text-accent mt-1 text-xs"
+                                    class="fas fa-rocket text-accent mt-1 text-xs"
                                 ></i>
-                                <span
-                                    >AWS Certified Solutions Architect,
-                                    Singapore 2015</span
-                                >
+                                <span>Y Combinator, Remote Batch 2018</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i
+                                    class="fas fa-rocket text-accent mt-1 text-xs"
+                                ></i>
+                                <span>StartupYard Accelerator, Prague 2018</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i
@@ -1078,7 +971,7 @@
                                 ></i>
                                 <span
                                     >EOS Global Hackathon Finalist, Hong Kong
-                                    2018</span
+                                    2018 & Sydney 2019</span
                                 >
                             </li>
                             <li class="flex items-start gap-2">
