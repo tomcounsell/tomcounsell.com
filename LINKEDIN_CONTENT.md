@@ -9,8 +9,7 @@ LinkedIn layout differs from the resume: positions are standalone pages, the Abo
 ## Headline (multiline)
 
 ```
-CTO & Founder | 3 exits
-Building self-improving AI agents
+CTO & Founder, 3 exits, Building self-improving AI agents
 ```
 
 ---
@@ -29,10 +28,6 @@ The short version: Tom co-founded an e-commerce platform in Morocco's Sahara des
 The longer version is that every role taught him something different about building under pressure. At Anou, he learned you can design software for people who can't read if you do the research. At Agoda, he learned that pitching a bold idea to executives is the easy part; building the team to execute it is the real work. At Official, he learned you can rebuild an entire engineering org inside a public company without missing a sprint, if you hire right and communicate clearly. At Simplenight, he learned that the difference between accurate pricing and stale pricing is measured in milliseconds.
 
 Tom believes in building things that outlast you, open-sourcing what you can, and hiring people who are better than you. He challenges the status quo, he's the first to admit when he's wrong, and nothing is more valuable than integrity throughout.
-
-
-If you're a founder building something ambitious and need a technical leader who's done it before: connect and send a message.
-
 
 
 Tom's Rules for Business:
@@ -60,6 +55,9 @@ Tom's Rules for Business:
 11. With failure, learn and never repeat
 
 12. Nothing is more valuable than your integrity
+
+
+If you're a founder building something ambitious and need a technical leader who's done it before: connect and send a message.
 ```
 
 ---
@@ -118,9 +116,10 @@ Bumble Studio: Official, The Relationship App (NASDAQ: BMBL).
 ```
 Tom joined as tech lead, then led all technology through the Bumble acquisition and supported the founder's exit.
 
-- Technical Advisor (Oct 2022 - May 2023): guided the technical strategy through acquisition diligence.
 - Head of Engineering (Apr 2023 - Dec 2023): rebuilt the team post-acquisition, managed handover to Bumble's org.
 - Hiring manager for full replacement of the London-based dev team.
+
+- Technical Advisor (Oct 2022 - May 2023): Tom guided the technical strategy through monetization strategy, implementation, and acquisition diligence.
 ```
 
 ---
@@ -158,6 +157,7 @@ Prague needed infrastructure for blockchain founders, not just meetups.
 
 - Incubator supporting 20+ early-stage companies. Members raised $6M+ in seed funding.
 - 100+ education events, partnerships with local accelerators and universities. No equity taken.
+- Facilitated adoption of Design Sprints 2.0
 
 Later merged with WeWork, entity sold in 2021.
 ```
