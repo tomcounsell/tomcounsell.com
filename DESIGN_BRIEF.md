@@ -82,19 +82,18 @@ Text Secondary:   #555555  (Medium gray for subtitles)
 ```
 
 ### Accent Color
-Soft teal (#52796F) as the primary accent color for highlights and interactive elements:
+Navy blue (#364E63), used sparingly — a darker, desaturated shade of the steel-blue backdrop in Tom's profile photo (hue 208°, sampled from static/img/profile.jpg). The site is greyscale at rest — navy appears only at deliberate moments:
 - Used for:
-  - Contact/CTA button backgrounds
-  - Social media icon highlights
-  - Hover states for links
-  - Company name/role headers in experience cards
-  - Section dividers or decorative elements
-  - Tag/label backgrounds for technologies
-- Applied consistently throughout to create cohesion
+  - Primary CTA button backgrounds (one per page)
+  - Hover and keyboard-focus states for links and icons
+  - Rate figures on the pricing table
+  - Small section-heading rules and testimonial border bars
+- Everything else (icons, company links, tags, logos area) stays greyscale at rest
+- Restraint is the point: color marks interactivity and key information, not decoration
 
 ### Secondary Colors
 Additional subtle colors for visual interest:
-- Light teal background for alternating sections (#F0F5F4)
+- Neutral light gray background for alternating sections (#F0F0F0)
 - Soft borders and dividers using gray tones
 - Technology tags can use muted color variations
 
@@ -272,6 +271,29 @@ Final section acting as call-to-action for getting in touch.
 - Alternating background colors for section variation
 - Not flat, but not heavy - balanced approach
 
+### Cards — Use Sparingly
+Cards are reserved for content with a real visual mark or a call to action:
+career/experience cards (company logos) and Get in Touch CTA cards (buttons).
+All share one chrome: `bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow`.
+Never build grids of icon cards — repeated decorative Font Awesome chips read cheap.
+Lists of services, skills, or terms get the editorial keyline treatment instead.
+
+### Editorial Keyline Pattern (the default for any list-like content)
+Used by the Expertise index (index.html) and the Services + Terms sections (rates.html):
+- Group opens with a thin keyline (`border-t border-gray-300 pt-4`/`pt-5`)
+- Uppercase tracked label: `text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary`
+- Content beneath: either stacked `text-sm` items (`space-y-2`),
+  or a `sm:grid-cols-3` grid of serif `text-xl` titles with `text-sm text-text-secondary leading-relaxed` descriptions
+- Typography and whitespace do the work; no icons
+
+### Key Typography Patterns
+- **Featured quote** (top of index): quiet confidence, not a billboard —
+  centered body sans, `text-lg md:text-xl leading-relaxed`, NO italics, no oversized serif;
+  attribution + "Read more reviews" link in `text-sm text-text-secondary` below.
+  Above the fold, the hero name/subtitle is the only serif display moment.
+- Index page section order: Hero → About (quote only) → Career → Expertise (bio paragraph + skills index) → Contact,
+  alternating white / #F0F0F0 backgrounds
+
 ---
 
 ## Imagery & Iconography
@@ -322,11 +344,11 @@ Final section acting as call-to-action for getting in touch.
 <style type="text/tailwindcss">
   @theme {
     --color-bg-primary: #FAFAFA;
-    --color-bg-secondary: #F0F5F4;
+    --color-bg-secondary: #F0F0F0;
     --color-text-primary: #111111;
     --color-text-secondary: #555555;
-    --color-accent: #52796F;
-    --color-accent-light: #6B9B8F;
+    --color-accent: #364E63;
+    --color-accent-light: #7C95AB;
   }
 </style>
 ```
@@ -562,7 +584,7 @@ The slides page uses Reveal.js for presentations, maintaining consistent brandin
 --color-accent: #4A6B8A;     /* Light navy blue */
 ```
 
-Note: Slides use light navy blue (#4A6B8A) as accent instead of teal (#52796F) for better projection visibility.
+Note: Slides use a slightly lighter navy (#4A6B8A) than the site accent (#364E63) for better projection visibility.
 
 ### Typography (Slides)
 - **Headings (H1-H3):** Playfair Display, serif

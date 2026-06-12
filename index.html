@@ -36,10 +36,10 @@
             @theme {
                 --color-bg-primary: #fafafa;
                 --color-bg-secondary: #f0f0f0;
-                --color-text-primary: #1a1a1a;
-                --color-text-secondary: #666666;
-                --color-accent: #2c2c2c;
-                --color-accent-light: #4a4a4a;
+                --color-text-primary: #111111;
+                --color-text-secondary: #555555;
+                --color-accent: #364e63;
+                --color-accent-light: #7c95ab;
             }
 
             /* Serif font for name and headings */
@@ -50,6 +50,13 @@
             /* Smooth scrolling */
             html {
                 scroll-behavior: smooth;
+            }
+
+            /* Visible keyboard focus */
+            a:focus-visible,
+            button:focus-visible {
+                outline: 2px solid #364e63;
+                outline-offset: 2px;
             }
         </style>
     </head>
@@ -63,14 +70,14 @@
             >
                 <a
                     href="#hero"
-                    class="text-xl md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors"
+                    class="text-lg md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors whitespace-nowrap"
                 >
                     Tom Counsell
                 </a>
-                <div class="flex items-center gap-3 md:gap-6">
+                <div class="flex items-center gap-2.5 sm:gap-3 md:gap-6">
                     <a
                         href="#about"
-                        class="text-sm md:text-base hover:text-accent transition-colors py-2"
+                        class="hidden sm:inline-block text-sm md:text-base hover:text-accent transition-colors py-2"
                         >About</a
                     >
                     <a
@@ -110,11 +117,17 @@
             <section id="hero" class="py-16 md:py-24 px-4 text-center">
                 <div class="max-w-4xl mx-auto">
                     <!-- Portrait Image -->
-                    <img
-                        src="static/img/profile.jpg"
-                        alt="Tom Counsell - Professional portrait"
-                        class="w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full mx-auto mb-8 object-cover shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
-                    />
+                    <a
+                        href="#about"
+                        aria-label="About Tom Counsell"
+                        class="inline-block rounded-full mb-8"
+                    >
+                        <img
+                            src="static/img/profile.jpg"
+                            alt="Tom Counsell - Professional portrait"
+                            class="w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full mx-auto object-cover shadow-lg hover:shadow-2xl transition-shadow"
+                        />
+                    </a>
 
                     <!-- Name -->
                     <h1
@@ -135,7 +148,7 @@
                         <a
                             href="https://linkedin.com/in/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="LinkedIn"
                         >
                             <i class="fab fa-linkedin"></i>
@@ -143,7 +156,7 @@
                         <a
                             href="https://wellfound.com/u/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="Wellfound"
                         >
                             <i class="fab fa-angellist"></i>
@@ -151,7 +164,7 @@
                         <a
                             href="https://github.com/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="GitHub"
                         >
                             <i class="fab fa-github"></i>
@@ -159,7 +172,7 @@
                         <a
                             href="https://stackoverflow.com/users/2102461/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="Stack Overflow"
                         >
                             <i class="fab fa-stack-overflow"></i>
@@ -167,7 +180,7 @@
                         <a
                             href="https://t.me/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="Telegram"
                         >
                             <i class="fab fa-telegram"></i>
@@ -180,104 +193,183 @@
             <section id="about" class="py-16 md:py-20 px-4 bg-bg-secondary">
                 <div class="max-w-4xl mx-auto">
                     <!-- Featured Quote -->
-                    <blockquote class="border-l-2 border-accent pl-6 py-2 mb-8">
+                    <blockquote class="text-center">
                         <p
-                            class="text-lg md:text-xl italic text-text-primary mb-3"
+                            class="text-lg md:text-xl leading-relaxed text-text-primary mb-4 max-w-2xl mx-auto"
                         >
-                            "Tom cares. He's a force multiplier that makes
-                            everyone around him better... <br />
-                            I highly recommend Tom as a leader."
+                            “Tom cares. He's a force multiplier that makes
+                            everyone around him better…
+                            <br class="hidden md:block" />
+                            I highly recommend Tom as a leader.”
                         </p>
-                        <a
-                            href="rates.html#testimonials"
-                            class="text-sm text-accent hover:text-accent-light underline"
-                        >
-                            Read more reviews
-                        </a>
+                        <footer class="text-sm text-text-secondary">
+                            — Anthony S. Cannella, Blockchain Hub
+                            <span class="mx-1.5 text-gray-400" aria-hidden="true"
+                                >·</span
+                            >
+                            <a
+                                href="rates.html#testimonials"
+                                class="text-text-primary hover:text-accent underline transition-colors"
+                            >
+                                Read more reviews
+                            </a>
+                        </footer>
                     </blockquote>
-
-                    <div class="text-base md:text-lg leading-loose">
-                        <p>
-                            Tom builds engineering teams that ship. Ten years as
-                            CTO across fintech, AI, and travel tech. Raised
-                            $3.5M+, completed three exits, delivered systems
-                            serving millions. Architected Redis caches ingesting
-                            GB/s. Rebuilt Bumble Studio's engineering org in six
-                            months without missing a sprint. Bootstrapped a
-                            social enterprise to $1M revenue in the Sahara
-                            Desert. Beyond the engineering, Tom excels at hiring
-                            the right team, making the tough calls, and shipping
-                            products people love.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="py-16 md:py-20 px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
-                    >
-                        Expertise
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="font-serif text-xl font-semibold mb-3">
-                                Technical Leadership
-                            </h3>
-                            <p class="text-text-secondary">
-                                Team Building, Agile/Scrum, Technical
-                                Architecture, Hiring & Mentorship
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="font-serif text-xl font-semibold mb-3">
-                                Backend/Data
-                            </h3>
-                            <p class="text-text-secondary">
-                                Python, Django, Redis, ETL Pipelines,
-                                PostgreSQL, Real-time Systems, Blockchain, Web3
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="font-serif text-xl font-semibold mb-3">
-                                AI/ML
-                            </h3>
-                            <p class="text-text-secondary">
-                                LLMs (OpenAI, Anthropic), Agent Orchestration,
-                                Prompt & Context Engineering, Deep Learning
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="font-serif text-xl font-semibold mb-3">
-                                Cloud/DevOps
-                            </h3>
-                            <p class="text-text-secondary">
-                                AWS, Scaling Infrastructure, Microservices, API
-                                Design, React Native, Dart / Flutter
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
             <!-- Career Section -->
-            <section id="career" class="py-16 md:py-20 px-4 bg-bg-secondary">
+            <section id="career" class="py-16 md:py-20 px-4">
                 <div class="max-w-4xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-center"
                     >
                         Career
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-12"></div>
 
                     <div class="space-y-8">
-                        <!-- Fuse (DeckFusion) -->
+                        <!-- Cyndra AI -->
                         <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
+                        >
+                            <div class="flex gap-4 mb-3">
+                                <img
+                                    src="static/img/cyndra.png"
+                                    alt="Cyndra AI logo"
+                                    class="w-12 h-12 object-contain rounded flex-shrink-0"
+                                />
+                                <div class="flex-1">
+                                    <h3
+                                        class="font-serif text-xl font-semibold mb-1"
+                                    >
+                                        CTO
+                                    </h3>
+                                    <h4 class="text-base mb-1">
+                                        <a
+                                            href="https://cyndra.ai"
+                                            target="_blank"
+                                            class="text-text-primary hover:text-accent transition-colors font-medium"
+                                        >
+                                            Cyndra AI
+                                        </a>
+                                    </h4>
+                                    <p class="text-sm text-text-secondary">
+                                        May 2026 - Present
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 text-base text-text-primary">
+                                <p>
+                                    Businesses are ready for AI team members.
+                                    Cyndra provisions autonomous AI employees on
+                                    customer-owned hardware — configurable
+                                    personas with persistent memory and a local
+                                    skill layer, working through the same email,
+                                    chat, and app tools as their human
+                                    colleagues. Tom leads the platform
+                                    architecture: agent hosts deployable in
+                                    hours, bespoke skillsets mapped to real
+                                    business practices, and observability
+                                    tooling so non-technical operators can
+                                    supervise a blended human-and-AI workforce.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-1.5">
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >AI Agents</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >MCP</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Persistent Memory</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Observability</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >macOS</span
+                                >
+                            </div>
+                        </article>
+
+                        <!-- PsyOptimal -->
+                        <article
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
+                        >
+                            <div class="flex gap-4 mb-3">
+                                <img
+                                    src="static/img/psyoptimal.png"
+                                    alt="PsyOptimal logo"
+                                    class="w-12 h-12 object-contain flex-shrink-0"
+                                />
+                                <div class="flex-1">
+                                    <h3
+                                        class="font-serif text-xl font-semibold mb-1"
+                                    >
+                                        CTO
+                                    </h3>
+                                    <h4 class="text-base mb-1">
+                                        <a
+                                            href="https://psyoptimal.com"
+                                            target="_blank"
+                                            class="text-text-primary hover:text-accent transition-colors font-medium"
+                                        >
+                                            PsyOptimal
+                                        </a>
+                                    </h4>
+                                    <p class="text-sm text-text-secondary">
+                                        Jan 2025 - Present
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 text-base text-text-primary">
+                                <p>
+                                    The OKC Thunder's team psychologist had 25
+                                    years of military-grade assessment methods
+                                    and no digital platform. Tom built one from
+                                    scratch: a real-time scoring engine that
+                                    benchmarks psychological profiles against
+                                    team, league, and sport-wide norms. The
+                                    Thunder won the 2025 NBA Championship in the
+                                    platform's first full season. Now at scale
+                                    nationwide, serving thousands of students,
+                                    athletes, and businesses.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-1.5">
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Python</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Django</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >PostgreSQL</span
+                                >
+                                <span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >AWS</span
+                                >
+                            </div>
+                        </article>
+
+                        <!-- Fuse -->
+                        <article
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
                         >
                             <div class="flex gap-4 mb-3">
                                 <img
@@ -295,70 +387,65 @@
                                         <a
                                             href="https://fuse.is"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors font-medium"
                                         >
                                             Fuse
                                         </a>
                                     </h4>
                                     <p class="text-sm text-text-secondary">
-                                        Jun 2024 - Present
+                                        Jun 2024 - Jan 2026
                                     </p>
                                 </div>
                             </div>
 
                             <div class="mb-4 text-base text-text-primary">
                                 <p>
-                                    Tom architects multi-agent AI systems using
-                                    PydanticAI and Claude MCPs for enterprise
-                                    data orchestration, building "chat with your
-                                    data" platforms that process 10TB+ across
-                                    customer databases. He leads the engineering
-                                    team through rapid product-market fit
-                                    iterations, focusing on practical AI
-                                    implementations that solve real business
-                                    problems.
+                                    Marketing teams were drowning in siloed data
+                                    across Google Analytics, Ads, and Meta. Tom
+                                    took Fuse from zero to production MVP in six
+                                    months, architecting a multi-agent platform
+                                    with PydanticAI and Claude MCP servers —
+                                    pioneering MCP patterns before Anthropic's
+                                    standardization. He built the data
+                                    verification layer that eliminates AI
+                                    hallucinations and a prompt system that cut
+                                    token costs 40%. The platform now serves
+                                    400+ marketing teams at $470K ARR, including
+                                    Ziff Davis (CNET Group).
                                 </p>
                             </div>
 
                             <div class="flex flex-wrap gap-1.5">
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
                                     >Python</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
                                     >PydanticAI</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >OpenAI</span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >MCP</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Anthropic</span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Claude</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
                                     >AWS</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Gen AI</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >prompt engineering</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >data pipelines</span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Data Pipelines</span
                                 >
                             </div>
                         </article>
 
-                        <!-- Bumble / Official -->
+                        <!-- Bumble Inc / Official -->
                         <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
                         >
                             <div class="flex gap-4 mb-3">
                                 <div class="flex gap-2 flex-shrink-0">
@@ -383,9 +470,9 @@
                                         <a
                                             href="https://getofficial.co"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors font-medium"
                                         >
-                                            Bumble / Official
+                                            Bumble Inc / Official
                                         </a>
                                     </h4>
                                     <p class="text-sm text-text-secondary">
@@ -396,606 +483,366 @@
 
                             <div class="mb-4 text-base text-text-primary">
                                 <p>
-                                    Tom led a complete technical transformation
-                                    at Bumble Studio's Official app, rebuilding
-                                    the entire 8-person dev team in 6 months
-                                    while maintaining product velocity. He
-                                    integrated data pipelines that reduced BI
-                                    report latency by 75% and managed the
-                                    technical handover of a React Native app
-                                    serving 100K+ monthly active users. His work
-                                    aligned the startup's engineering practices
-                                    with the parent company's NASDAQ-listed
-                                    operational standards, ensuring long-term
-                                    maintainability and team success.
+                                    Tom joined Official as tech lead, then led
+                                    all technology through the Bumble Inc
+                                    (NASDAQ: BMBL) acquisition, supporting the
+                                    founder's exit. Post-acquisition, he rebuilt
+                                    the entire 8-person engineering team in six
+                                    months with zero missed sprint commitments,
+                                    handed the React Native app (100K+ MAU) over
+                                    to Bumble's organization, and integrated
+                                    data pipelines that gave the business
+                                    real-time visibility for the first time.
                                 </p>
                             </div>
 
                             <div class="flex flex-wrap gap-1.5">
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
                                     >React Native</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >scaling infrastructure</span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Data Pipelines</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >data pipelines</span
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
+                                    >Team Building</span
                                 >
                                 <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >gen AI</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >leadership</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Management</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
+                                    class="px-2.5 py-0.5 bg-bg-secondary text-xs rounded-full"
                                     >Scrum</span
                                 >
                             </div>
                         </article>
+                    </div>
 
-                        <!-- Chainstarters -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
+                    <!-- Earlier & Ongoing Roles -->
+                    <div class="mt-12">
+                        <h3
+                            class="font-serif text-xl font-semibold mb-6 text-center text-text-secondary"
                         >
-                            <div class="flex gap-4 mb-3">
-                                <img
-                                    src="static/img/chainstarters.jpg"
-                                    alt="Chainstarters logo"
-                                    class="w-12 h-12 object-contain flex-shrink-0"
-                                />
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        Strategic Advisor
-                                    </h3>
-                                    <h4 class="text-base mb-1">
-                                        <a
-                                            href="https://www.chainstarters.com/"
-                                            target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
-                                        >
-                                            Chainstarters
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        May 2018 - Present
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div
-                                class="space-y-2 mb-4 text-base text-text-primary"
-                            >
-                                <p>
-                                    Tom authored the technical whitepaper for
-                                    Chainstarters (formerly Balehu), an asset
-                                    tokenization platform that converts physical
-                                    assets into digital tokens using blockchain
-                                    technology.
-                                </p>
-                                <p>
-                                    The no-code platform enables businesses to
-                                    tokenize real estate, securities, digital
-                                    art, and other assets with built-in
-                                    regulatory compliance and smart contract
-                                    automation.
-                                </p>
-                            </div>
-
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >blockchain</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >asset tokenization</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >smart contracts</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >technical writing</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Web3</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >no-code platform</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >SaaS</span
-                                >
-                            </div>
-                        </article>
-
-                        <!-- Yudame -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
+                            Earlier &amp; Ongoing Roles
+                        </h3>
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg divide-y divide-gray-100 shadow"
                         >
-                            <div class="flex gap-4 mb-3">
-                                <img
-                                    src="static/img/yudame.png"
-                                    alt="Yudame logo"
-                                    class="w-12 h-12 object-contain flex-shrink-0"
-                                />
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        Owner
-                                    </h3>
-                                    <h4 class="text-base mb-1">
-                                        <a
-                                            href="https://yuda.me"
-                                            target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
-                                        >
-                                            Yudame
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        Mar 2019 - Present
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div
-                                class="space-y-2 mb-4 text-base text-text-primary"
-                            >
-                                <p>
-                                    Yudame only partners with mission-driven
-                                    founders who are building software that
-                                    creates lasting value in the lives of
-                                    people.
-                                </p>
-                                <p>
-                                    Building applications that help with things
-                                    like finding kidney donors, helping
-                                    insomniacs fall asleep, repetition-based
-                                    language learning, newsletter summaries, AI
-                                    agents
-                                </p>
-                                <p>
-                                    And a
-                                    <a
-                                        href="https://mondayflowers.org/story"
-                                        target="_blank"
-                                        class="text-accent hover:text-accent-light"
-                                        >flower delivery service</a
-                                    >
-                                    in Chiang Mai, Thailand
-                                </p>
-                            </div>
-
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >mission-driven</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >consulting</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >product development</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >AI agents</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >social impact</span
-                                >
-                            </div>
-                        </article>
-
-                        <!-- SIMPLENIGHT -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <div class="flex gap-4 mb-3">
+                            <div class="flex items-center gap-4 p-4 md:px-6">
                                 <img
                                     src="static/img/simplenight.jpg"
-                                    alt="SIMPLENIGHT logo"
-                                    class="w-12 h-12 object-contain flex-shrink-0"
+                                    alt="Simplenight logo"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
                                 />
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        Cache Architect
-                                    </h3>
-                                    <h4 class="text-base mb-1">
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        Cache Architect ·
                                         <a
                                             href="https://www.simplenight.com/"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Simplenight</a
                                         >
-                                            SIMPLENIGHT
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        2021 - 2024
                                     </p>
+                                    <p class="text-sm text-text-secondary">
+                                        Redis caching for 700K+ hotels
+                                        processing 70GB/min; response times down
+                                        85% to sub-100ms
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2021 - 2024</p>
                                 </div>
-                            </div>
-
-                            <div class="mb-4 text-base text-text-primary">
-                                <p>
-                                    Tom designed a custom Redis-based caching
-                                    system for 700K+ hotels worldwide,
-                                    engineering real-time ETL processing that
-                                    handles 70GB/min of rates and availability
-                                    data. This architecture reduced API response
-                                    times by 85%, enabling sub-100ms booking
-                                    flows that dramatically improved conversion
-                                    rates and user experience across the
-                                    platform.
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
+                                >
+                                    2021 - 2024
                                 </p>
                             </div>
 
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >ETL systems</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Redis</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >geospatial databases</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >scaling infrastructure</span
-                                >
-                            </div>
-                        </article>
-
-                        <!-- Blockchain Hub Prague -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <div class="flex gap-4 mb-3">
+                            <div class="flex items-center gap-4 p-4 md:px-6">
                                 <img
-                                    src="static/img/bhub.png"
-                                    alt="Blockchain Hub Prague logo"
-                                    class="w-12 h-12 object-contain flex-shrink-0"
+                                    src="static/img/chainstarters.jpg"
+                                    alt="Chainstarters logo"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
                                 />
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        Executive Director
-                                    </h3>
-                                    <h4 class="text-base mb-1">
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        Strategic Advisor, ex-CTO ·
                                         <a
-                                            href="http://bhubprague.com"
+                                            href="https://www.chainstarters.com/"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Chainstarters</a
                                         >
-                                            Blockchain Hub Prague
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        Sep 2017 - Oct 2019
                                     </p>
+                                    <p class="text-sm text-text-secondary">
+                                        No-code Web3 platform for brands and
+                                        marketplaces; authored the technical
+                                        whitepaper
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2018 - Present</p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="space-y-2 mb-4 text-base text-text-primary"
-                            >
-                                <p>
-                                    B Hub is the environment teams need to grow
-                                    innovative startup businesses.
-                                </p>
-                                <p>
-                                    Incubator for blockchain startups providing
-                                    shared office space, mentorship, funding,
-                                    legal support.
-                                </p>
-                                <p>
-                                    $6M+ in total fundraising by member startups
-                                </p>
-                                <p>
-                                    Partnerships with local incubator and
-                                    accelerator programs
-                                </p>
-                                <p>
-                                    Weekly education events led by volunteer
-                                    advisors
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
+                                >
+                                    2018 - Present
                                 </p>
                             </div>
 
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >incubator</span
+                            <div class="flex items-center gap-4 p-4 md:px-6">
+                                <img
+                                    src="static/img/yudame.png"
+                                    alt="Yudame logo"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
+                                />
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        Owner ·
+                                        <a
+                                            href="https://yuda.me"
+                                            target="_blank"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Yudame</a
+                                        >
+                                    </p>
+                                    <p class="text-sm text-text-secondary">
+                                        Mission-driven software consultancy: AI
+                                        agents, health apps, language learning,
+                                        and a
+                                        <a
+                                            href="https://mondayflowers.org/story"
+                                            target="_blank"
+                                            class="text-text-primary hover:text-accent"
+                                            >flower delivery service</a
+                                        >
+                                        in Chiang Mai
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2019 - Present</p>
+                                </div>
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
                                 >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >mentorship</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >fundraising</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >community building</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >design sprints</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >blockchain</span
-                                >
+                                    2019 - Present
+                                </p>
                             </div>
-                        </article>
 
-                        <!-- Intelligent Trading Foundation -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <div class="flex gap-4 mb-3">
+                            <div class="flex items-center gap-4 p-4 md:px-6">
                                 <img
                                     src="static/img/ITF.png"
                                     alt="Intelligent Trading Foundation logo"
-                                    class="w-12 h-12 object-contain flex-shrink-0"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
                                 />
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        CTO
-                                    </h3>
-                                    <h4 class="text-base mb-1">
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        CTO ·
                                         <a
                                             href="https://intelligenttrading.org"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Intelligent Trading Foundation</a
                                         >
-                                            Intelligent Trading Foundation
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        Jan 2017 - Aug 2020
                                     </p>
+                                    <p class="text-sm text-text-secondary">
+                                        ML trading signals for 50K+ crypto
+                                        traders; open-sourced across 22
+                                        repositories
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2017 - 2020</p>
                                 </div>
-                            </div>
-
-                            <div class="mb-4 text-base text-text-primary">
-                                <p>
-                                    As CTO, Tom built an ML-powered trading
-                                    signals platform that served 50K+ crypto
-                                    traders, pairing traditional market trading
-                                    concepts with pattern recognition and
-                                    machine learning capabilities. He led
-                                    extensive open-source contributions that
-                                    attracted 100+ GitHub contributors and 2K+
-                                    stars, while developing portfolio tracking
-                                    and auto-rebalancing systems managing $10M+
-                                    in digital assets. The company's research
-                                    and education initiatives dove deep into
-                                    fundamental analysis of decentralized
-                                    networks, establishing thought leadership in
-                                    the emerging crypto trading space.
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
+                                >
+                                    2017 - 2020
                                 </p>
                             </div>
 
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Blockchain</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Machine Learning</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Deep Learning</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Neural Networks</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >AI</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Statistical Data Analysis</span
-                                >
-                            </div>
-                        </article>
-
-                        <!-- Agoda (Booking Group) -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <div class="flex gap-4 mb-3">
-                                <div class="flex gap-2 flex-shrink-0">
-                                    <img
-                                        src="static/img/agoda.png"
-                                        alt="Agoda logo"
-                                        class="w-12 h-12 object-contain"
-                                    />
-                                    <img
-                                        src="static/img/booking.png"
-                                        alt="Booking Group logo"
-                                        class="w-12 h-12 object-contain"
-                                    />
+                            <div class="flex items-center gap-4 p-4 md:px-6">
+                                <img
+                                    src="static/img/bhub.png"
+                                    alt="Blockchain Hub Prague logo"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
+                                />
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        Founder &amp; Executive Director ·
+                                        <a
+                                            href="http://bhubprague.com"
+                                            target="_blank"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Blockchain Hub Prague</a
+                                        >
+                                    </p>
+                                    <p class="text-sm text-text-secondary">
+                                        Startup incubator; member companies
+                                        raised $6M+ in seed funding
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2017 - 2019</p>
                                 </div>
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        Senior Engineering Team Lead
-                                    </h3>
-                                    <h4 class="text-base mb-1">
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
+                                >
+                                    2017 - 2019
+                                </p>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 md:px-6">
+                                <img
+                                    src="static/img/agoda.png"
+                                    alt="Agoda logo"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
+                                />
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        Senior Engineering Team Lead ·
                                         <a
                                             href="https://www.agoda.com/"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Agoda (Booking Holdings)</a
                                         >
-                                            Agoda (Booking Group)
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        Jan 2016 - Sep 2016
                                     </p>
+                                    <p class="text-sm text-text-secondary">
+                                        Pitched a greenfield product to
+                                        executives; spun into a 15-person
+                                        department serving 40M+ MAU
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2016</p>
                                 </div>
-                            </div>
-
-                            <div class="mb-4 text-base text-text-primary">
-                                <p>
-                                    Tom pitched and led a greenfield product
-                                    initiative for non-hotel accommodations to
-                                    compete with Airbnb's market dominance. He
-                                    secured executive buy-in and built a
-                                    dedicated department within 4 months,
-                                    recruiting senior developers to create an
-                                    agile, high-energy team. The features he
-                                    architected scaled to serve Agoda's 40M+
-                                    monthly active users across 39 languages,
-                                    transforming customer engagement and opening
-                                    new revenue streams for the Booking Holdings
-                                    property.
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
+                                >
+                                    2016
                                 </p>
                             </div>
 
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >messaging</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >chat</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >AI</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >API design</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >product architecture</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >scaling</span
-                                >
-                            </div>
-                        </article>
-
-                        <!-- Anou -->
-                        <article
-                            class="bg-white border border-gray-200 rounded p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <div class="flex gap-4 mb-3">
+                            <div class="flex items-center gap-4 p-4 md:px-6">
                                 <img
                                     src="static/img/anou.png"
                                     alt="Anou logo"
-                                    class="w-12 h-12 object-contain flex-shrink-0"
+                                    class="w-8 h-8 object-contain flex-shrink-0"
                                 />
-                                <div class="flex-1">
-                                    <h3
-                                        class="font-serif text-xl font-semibold mb-1"
-                                    >
-                                        Cofounder, Technical Director
-                                    </h3>
-                                    <h4 class="text-base mb-1">
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium">
+                                        Cofounder &amp; Technical Director ·
                                         <a
                                             href="https://theanou.com"
                                             target="_blank"
-                                            class="text-accent hover:text-accent-light transition-colors font-medium"
+                                            class="text-text-primary hover:text-accent transition-colors"
+                                            >Anou</a
                                         >
-                                            Anou
-                                        </a>
-                                    </h4>
-                                    <p class="text-sm text-text-secondary">
-                                        Dec 2012 - Jul 2015
                                     </p>
+                                    <p class="text-sm text-text-secondary">
+                                        Morocco's largest artisan e-commerce
+                                        platform; $1M+ revenue and 3,000+ jobs,
+                                        built in the Sahara
+                                    </p>
+                                <p class="text-xs text-text-secondary mt-1 sm:hidden">2012 - 2015</p>
                                 </div>
-                            </div>
-
-                            <div class="mb-4 text-base text-text-primary">
-                                <p>
-                                    Tom co-founded and scaled Morocco's largest
-                                    artisan e-commerce platform to $1M+ annual
-                                    revenue, pioneering language-free mobile
-                                    commerce UX designed specifically for
-                                    illiterate artisans through extensive HCI
-                                    research. Living in the Sahara Desert for 2
-                                    years and learning Arabic, he bootstrapped
-                                    the platform to profitability while creating
-                                    economic impact that funded primary schools,
-                                    healthcare programs, and 1,000+ jobs. He led
-                                    the IT strategy using Agile Development
-                                    methods as a Lean Startup, performing
-                                    human-computer interaction studies to
-                                    iterate on culturally-responsive design
-                                    based on environmental and cultural factors
-                                    specific to rural Morocco. Together with
-                                    founder Dan Driscoll, they empowered the
-                                    community to become the largest national
-                                    cooperative in Morocco.
+                                <p
+                                    class="hidden sm:block text-sm text-text-secondary whitespace-nowrap"
+                                >
+                                    2012 - 2015
                                 </p>
                             </div>
+                        </div>
 
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >e-commerce</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >Python Django</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >HCI</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >public-private partnerships</span
-                                >
-                                <span
-                                    class="px-2 py-0.5 bg-bg-secondary text-sm font-mono rounded"
-                                    >AWS S3</span
-                                >
-                            </div>
-                        </article>
+                        <p class="text-center text-sm text-text-secondary mt-6">
+                            Full details on the
+                            <a
+                                href="resume.html"
+                                class="text-text-primary hover:text-accent underline"
+                                >resume / CV</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expertise Section -->
+            <section id="skills" class="py-16 md:py-20 px-4 bg-bg-secondary">
+                <div class="max-w-5xl mx-auto">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-center"
+                    >
+                        Expertise
+                    </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-12"></div>
+
+                    <div
+                        class="max-w-3xl mx-auto text-base md:text-lg leading-loose mb-12 md:mb-16"
+                    >
+                        <p>
+                            Tom builds engineering teams that ship. Fifteen
+                            years as CTO across AI, fintech, travel tech, and
+                            e-commerce. Raised $3.5M+, completed three exits,
+                            delivered systems serving tens of millions.
+                            Architected Redis caches ingesting GB/s. Rebuilt
+                            Bumble Studio's engineering org in six months
+                            without missing a sprint. Bootstrapped a social
+                            enterprise to $1M revenue in the Sahara Desert. Now
+                            he's building AI employees that embody the best
+                            qualities you'd wish for in a colleague. Beyond the
+                            engineering, Tom excels at hiring the right team,
+                            making the tough calls, and shipping products
+                            people love.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
+                                AI / ML
+                            </h3>
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>LLMs (OpenAI, Anthropic)</li>
+                                <li>Agent Orchestration</li>
+                                <li>Prompt &amp; Context Engineering</li>
+                                <li>Deep Learning</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
+                                Technical Leadership
+                            </h3>
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>Team Building</li>
+                                <li>Agile / Scrum</li>
+                                <li>Technical Architecture</li>
+                                <li>Hiring &amp; Mentorship</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
+                                Backend / Data
+                            </h3>
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>Python, Django</li>
+                                <li>Redis, PostgreSQL</li>
+                                <li>ETL Pipelines</li>
+                                <li>Real-time Systems</li>
+                                <li>Blockchain / Web3</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
+                                Cloud / Platforms
+                            </h3>
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>AWS, Scaling Infrastructure</li>
+                                <li>Microservices, API Design</li>
+                                <li>React Native</li>
+                                <li>Dart / Flutter</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1004,15 +851,16 @@
             <section id="contact" class="py-16 md:py-20 px-4 text-center">
                 <div class="max-w-4xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4"
                     >
                         Get in Touch
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-12"></div>
 
                     <div class="grid md:grid-cols-2 gap-8 mb-8">
                         <!-- Yudame -->
                         <div
-                            class="bg-white border border-gray-200 rounded-lg p-8 hover:border-[#f5d563] transition-colors"
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
                         >
                             <div
                                 class="flex items-center justify-center gap-1 mb-4"
@@ -1041,7 +889,7 @@
 
                         <!-- Message on LinkedIn -->
                         <div
-                            class="bg-white border border-gray-200 rounded-lg p-8"
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
                         >
                             <h3
                                 class="font-serif text-2xl font-semibold mb-4 mt-1"
@@ -1066,7 +914,7 @@
                         Want to learn more about services and rates?
                         <a
                             href="rates.html"
-                            class="text-accent hover:text-accent-light underline"
+                            class="text-text-primary hover:text-accent underline"
                             >View details</a
                         >
                     </p>
@@ -1138,7 +986,7 @@
                     >
                         View Source
                     </a>
-                    <p class="font-serif">&copy; 2025 Tom Counsell</p>
+                    <p class="font-serif">&copy; 2026 Tom Counsell</p>
                 </div>
             </div>
         </footer>

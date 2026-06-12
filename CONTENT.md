@@ -40,21 +40,54 @@ Engineering Leader | AI/Web3 Architect | $50M+ Products Delivered
 
 ## Professional Experience
 
+### Cyndra AI
+**Role:** CTO
+**Period:** May 2026-present
+**Logo:** none yet (serif "C" monogram placeholder on site)
+**URL:** https://cyndra.ai
+
+**Description (Primary):**
+Businesses are ready for AI team members. Cyndra provisions autonomous AI employees on customer-owned hardware (Mac Studio) — configurable personas with persistent memory and a local MCP skill layer, working through the same email, chat, and app tools as their human colleagues. Tom leads the platform architecture: agent hosts deployable in hours, bespoke skillsets mapped to real business practices (email triage, meeting prep, reporting, CRM ops, content creation, software development, market research), and observability tooling so non-technical operators can supervise a blended human-and-AI workforce.
+
+**Additional Details:**
+- Customer-owned from day one; deployable in a few hours.
+- The hardest problems are identity and human-like socialization.
+
+**Technologies:** AI Agents, MCP, Claude, macOS, persistent memory, observability
+
+---
+
+### PsyOptimal
+**Role:** CTO
+**Period:** Jan 2025-present
+**Logo:** none yet (serif "P" monogram placeholder on site)
+**URL:** https://psyoptimal.com
+
+**Description (Primary):**
+The OKC Thunder's team psychologist had 25 years of military-grade assessment methods and no digital platform. Tom built one from scratch: a real-time scoring engine that benchmarks psychological profiles against team, league, and sport-wide norms. The Thunder won the 2025 NBA Championship in the platform's first full season. Now at scale nationwide, serving thousands of students, athletes, and businesses.
+
+**Additional Details:**
+- Founded by Dr. Wayne Chappelle (Air Force Research Laboratory, OKC Thunder team psychologist) and Bryan Fetzer (NCAA D1 head coach, ESPN analyst).
+
+**Technologies:** Python, Django, PostgreSQL, AWS
+
+---
+
 ### Fuse (formerly DeckFusion)
 **Role:** CTO
-**Period:** Jun 2024-present
+**Period:** Jun 2024-Jan 2026
 **Logo:** static/img/deckfusion.jpeg
 **URL:** https://fuse.is
 
 **Description (Primary):**
-Tom architects multi-agent AI systems using PydanticAI and Claude MCPs for enterprise data orchestration, building "chat with your data" platforms that process 10TB+ across customer databases. He leads the engineering team through rapid product-market fit iterations, focusing on practical AI implementations that solve real business problems.
+Marketing teams were drowning in siloed data across Google Analytics, Ads, and Meta. Tom took Fuse from zero to production MVP in six months, architecting a multi-agent platform with PydanticAI and Claude MCP servers — pioneering MCP patterns before Anthropic's standardization. He built the data verification layer that eliminates AI hallucinations and a prompt system that cut token costs 40%. The platform now serves 400+ marketing teams at $470K ARR, including Ziff Davis (CNET Group).
 
 **Additional Details:**
 - Built and deployed teams of AI Agents, MCPs to manage data orchestration.
-- Enabling "chat with your data" capabilities.
-- Building and leading all engineering.
+- Enterprise multi-tenant architecture from day one.
+- Advisory board includes Bill Macaitis (former CMO, Slack & Zendesk) and Chris Copeland (former CEO, GroupM Search/WPP).
 
-**Technologies:** Python, PydanticAI, OpenAI, Anthropic, AWS, Gen AI, prompt engineering, data pipelines
+**Technologies:** Python, PydanticAI, OpenAI, Anthropic, AWS, MCP, prompt engineering, data pipelines
 
 ---
 

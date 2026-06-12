@@ -36,10 +36,10 @@
             @theme {
                 --color-bg-primary: #fafafa;
                 --color-bg-secondary: #f0f0f0;
-                --color-text-primary: #1a1a1a;
-                --color-text-secondary: #666666;
-                --color-accent: #2c2c2c;
-                --color-accent-light: #4a4a4a;
+                --color-text-primary: #111111;
+                --color-text-secondary: #555555;
+                --color-accent: #364e63;
+                --color-accent-light: #7c95ab;
             }
 
             /* Serif font for name and headings */
@@ -50,6 +50,13 @@
             /* Smooth scrolling */
             html {
                 scroll-behavior: smooth;
+            }
+
+            /* Visible keyboard focus */
+            a:focus-visible,
+            button:focus-visible {
+                outline: 2px solid #364e63;
+                outline-offset: 2px;
             }
         </style>
     </head>
@@ -63,14 +70,14 @@
             >
                 <a
                     href="index.html"
-                    class="text-xl md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors"
+                    class="text-lg md:text-2xl font-serif font-bold text-text-primary hover:text-accent transition-colors whitespace-nowrap"
                 >
                     Tom Counsell
                 </a>
-                <div class="flex items-center gap-3 md:gap-6">
+                <div class="flex items-center gap-2.5 sm:gap-3 md:gap-6">
                     <a
                         href="index.html#about"
-                        class="text-sm md:text-base hover:text-accent transition-colors py-2"
+                        class="hidden sm:inline-block text-sm md:text-base hover:text-accent transition-colors py-2"
                         >About</a
                     >
                     <a
@@ -106,36 +113,36 @@
 
         <!-- Main Content -->
         <main>
-            <!-- Hero Section -->
-            <section class="py-16 md:py-24 px-4 text-center">
+            <!-- Page Header -->
+            <section class="py-12 md:py-16 px-4 text-center">
                 <div class="max-w-4xl mx-auto">
                     <!-- Portrait Image -->
                     <img
                         src="static/img/profile.jpg"
                         alt="Tom Counsell - Professional portrait"
-                        class="w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full mx-auto mb-8 object-cover shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
+                        class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-6 object-cover shadow-lg"
                     />
 
-                    <!-- Name -->
+                    <!-- Page Title -->
                     <h1
-                        class="font-serif font-bold text-4xl md:text-5xl lg:text-6xl mb-4"
+                        class="font-serif font-bold text-3xl md:text-4xl lg:text-5xl mb-3"
                     >
-                        Tom Counsell
+                        Rates &amp; Services
                     </h1>
 
                     <!-- Subtitle -->
                     <p
-                        class="font-serif text-xl md:text-2xl text-text-secondary mb-8"
+                        class="font-serif text-lg md:text-xl text-text-secondary mb-6"
                     >
-                        Engineering Leader | AI & Systems Architect
+                        Working with Tom Counsell
                     </p>
 
                     <!-- Social Links -->
-                    <div class="flex justify-center gap-6 text-2xl">
+                    <div class="flex justify-center gap-5 text-xl">
                         <a
                             href="https://linkedin.com/in/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="LinkedIn"
                         >
                             <i class="fab fa-linkedin"></i>
@@ -143,7 +150,7 @@
                         <a
                             href="https://wellfound.com/u/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="Wellfound"
                         >
                             <i class="fab fa-angellist"></i>
@@ -151,7 +158,7 @@
                         <a
                             href="https://github.com/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="GitHub"
                         >
                             <i class="fab fa-github"></i>
@@ -159,7 +166,7 @@
                         <a
                             href="https://stackoverflow.com/users/2102461/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="Stack Overflow"
                         >
                             <i class="fab fa-stack-overflow"></i>
@@ -167,7 +174,7 @@
                         <a
                             href="https://t.me/tomcounsell"
                             target="_blank"
-                            class="text-accent hover:text-accent-light transition-colors"
+                            class="text-text-primary hover:text-accent transition-colors"
                             title="Telegram"
                         >
                             <i class="fab fa-telegram"></i>
@@ -183,25 +190,26 @@
             >
                 <div class="max-w-4xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-center"
                     >
                         What People Say
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-12"></div>
 
                     <div class="space-y-8">
                         <!-- Testimonial 1 -->
                         <blockquote class="border-l-2 border-accent pl-6 py-2">
                             <p class="text-lg mb-4 italic">
-                                "an indispensable asset to our team.. the best
+                                “An indispensable asset to our team… the best
                                 engineer I've had the privilege of working
-                                with.. Tom fostered a positive and collaborative
+                                with… Tom fostered a positive and collaborative
                                 work environment, serving as a natural leader
                                 who inspired the entire team to strive for
                                 excellence. I wholeheartedly recommend Tom for
                                 any leadership role in engineering, confident
                                 that his dedication, expertise, and leadership
                                 qualities will greatly contribute to the success
-                                of any organization."
+                                of any organization.”
                             </p>
                             <footer class="text-text-secondary font-semibold">
                                 — Zac Stern, Bumble Inc
@@ -211,9 +219,9 @@
                         <!-- Testimonial 2 -->
                         <blockquote class="border-l-2 border-accent pl-6 py-2">
                             <p class="text-lg mb-4 italic">
-                                "Tom cares. He's a force multiplier that makes
-                                everyone around him better... I highly recommend
-                                Tom as a leader."
+                                “Tom cares. He's a force multiplier that makes
+                                everyone around him better… I highly recommend
+                                Tom as a leader.”
                             </p>
                             <footer class="text-text-secondary font-semibold">
                                 — Anthony S. Cannella, Blockchain Hub
@@ -223,10 +231,10 @@
                         <!-- Testimonial 3 -->
                         <blockquote class="border-l-2 border-accent pl-6 py-2">
                             <p class="text-lg mb-4 italic">
-                                "Tom is not only a very talented developer, but
-                                a keen business leader... He instituted 'hack
+                                “Tom is not only a very talented developer, but
+                                a keen business leader… He instituted 'hack
                                 days' and design sprints that really encouraged
-                                innovation."
+                                innovation.”
                             </p>
                             <footer class="text-text-secondary font-semibold">
                                 — Ben Lakoff, Bankless Ventures
@@ -236,9 +244,9 @@
                         <!-- Testimonial 4 -->
                         <blockquote class="border-l-2 border-accent pl-6 py-2">
                             <p class="text-lg mb-4 italic">
-                                "Tom has incredible personal, leadership, and
-                                technical skills... the best aspect of working
-                                with Tom is the quality and ease of management."
+                                “Tom has incredible personal, leadership, and
+                                technical skills… the best aspect of working
+                                with Tom is the quality and ease of management.”
                             </p>
                             <footer class="text-text-secondary font-semibold">
                                 — Francesco De Lisi, Woven Project, Toyota Inc.
@@ -248,9 +256,9 @@
                         <!-- Testimonial 5 -->
                         <blockquote class="border-l-2 border-accent pl-6 py-2">
                             <p class="text-lg mb-4 italic">
-                                "Tom shows great passion and creativity... The
-                                products he built were instant hits... he has
-                                natural leadership qualities."
+                                “Tom shows great passion and creativity… The
+                                products he built were instant hits… he has
+                                natural leadership qualities.”
                             </p>
                             <footer class="text-text-secondary font-semibold">
                                 — Rupert Lane, Agoda, Booking Inc.
@@ -264,12 +272,13 @@
             <section id="rates" class="py-16 md:py-20 px-4">
                 <div class="max-w-4xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-center"
                     >
                         2026 Rates
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-12"></div>
 
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto max-w-xl mx-auto">
                         <table class="w-full border-collapse">
                             <thead>
                                 <tr class="border-b border-gray-300">
@@ -329,335 +338,219 @@
 
             <!-- Core Services Section -->
             <section class="py-16 md:py-20 px-4 bg-bg-secondary">
-                <div class="max-w-6xl mx-auto">
+                <div class="max-w-5xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-16 text-center"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-center"
                     >
                         Services
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-14"></div>
 
-                    <!-- For Executives & CTOs -->
-                    <div class="mb-12">
-                        <h3
-                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
-                        >
-                            For Executives & CTOs
-                        </h3>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                    <div class="space-y-12 md:space-y-14">
+                        <!-- For Executives & CTOs -->
+                        <div class="border-t border-gray-300 pt-5">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-7"
                             >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                For Executives &amp; CTOs
+                            </h3>
+                            <div class="grid sm:grid-cols-3 gap-x-10 gap-y-8">
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Dev Team Leadership
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Agile project management, code
-                                            reviews, technical mentorship.
-                                        </p>
-                                    </div>
+                                        Dev Team Leadership
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Agile project management, code reviews,
+                                        technical mentorship.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-user-plus"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Dev Team Hiring
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Recruitment and vetting of
-                                            engineering talent.
-                                        </p>
-                                    </div>
+                                        Dev Team Hiring
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Recruitment and vetting of engineering
+                                        talent.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-sitemap"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Systems Architecture
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Scalable design with monolith or
-                                            microservices architectures.
-                                        </p>
-                                    </div>
+                                        Systems Architecture
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Scalable design with monolith or
+                                        microservices architectures.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- For Product & Engineering Teams -->
-                    <div class="mb-12">
-                        <h3
-                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
-                        >
-                            For Product & Engineering Teams
-                        </h3>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        <!-- For Product & Engineering Teams -->
+                        <div class="border-t border-gray-300 pt-5">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-7"
                             >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                For Product &amp; Engineering Teams
+                            </h3>
+                            <div class="grid sm:grid-cols-3 gap-x-10 gap-y-8">
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fab fa-python"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Python Development
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Custom backend services, data
-                                            analytics, machine learning
-                                            solutions.
-                                        </p>
-                                    </div>
+                                        Python Development
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Custom backend services, data analytics,
+                                        machine learning solutions.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-plug"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            API Integration
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Seamless third-party services
-                                            integration including payment
-                                            gateways.
-                                        </p>
-                                    </div>
+                                        API Integration
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Seamless third-party services
+                                        integration including payment gateways.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-tachometer-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Rapid Backend Dashboards
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Quick development of backend admin
-                                            panels.
-                                        </p>
-                                    </div>
+                                        Rapid Backend Dashboards
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Quick development of backend admin
+                                        panels.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- For Data & Infrastructure Teams -->
-                    <div class="mb-12">
-                        <h3
-                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
-                        >
-                            For Data & Infrastructure Teams
-                        </h3>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        <!-- For Data & Infrastructure Teams -->
+                        <div class="border-t border-gray-300 pt-5">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-7"
                             >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                For Data &amp; Infrastructure Teams
+                            </h3>
+                            <div class="grid sm:grid-cols-3 gap-x-10 gap-y-8">
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-exchange-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            ETL Services
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Data extraction, transformation,
-                                            loading for analytics and BI.
-                                        </p>
-                                    </div>
+                                        ETL Services
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Data extraction, transformation, loading
+                                        for analytics and BI.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-database"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Database Design
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Relational and document databases
-                                            optimized for performance and
-                                            reliability.
-                                        </p>
-                                    </div>
+                                        Database Design
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Relational and document databases
+                                        optimized for performance and
+                                        reliability.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-bolt"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
+                                        Redis Database Systems
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        High-performance Redis databases, cache
+                                        architecture. Also relational:
+                                        <a
+                                            href="https://popoto.readthedocs.io/en/latest/"
+                                            class="text-text-primary hover:text-accent underline transition-colors"
+                                            target="_blank"
+                                            >see Popoto</a
                                         >
-                                            Redis Database Systems
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            High-performance Redis databases,
-                                            cache architecture. Also relational:
-                                            <a
-                                                href="https://popoto.readthedocs.io/en/latest/"
-                                                style="color: darkred"
-                                                target="_blank"
-                                                >see Popoto</a
-                                            >
-                                        </p>
-                                    </div>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- For AI & Intelligence Teams -->
-                    <div>
-                        <h3
-                            class="font-serif text-2xl font-semibold mb-6 text-center text-text-secondary"
-                        >
-                            For AI & Intelligence Teams
-                        </h3>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
+                        <!-- For AI & Intelligence Teams -->
+                        <div class="border-t border-gray-300 pt-5">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-7"
                             >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                For AI &amp; Intelligence Teams
+                            </h3>
+                            <div class="grid sm:grid-cols-3 gap-x-10 gap-y-8">
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-robot"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Agentic Systems
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Autonomous AI agents that reason,
-                                            plan, and execute complex workflows.
-                                        </p>
-                                    </div>
+                                        Agentic Systems
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Autonomous AI agents that reason, plan,
+                                        and execute complex workflows.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-search"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Deep Research
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Advanced information retrieval and
-                                            analysis systems for comprehensive
-                                            insights.
-                                        </p>
-                                    </div>
+                                        Deep Research
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Advanced information retrieval and
+                                        analysis systems for comprehensive
+                                        insights.
+                                    </p>
                                 </div>
-                            </div>
-
-                            <div
-                                class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                            >
-                                <div class="flex items-start gap-4">
-                                    <div
-                                        class="text-accent text-3xl flex-shrink-0"
+                                <div>
+                                    <h4
+                                        class="font-serif text-xl font-semibold mb-2"
                                     >
-                                        <i class="fas fa-brain"></i>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="font-serif text-xl font-semibold mb-2"
-                                        >
-                                            Context Engineering
-                                        </h4>
-                                        <p class="text-text-secondary">
-                                            Dynamic prompt optimization and
-                                            context management for peak LLM
-                                            performance.
-                                        </p>
-                                    </div>
+                                        Context Engineering
+                                    </h4>
+                                    <p
+                                        class="text-sm text-text-secondary leading-relaxed"
+                                    >
+                                        Dynamic prompt optimization and context
+                                        management for peak LLM performance.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -667,105 +560,55 @@
 
             <!-- Terms & Assurances Section -->
             <section class="py-16 md:py-20 px-4">
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-5xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12 text-center"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-center"
                     >
-                        Terms & Assurances
+                        Terms &amp; Assurances
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-14"></div>
 
-                    <div class="grid md:grid-cols-3 gap-6">
+                    <div class="grid sm:grid-cols-3 gap-x-10 gap-y-10">
                         <!-- Assurances -->
-                        <div
-                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <h3 class="font-serif text-xl font-semibold mb-4">
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
                                 Assurances
                             </h3>
-                            <ul class="space-y-3 text-base">
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span>Client confidentiality</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span>IP solely owned by Client</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span>Flexible agreement terms</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-shield-alt text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span
-                                        >Structured refund and arbitration</span
-                                    >
-                                </li>
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>Client confidentiality</li>
+                                <li>IP solely owned by Client</li>
+                                <li>Flexible agreement terms</li>
+                                <li>Structured refund and arbitration</li>
                             </ul>
                         </div>
 
                         <!-- Payment Terms -->
-                        <div
-                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <h3 class="font-serif text-xl font-semibold mb-4">
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
                                 Payment Terms
                             </h3>
-                            <ul class="space-y-3 text-base">
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-check text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span
-                                        >50% of monthly invoice estimate as
-                                        deposit</span
-                                    >
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-check text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span
-                                        >Invoices on 1st of each month,
-                                        Net-15</span
-                                    >
-                                </li>
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>50% of monthly invoice estimate as deposit</li>
+                                <li>Invoices on 1st of each month, Net-15</li>
                             </ul>
                         </div>
 
                         <!-- Discounts -->
-                        <div
-                            class="bg-white border border-gray-200 rounded p-6 shadow hover:shadow-lg transition-shadow"
-                        >
-                            <h3 class="font-serif text-xl font-semibold mb-4">
+                        <div class="border-t border-gray-300 pt-4">
+                            <h3
+                                class="text-xs font-semibold uppercase tracking-[0.15em] text-text-secondary mb-4"
+                            >
                                 Discounts
                             </h3>
-                            <ul class="space-y-3 text-base">
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-star text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span
-                                        >Up to 20% for active client
-                                        referrals</span
-                                    >
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <i
-                                        class="fas fa-star text-accent mt-1 text-sm"
-                                    ></i>
-                                    <span
-                                        >Reduced rates for Social Enterprises
-                                        and Non-profits</span
-                                    >
+                            <ul class="space-y-2 text-sm leading-relaxed">
+                                <li>Up to 20% for active client referrals</li>
+                                <li>
+                                    Reduced rates for Social Enterprises and
+                                    Non-profits
                                 </li>
                             </ul>
                         </div>
@@ -777,15 +620,16 @@
             <section id="contact" class="py-16 md:py-20 px-4 text-center">
                 <div class="max-w-4xl mx-auto">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-12"
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-4"
                     >
                         Get in Touch
                     </h2>
+                    <div class="w-12 h-0.5 bg-accent mx-auto mb-12"></div>
 
                     <div class="grid md:grid-cols-2 gap-8 mb-8">
                         <!-- Yudame -->
                         <div
-                            class="bg-white border border-gray-200 rounded-lg p-8 hover:border-[#f5d563] transition-colors"
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
                         >
                             <div
                                 class="flex items-center justify-center gap-1 mb-4"
@@ -814,7 +658,7 @@
 
                         <!-- Message on LinkedIn -->
                         <div
-                            class="bg-white border border-gray-200 rounded-lg p-8"
+                            class="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow hover:shadow-lg transition-shadow"
                         >
                             <h3
                                 class="font-serif text-2xl font-semibold mb-4 mt-1"
@@ -902,7 +746,7 @@
                     >
                         View Source
                     </a>
-                    <p class="font-serif">&copy; 2025 Tom Counsell</p>
+                    <p class="font-serif">&copy; 2026 Tom Counsell</p>
                 </div>
             </div>
         </footer>
