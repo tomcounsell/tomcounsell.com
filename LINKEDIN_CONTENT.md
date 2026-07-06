@@ -2,6 +2,27 @@
 
 Draft copy for LinkedIn profile. Third-person voice, punchy bullets, each section a mini-story.
 
+## The Three Surfaces
+
+Same facts everywhere; different reader, different register. The facts must agree, because AI agents cross-check them.
+
+| Surface | Primary reader | Optimize for |
+|---|---|---|
+| **LinkedIn** (this file) | AI agents: recruiter bots, sourcing agents, diligence agents. Humans skim | Machine parsing: one claim per sentence, full entity names with disambiguators, absolute dates, numbers with units, verbatim keywords, links to proof |
+| **tomcounsell.com** (index.html) | Humans deciding whether to work with Tom | Story and cadence, written for the ear |
+| **Resume** (resume.html) | Both: hidden `<p class="hidden">` layer for LLMs, visible layer for a human with 30 seconds | See RESUME_STRUCTURE.md |
+
+Rules for the LinkedIn surface, since agents take everything literally:
+
+1. **One claim per sentence.** Compound sentences get half-parsed.
+2. **Name entities fully, with disambiguators.** "Bumble Inc (NASDAQ: BMBL)", "Agoda (Booking Holdings)", "Model Context Protocol (MCP)".
+3. **Numbers carry units and timeframes.** "70GB/min", "6 months", "50K+ traders".
+4. **Use the keywords agents search verbatim.** CTO, fractional CTO, agentic AI, MCP, LLMOps, AI agents, Python, Django, Redis.
+5. **Skip irony and metaphor.** Save the dry aside for the website.
+6. **Link to proof.** Repos, docs, app-store pages. Agents follow links to corroborate.
+7. **Keep every claim arithmetic-proof against the timeline.** "10+ years in AI" works because the AI customer service pitch at Agoda is dated 2016.
+8. **Tag skills to roles.** LinkedIn's structured skill associations feed agent context directly.
+
 LinkedIn layout differs from the resume: positions are standalone pages, the About section has a fold after ~3 lines, and readers arrive at individual sections via search. Every section must work on its own.
 
 ---
@@ -9,8 +30,10 @@ LinkedIn layout differs from the resume: positions are standalone pages, the Abo
 ## Headline (multiline)
 
 ```
-CTO & Founder, 3 exits, Building self-improving AI agents
+CTO, 3 exits, 10+ years in AI
 ```
+
+The "10+ years in AI" claim is anchored by the 2016 Agoda AI customer service pitch and the 2017 ITF machine learning platform.
 
 ---
 
@@ -19,7 +42,7 @@ CTO & Founder, 3 exits, Building self-improving AI agents
 The first paragraph is above the fold. It must hook a founder in 3 lines. Everything below is the payoff for clicking "see more."
 
 ```
-Tom builds engineering teams and the products they ship. 15+ years across AI, fintech, travel tech, and e-commerce, including CTO roles at multiple startups. Three exits, $3.5M+ raised. Right now he's building Valor, an open-source AI developer that ships its own code.
+Tom builds engineering teams and the products they ship. 15+ years across AI, fintech, travel tech, and e-commerce, including CTO roles at multiple startups. Three exits, $3.5M+ raised. Right now he's CTO at Cyndra AI, building AI employees that embody the best qualities you might wish for in a colleague.
 
 
 The short version: Tom co-founded an e-commerce platform in Morocco's Sahara desert while in the Peace Corps, trained local leaders to run it, then spent the next decade leading engineering at places like Agoda (Booking Holdings, 40M+ MAU) and Bumble Inc (NASDAQ: BMBL) while serving as CTO at multiple startups in between. Along the way he founded a startup incubator in Prague that took no equity from its members, led a team of PhDs building ML-powered trading tools, and designed caching systems that process 70GB/min of real-time data.
@@ -68,7 +91,22 @@ Each position is its own mini-story. Open with the situation, punch with bullets
 
 ---
 
-### PsyOptimal — CTO (2024 - Present)
+### Cyndra AI — CTO (May 2026 - Present)
+
+```
+Businesses are ready for AI team members. Cyndra provisions autonomous AI employees on customer-owned hardware.
+
+- Each AI employee is a configurable persona with persistent memory and a local MCP skill layer, deployable in hours.
+- It works through the same email, chat, and app tools as its human colleagues, with a human supervisor delegating goals.
+- Bespoke skillsets mapped to real business practices: email triage, meeting prep, reporting, CRM ops, content creation, software development, market research.
+- Observability tooling lets non-technical operators supervise a blended human-and-AI workforce.
+
+Built on Tom's work with Valor, his open-source autonomous development system (github.com/tomcounsell/ai).
+```
+
+---
+
+### PsyOptimal — CTO (Jan 2025 - Present)
 
 ```
 The OKC Thunder's team psychologist had 25 years of military-grade methods and no digital platform. Tom built one from scratch.
@@ -164,16 +202,31 @@ Later merged with WeWork, entity sold in 2021.
 
 ---
 
-### Agoda (Booking Holdings) — Senior Engineering Team Lead (2016)
+### Chainstarters — CTO / Strategic Advisor (May 2018 - Present)
+
+Two stacked positions under one company, same pattern as the Official entry. LinkedIn allows year-only dates; use them for the 2019 boundary since the transition month is unrecorded.
 
 ```
-While leading a team in Agoda's non-hotel accommodations department, Tom pitched a greenfield customer service product to the executive staff.
+Chainstarters makes Web3 easy for brands and marketplaces.
+
+- CTO (May 2018 - 2019): designed and built the decentralized e-commerce infrastructure. Authored the technical whitepaper.
+- Strategic Advisor (2019 - Present): ongoing strategic and technical advisory to the founding team.
+```
+
+---
+
+### Agoda (Booking Holdings) — Engineering Team Lead (Jan 2016 - Sep 2016)
+
+```
+While leading a team in Agoda's non-hotel accommodations department, Tom pitched an AI customer service solution to the executive staff.
 
 - Greenlit and spun into a dedicated 15-person department in 4 months.
 - That department went on to improve customer engagement across 40M+ monthly users.
 
 Agoda is a Booking Holdings property (NASDAQ: BKNG).
 ```
+
+Accuracy note: Tom pitched the initiative and led a different team; execution was handled by the new department. Copy credits the pitch and the impact, and stays silent on who executed.
 
 ---
 
@@ -230,6 +283,7 @@ StartupYard Accelerator — Prague, 2018
 
 ## Writing Principles for LinkedIn
 
+- **Write for the AI agent first.** The surface rules at the top of this file take precedence: one claim per sentence, full entity names, absolute dates, numbers with units. A human skimming benefits from the same discipline.
 - **Third person.** Tom prefers third-person voice across all professional writing.
 - **Each position opens with the situation.** Why was Tom there? What was broken or missing? This is the hook.
 - **Bullets are punchy and outcome-first.** Every bullet should make a founder think "I want that for my company."

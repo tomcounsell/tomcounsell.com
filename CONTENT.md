@@ -115,7 +115,7 @@ Tom led a complete technical transformation at Bumble Studio's Official app, reb
 ---
 
 ### Chainstarters
-**Role:** Strategic Advisor
+**Role:** CTO (May 2018-2019), then Strategic Advisor (2019-present)
 **Period:** May 2018-present
 **Location:** Portland, Oregon, United States
 **Logo:** static/img/chainstarters.jpg
@@ -128,6 +128,7 @@ Tom led a complete technical transformation at Bumble Studio's Official app, reb
 - Chainstarters makes Web3 easy for brands and marketplaces.
 - No-code platform for web3 applications.
 - Build your NFT site or ticketing app.
+- As CTO, Tom designed and built the decentralized e-commerce infrastructure and authored the technical whitepaper. He remains an involved strategic advisor.
 
 **Technologies:** Web3, React, React Native, Business Development, Leadership, Cloud Computing, Consulting, Software as a Service (SaaS)
 
@@ -212,7 +213,7 @@ As CTO, Tom built an ML-powered trading signals platform that served 50K+ crypto
 ---
 
 ### Agoda (Booking Group)
-**Role:** Senior Engineering Team Lead
+**Role:** Engineering Team Lead
 **Period:** Jan 2016-Sep 2016
 **Location:** Bangkok, Bangkok City, Thailand
 **Logos:**
@@ -223,11 +224,13 @@ As CTO, Tom built an ML-powered trading signals platform that served 50K+ crypto
 - https://www.booking.com/
 
 **Description (Primary):**
-Tom pitched and led a greenfield product initiative for non-hotel accommodations to compete with Airbnb's market dominance. He secured executive buy-in and built a dedicated 15-person department within 4 months, recruiting senior developers to create an agile, high-energy team. The experimental features he architected scaled to serve Agoda's 40M+ monthly active users across 39 languages, transforming customer engagement and opening new revenue streams for the Booking Holdings property.
+Tom led an engineering team in Agoda's non-hotel accommodations department (Airbnb-style vacation rentals), recruiting senior developers to create an agile, high-energy team. While in this role, he separately prototyped and pitched an AI customer service solution to the executive staff. The concept secured C-level buy-in and was spun into a dedicated 15-person department within 4 months. That department went on to transform customer engagement across Agoda's 40M+ monthly active users in 39 languages.
+
+**Accuracy note:** Tom pitched the AI customer service initiative and led a different team (non-hotel accommodations). Execution of the initiative was handled by the new dedicated department. Copy credits the pitch and the impact, and stays silent on who executed.
 
 **Additional Details:**
 - Led the architectural design and deployment of new experimental product features targeting the non-hotel accommodation market (formerly, AirBnB-style accommodations).
-- Prototyped and presented a bold new product concept to the executive staff. The project was widely accepted, quickly assigned a dedicated department, and transformed customer engagement.
+- Prototyped and presented an AI customer service concept to the executive staff. The project was widely accepted, quickly assigned a dedicated department, and transformed customer engagement.
 - Recruited senior developers to create an agile and high-energy team to drive innovation, move fast, and consistently deliver products with performance at scale.
 - Agoda, in the Priceline/Booking Group (NASDAQ: BKNG), is Asia's leading and fastest growing online hotel reservation service with over 40 million monthly active users, in 39 different languages.
 
