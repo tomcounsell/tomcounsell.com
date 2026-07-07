@@ -50,7 +50,8 @@ Engineering Leader | AI/Web3 Architect | $50M+ Products Delivered
 Businesses are ready for AI team members. Cyndra provisions autonomous AI employees on customer-owned hardware (Mac Studio) — configurable personas with persistent memory and a local MCP skill layer, working through the same email, chat, and app tools as their human colleagues. Tom leads the platform architecture: agent hosts deployable in hours, bespoke skillsets mapped to real business practices (email triage, meeting prep, reporting, CRM ops, content creation, software development, market research), and observability tooling so non-technical operators can supervise a blended human-and-AI workforce.
 
 **Additional Details:**
-- Customer-owned from day one; deployable in a few hours.
+- Customer-owned from day one. Tom's architecture cut deployment from 2 weeks to 4 hours.
+- Hundreds of AI employees deployed via hosted app.cyndra.ai, plus many bespoke custom builds running internally inside Microsoft-based enterprise teams.
 - The hardest problems are identity and human-like socialization.
 
 **Technologies:** AI Agents, MCP, Claude, macOS, persistent memory, observability
@@ -64,7 +65,9 @@ Businesses are ready for AI team members. Cyndra provisions autonomous AI employ
 **URL:** https://psyoptimal.com
 
 **Description (Primary):**
-The OKC Thunder's team psychologist had 25 years of military-grade assessment methods and no digital platform. Tom built one from scratch: a real-time scoring engine that benchmarks psychological profiles against team, league, and sport-wide norms. The Thunder won the 2025 NBA Championship in the platform's first full season. Now at scale nationwide, serving thousands of students, athletes, and businesses.
+The OKC Thunder's team psychologist had 25 years of military-grade assessment methods and no digital platform. Tom built one from scratch, solo, zero to first team use in 3 months: a real-time scoring engine that benchmarks psychological profiles against team, league, and sport-wide norms. Team assessment management at scale went from weeks to 1 day, driven by mobile-first design. The Thunder won the 2025 NBA Championship in the platform's first season; co-founder Dr. Wayne Chappelle is the team's psychologist. Now at scale nationwide, serving thousands of students, athletes, and businesses.
+
+**Accuracy note:** The Thunder engage with PsyOptimal's methods indirectly through Dr. Chappelle's role as team psychologist; the team is not a direct platform customer. Keep the championship adjacent to Chappelle's role, never claimed as a platform outcome.
 
 **Additional Details:**
 - Founded by Dr. Wayne Chappelle (Air Force Research Laboratory, OKC Thunder team psychologist) and Bryan Fetzer (NCAA D1 head coach, ESPN analyst).
@@ -85,6 +88,7 @@ Marketing teams were drowning in siloed data across Google Analytics, Ads, and M
 **Additional Details:**
 - Built and deployed teams of AI Agents, MCPs to manage data orchestration.
 - Enterprise multi-tenant architecture from day one.
+- Trained Paul Tuck and other engineers to step into his shoes, saving the company senior engineering costs. Paul Tuck was promoted to Principal Engineer after Tom's tenure.
 - Advisory board includes Bill Macaitis (former CMO, Slack & Zendesk) and Chris Copeland (former CEO, GroupM Search/WPP).
 
 **Technologies:** Python, PydanticAI, OpenAI, Anthropic, AWS, MCP, prompt engineering, data pipelines

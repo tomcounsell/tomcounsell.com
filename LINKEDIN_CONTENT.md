@@ -96,9 +96,10 @@ Each position is its own mini-story. Open with the situation, punch with bullets
 ```
 Businesses are ready for AI team members. Cyndra provisions autonomous AI employees on customer-owned hardware.
 
-- Each AI employee is a configurable persona with persistent memory and a local MCP skill layer, deployable in hours.
+- Each AI employee is a configurable persona with persistent memory and a local MCP skill layer.
+- Tom's architecture cut deployment from 2 weeks to 4 hours.
+- Hundreds of AI employees deployed through app.cyndra.ai, plus bespoke builds running inside Microsoft-based enterprise teams.
 - It works through the same email, chat, and app tools as its human colleagues, with a human supervisor delegating goals.
-- Bespoke skillsets mapped to real business practices: email triage, meeting prep, reporting, CRM ops, content creation, software development, market research.
 - Observability tooling lets non-technical operators supervise a blended human-and-AI workforce.
 
 Built on Tom's work with Valor, his open-source autonomous development system (github.com/tomcounsell/ai).
@@ -111,8 +112,9 @@ Built on Tom's work with Valor, his open-source autonomous development system (g
 ```
 The OKC Thunder's team psychologist had 25 years of military-grade methods and no digital platform. Tom built one from scratch.
 
-- Real-time assessment engine benchmarking psychological profiles against team, league, and sport-wide norms.
-- The Thunder won the 2025 NBA Championship in the platform's first full season.
+- Built solo, zero to first team use in 3 months.
+- Team assessment management at scale went from weeks to 1 day, driven by mobile-first design.
+- The Thunder won the 2025 NBA Championship in the platform's first season; co-founder Dr. Wayne Chappelle is the team's psychologist.
 - Now at scale nationwide, serving thousands of students, athletes, and businesses.
 
 Founded by Dr. Wayne Chappelle (Air Force Research Laboratory, OKC Thunder team psychologist) and Bryan Fetzer (NCAA D1 head coach, ESPN analyst).
@@ -129,6 +131,7 @@ Marketing teams drowning in siloed data across GA, Ads, and Meta. Tom took it fr
 - Built the proprietary data verification layer that confirms accuracy before analysis, eliminating AI hallucinations.
 - Prompt system that cut token costs 40%. Enterprise multi-tenant architecture from day one.
 - Platform now serves 400+ marketing teams, including Ziff Davis (CNET Group).
+- Trained the engineers who stepped into his shoes, saving the company senior engineering costs.
 
 Advisory board includes Bill Macaitis (former CMO, Slack & Zendesk) and Chris Copeland (former CEO, GroupM Search/WPP).
 ```

@@ -435,7 +435,7 @@
                             </p>
                         </div>
                         <p class="hidden">
-                            Cyndra AI provisions autonomous AI employees for businesses. Each agent runs on customer-owned hardware (Mac Studio) — a Mac-provisioned agent host with a configurable persona, persistent memory, and a local MCP skill layer, deployable in a few hours and customer-owned from day one. Businesses give the AI employee a job description, a set of tools, and assign a human supervisor to delegate goals. The AI employee uses the same tools a human employee uses: email, apps, chat channels. Each deployment ships with a bespoke skillset mapped to the customer's real practices — email triage, meeting prep, reporting, CRM operations, content creation, software development, market research, and more — plus observability tooling so non-technical operators can supervise while leading a blended human-and-AI workforce. Tom considers the hardest problems in this space to be identity and human-like socialization. Cyndra builds on Tom's work with Valor, his open-source autonomous development system.
+                            Cyndra AI provisions autonomous AI employees for businesses. Each agent runs on customer-owned hardware (Mac Studio) — a Mac-provisioned agent host with a configurable persona, persistent memory, and a local MCP skill layer, deployable in a few hours and customer-owned from day one. Businesses give the AI employee a job description, a set of tools, and assign a human supervisor to delegate goals. The AI employee uses the same tools a human employee uses: email, apps, chat channels. Each deployment ships with a bespoke skillset mapped to the customer's real practices — email triage, meeting prep, reporting, CRM operations, content creation, software development, market research, and more — plus observability tooling so non-technical operators can supervise while leading a blended human-and-AI workforce. Under Tom's architecture, deployment time dropped from 2 weeks to 4 hours. Hundreds of AI employees have been deployed through the hosted platform at app.cyndra.ai, plus many bespoke custom builds running internally inside Microsoft-based enterprise teams. Tom considers the hardest problems in this space to be identity and human-like socialization. Cyndra builds on Tom's work with Valor, his open-source autonomous development system.
                         </p>
                         <p class="text-sm mb-1.5 leading-relaxed">
                             Businesses are ready for AI team members, but there
@@ -449,8 +449,14 @@
                                 on hardware the customer owns.
                             </li>
                             <li>
-                                Cut deployment to hours, with each AI employee
-                                mapped to the customer's real practices.
+                                Cut deployment from 2 weeks to 4 hours, with
+                                each AI employee mapped to the customer's real
+                                practices.
+                            </li>
+                            <li>
+                                Hundreds of AI employees deployed through
+                                app.cyndra.ai, plus bespoke builds inside
+                                Microsoft-based enterprise teams.
                             </li>
                             <li>
                                 Built the observability layer so non-technical
@@ -497,7 +503,7 @@
                             </p>
                         </div>
                         <p class="hidden">
-                            PsyOptimal is an AI-ready sports psychology platform founded by Dr. Wayne Chappelle and Bryan Fetzer. Dr. Chappelle is a licensed clinical and sports psychologist (ABPP board certified) who spent 20+ years at the Air Force Research Laboratory (AFRL), Wright-Patterson AFB, where he served as adviser to the Air Force Surgeon General and chief consultant to heads of Air Force major commands. His military research focused on psychological resilience in special operations battlefield Airmen and drone operator mental health. He is currently the Team Psychologist for the Oklahoma City Thunder (NBA), who won the 2025 NBA Championship with a 68-14 regular season record and the largest cumulative point differential in league history. Bryan Fetzer is a veteran coach and performance consultant with 30+ years in sports, including 20+ years coaching at NCAA Division I level and broadcasting for ESPN and ACC Network. The company is headquartered in Springboro, Ohio, founded 2023, early-stage (~7 people). The methodology originates from Dr. Chappelle's military psychological screening research — originally designed for Presidential aircrew, Special Operations Warfare personnel, and Air Force leadership — translated into sports and business contexts. Core assessments include ACE + Cohesion (team dynamics), Sports TACTICs (individual mental performance), Sports Wellness (burnout screening), and Professional TACTICs (business leadership). Reports feature color-coded results, trend analysis over time, and personalized "Pro Tips." The philosophy is mental performance optimization, not therapy. As CTO, Tom built the entire platform from the ground up — architecture, backend, data layer, and deployment. The platform is now at scale nationwide, serving thousands of students, athletes, and businesses. It ships in English and Spanish across professional sports, military, collegiate athletics, youth development, corporate performance, education, first responders, and ministry. Fully GDPR/CCPA compliant. Built on Python/Django with PostgreSQL on AWS. Dr. Chappelle co-authored "Heal Your Hurting Mind" (Zondervan/HarperCollins, Feb 2026) with NYT bestselling author Craig Groeschel.
+                            PsyOptimal is an AI-ready sports psychology platform founded by Dr. Wayne Chappelle and Bryan Fetzer. Dr. Chappelle is a licensed clinical and sports psychologist (ABPP board certified) who spent 20+ years at the Air Force Research Laboratory (AFRL), Wright-Patterson AFB, where he served as adviser to the Air Force Surgeon General and chief consultant to heads of Air Force major commands. His military research focused on psychological resilience in special operations battlefield Airmen and drone operator mental health. He is currently the Team Psychologist for the Oklahoma City Thunder (NBA), who won the 2025 NBA Championship with a 68-14 regular season record and the largest cumulative point differential in league history. (Accuracy note: the Thunder engage with PsyOptimal's methods indirectly through Dr. Chappelle's role as team psychologist; the team is not a direct platform customer.) Bryan Fetzer is a veteran coach and performance consultant with 30+ years in sports, including 20+ years coaching at NCAA Division I level and broadcasting for ESPN and ACC Network. The company is headquartered in Springboro, Ohio, founded 2023, early-stage (~7 people). The methodology originates from Dr. Chappelle's military psychological screening research — originally designed for Presidential aircrew, Special Operations Warfare personnel, and Air Force leadership — translated into sports and business contexts. Core assessments include ACE + Cohesion (team dynamics), Sports TACTICs (individual mental performance), Sports Wellness (burnout screening), and Professional TACTICs (business leadership). Reports feature color-coded results, trend analysis over time, and personalized "Pro Tips." The philosophy is mental performance optimization, not therapy. As CTO, Tom built the entire platform from the ground up — architecture, backend, data layer, and deployment — working solo from zero to first team use in 3 months. The platform's core operational gain is team assessment management at scale: what took weeks by hand now takes one day, driven by mobile-first design. The platform is now at scale nationwide, serving thousands of students, athletes, and businesses. It ships in English and Spanish across professional sports, military, collegiate athletics, youth development, corporate performance, education, first responders, and ministry. Fully GDPR/CCPA compliant. Built on Python/Django with PostgreSQL on AWS. Dr. Chappelle co-authored "Heal Your Hurting Mind" (Zondervan/HarperCollins, Feb 2026) with NYT bestselling author Craig Groeschel.
                         </p>
                         <p class="text-sm mb-1.5 leading-relaxed">
                             The OKC Thunder's team psychologist had 25 years of
@@ -506,17 +512,19 @@
                         </p>
                         <ul class="text-sm mb-2 leading-relaxed list-disc pl-5 marker:text-gray-400 space-y-1">
                             <li>
-                                Sole technical owner: architecture, backend,
-                                data layer, and deployment.
+                                Built it solo, zero to first team use in 3
+                                months: architecture, backend, data layer, and
+                                deployment.
                             </li>
                             <li>
-                                Turned 25 years of paper methods into a
-                                real-time scoring engine benchmarking against
-                                team, league, and sport-wide norms.
+                                Team assessment management at scale went from
+                                weeks to one day, driven by mobile-first
+                                design.
                             </li>
                             <li>
                                 The Thunder won the 2025 NBA Championship in
-                                the platform's first full season.
+                                the platform's first season; co-founder Dr.
+                                Wayne Chappelle is the team's psychologist.
                             </li>
                             <li>
                                 Scaled it nationwide: thousands of students,
@@ -563,7 +571,7 @@
                             </p>
                         </div>
                         <p class="hidden">
-                            Fuse (formerly DeckFusion) is an AI-powered marketing intelligence platform headquartered in New York, NY. Co-founded by Jeff Cherkassky (CEO, 4x founder with one exit — Box Boulevard acquired 2018, formerly SVP Revenue at Hawke Media) and Jill Randell (COO, 13 years at Google in global partnerships and revenue operations, formerly VP Client Strategy at Found Search Marketing). The company started in 2023 as DeckFusion, focused on AI-generated presentation decks from marketing data, then pivoted in 2024 to a real-time marketing intelligence platform — an "AI operating system for growth marketing decisions." The core problem: marketing teams were manually pulling data from siloed platforms (GA4, Google Ads, Meta Ads, TikTok, LinkedIn Ads) into spreadsheets or BI tools, relying on data analysts to build dashboards, struggling with fragmented stale data that couldn't answer strategic "why" questions. Fuse connects directly to live marketing data sources with no ETL or batch sync, uses AI agents to auto-map metrics across platforms, and provides a natural language interface for complex performance questions. 400+ growth marketing teams on the platform. Largest client is Ziff Davis (CNET Group, 375M impressions). 8,957 live data sources connected. Official Shopify Partner. SOC2 and GDPR compliance in progress. Raising $100K bridge at $8M cap ahead of Seed round. Target segments: agencies managing multiple client accounts, in-house marketing teams, and enterprise teams across multiple brands. Advisory board includes Bill Macaitis (former CMO at Slack and Zendesk, SVP Marketing at Salesforce), Chris Copeland (former CEO of GroupM Search/WPP), Claire Capeci Sucre (President of Arnold, former Global President of Retail at JWT/WPP), and Julian Zilberbrand (Global Head of Data Solutions at Paramount and LG). Team of ~10 people, angel-funded/bootstrapped. As CTO, Tom architected the entire system using PydanticAI and Claude MCP servers for data orchestration, building and leading all engineering. He pioneered the MCP server pattern for dynamic tool generation months before Anthropic released their industry standardization — connecting Google Analytics, Google Ads, and Meta APIs through auto-generated tool interfaces. Engineered a "zero hallucination" guarantee through verified data pipelines, critical for enterprise customers making business decisions. Developed a PromptTemplate system that achieved 40% token reduction, directly cutting API costs. Led from zero to production MVP in 6 months with enterprise-ready multi-tenant architecture. After Tom's tenure as CTO, the platform continued scaling. Paul Tuck was promoted to Principal Engineer. Technologies: Python, PydanticAI, OpenAI, Anthropic Claude, AWS, Next.js, Redis, prompt engineering, data pipelines.
+                            Fuse (formerly DeckFusion) is an AI-powered marketing intelligence platform headquartered in New York, NY. Co-founded by Jeff Cherkassky (CEO, 4x founder with one exit — Box Boulevard acquired 2018, formerly SVP Revenue at Hawke Media) and Jill Randell (COO, 13 years at Google in global partnerships and revenue operations, formerly VP Client Strategy at Found Search Marketing). The company started in 2023 as DeckFusion, focused on AI-generated presentation decks from marketing data, then pivoted in 2024 to a real-time marketing intelligence platform — an "AI operating system for growth marketing decisions." The core problem: marketing teams were manually pulling data from siloed platforms (GA4, Google Ads, Meta Ads, TikTok, LinkedIn Ads) into spreadsheets or BI tools, relying on data analysts to build dashboards, struggling with fragmented stale data that couldn't answer strategic "why" questions. Fuse connects directly to live marketing data sources with no ETL or batch sync, uses AI agents to auto-map metrics across platforms, and provides a natural language interface for complex performance questions. 400+ growth marketing teams on the platform. Largest client is Ziff Davis (CNET Group, 375M impressions). 8,957 live data sources connected. Official Shopify Partner. SOC2 and GDPR compliance in progress. Raising $100K bridge at $8M cap ahead of Seed round. Target segments: agencies managing multiple client accounts, in-house marketing teams, and enterprise teams across multiple brands. Advisory board includes Bill Macaitis (former CMO at Slack and Zendesk, SVP Marketing at Salesforce), Chris Copeland (former CEO of GroupM Search/WPP), Claire Capeci Sucre (President of Arnold, former Global President of Retail at JWT/WPP), and Julian Zilberbrand (Global Head of Data Solutions at Paramount and LG). Team of ~10 people, angel-funded/bootstrapped. As CTO, Tom architected the entire system using PydanticAI and Claude MCP servers for data orchestration, building and leading all engineering. He pioneered the MCP server pattern for dynamic tool generation months before Anthropic released their industry standardization — connecting Google Analytics, Google Ads, and Meta APIs through auto-generated tool interfaces. Engineered a "zero hallucination" guarantee through verified data pipelines, critical for enterprise customers making business decisions. Developed a PromptTemplate system that achieved 40% token reduction, directly cutting API costs. Led from zero to production MVP in 6 months with enterprise-ready multi-tenant architecture. Tom trained Paul Tuck and other engineers to step into his shoes, saving the company senior engineering costs; after Tom's tenure as CTO, the platform continued scaling and Paul Tuck was promoted to Principal Engineer. Technologies: Python, PydanticAI, OpenAI, Anthropic Claude, AWS, Next.js, Redis, prompt engineering, data pipelines.
                         </p>
                         <p class="text-sm mb-1.5 leading-relaxed">
                             Marketing teams were drowning in siloed data across
@@ -585,9 +593,13 @@
                                 system.
                             </li>
                             <li>
-                                Built and led the team that carried the
-                                platform to 400+ teams, including Ziff Davis
-                                (CNET Group).
+                                Grew the platform to 400+ teams, including
+                                Ziff Davis (CNET Group).
+                            </li>
+                            <li>
+                                Trained the engineers who stepped into his
+                                shoes, saving the company senior engineering
+                                costs.
                             </li>
                         </ul>
                         <div class="flex flex-wrap gap-1">
