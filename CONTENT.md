@@ -80,7 +80,7 @@ The OKC Thunder's team psychologist had 25 years of military-grade assessment me
 **URL:** https://fuse.is
 
 **Description (Primary):**
-Marketing teams were drowning in siloed data across Google Analytics, Ads, and Meta. Tom took Fuse from zero to production MVP in six months, architecting a multi-agent platform with PydanticAI and Claude MCP servers — pioneering MCP patterns before Anthropic's standardization. He built the data verification layer that eliminates AI hallucinations and a prompt system that cut token costs 40%. The platform now serves 400+ marketing teams at $470K ARR, including Ziff Davis (CNET Group).
+Marketing teams were drowning in siloed data across Google Analytics, Ads, and Meta. Tom took Fuse from zero to production MVP in six months, architecting a multi-agent platform with PydanticAI and Claude MCP servers — pioneering MCP patterns before Anthropic's standardization. He built the data verification layer that eliminates AI hallucinations and a prompt system that cut token costs 40%. The platform now serves 400+ marketing teams, including Ziff Davis (CNET Group).
 
 **Additional Details:**
 - Built and deployed teams of AI Agents, MCPs to manage data orchestration.

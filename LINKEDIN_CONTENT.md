@@ -128,7 +128,7 @@ Marketing teams drowning in siloed data across GA, Ads, and Meta. Tom took it fr
 - Multi-agent AI platform using PydanticAI and Claude MCP servers. Pioneered MCP patterns before Anthropic's standardization.
 - Built the proprietary data verification layer that confirms accuracy before analysis, eliminating AI hallucinations.
 - Prompt system that cut token costs 40%. Enterprise multi-tenant architecture from day one.
-- Platform now serves 400+ marketing teams with $470K ARR, including Ziff Davis (CNET Group).
+- Platform now serves 400+ marketing teams, including Ziff Davis (CNET Group).
 
 Advisory board includes Bill Macaitis (former CMO, Slack & Zendesk) and Chris Copeland (former CEO, GroupM Search/WPP).
 ```
